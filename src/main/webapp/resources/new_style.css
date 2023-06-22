@@ -1,0 +1,221 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-align: none;
+}
+
+#wrap {
+  width: 1500px;
+  height: 750px;
+
+  margin: auto;
+}
+
+.header {
+  width: 1500px;
+  height: 70px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#profile {
+  display: flex;
+  align-items: center;
+}
+
+#profile i {
+  margin-right: 10px;
+}
+
+.form-select {
+  border: 1px solid gray;
+}
+
+.nav {
+  width: 1500px;
+  height: 70px;
+  background-color: skyblue;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.nav li {
+  margin-right: 5px;
+  margin-top: 20px;
+}
+
+#section {
+  width: 1500px;
+  height: 540px;
+
+  display: flex;
+  align-items: flex-start;
+}
+
+.side_menu {
+  width: 200px;
+  height: 540px;
+
+}
+
+.side_menu ul {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.side_menu li {
+  margin: 10px 10px;
+}
+
+.content_wrapper {
+  display: flex;
+  /* 세로 방향으로 요소 정렬 */
+  flex-direction: column;
+  /* 요소들을 세로로 쌓도록 설정 */
+}
+
+
+
+.up_input {
+  width: 1200px;
+  height: 150px;
+  border: 1px solid gray;
+  background-color: white;
+
+}
+
+/* 공통 스타일 */
+.select-input {
+  border: 1px solid gray;
+  height: 30px;
+
+}
+
+.select-input-group {
+  margin: 20px;
+
+  /* 그룹 간의 아래쪽 마진을 설정합니다 */
+}
+
+.select-input-group select,
+.select-input-group input {
+  margin-bottom: 10px;
+  /* 그룹 내부 요소들 간의 아래쪽 마진을 설정합니다 */
+}
+
+.fa-magnifying-glass,
+.fa-arrow-rotate-right {
+  font-size: 24px;
+  /* 원하는 크기로 설정하세요 */
+  color: red;
+  /* 원하는 색상으로 설정하세요 */
+}
+
+
+
+.up_input,
+.down_table {
+  margin-top: 30px;
+  /* up_input, down_table 간의 간격 설정 */
+}
+
+.down_table {
+  width: 1200px;
+  height: 250px;
+
+  background-color: white;
+  display: flex;
+  /* 세로 방향으로 요소 정렬 */
+  flex-direction: column;
+  /* 요소들을 세로로 쌓도록 설정 */
+
+}
+
+.select-table {
+  float: right;
+  border: 1px solid gray;
+  height: 30px;
+
+}
+
+.table {
+  color: black;
+  width: 1200px;
+  /* 글자 색상을 하얀색으로 설정 */
+}
+
+.table thead tr {
+  background-color: black;
+  /* 배경색을 검은색으로 설정 */
+  color: white;
+  /* 글자 색상을 하얀색으로 설정 */
+}
+
+#number1 {
+
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+  color: white;
+  align-items: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+
+}
+
+
+
+
+#icon {
+  width: 1200px;
+  height: 24px;
+
+}
+
+#icon_wrap {
+  float: left;
+}
+
+#icon_wrap2 {
+  float: right;
+}
+
+
+#icon i {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: #ccc;
+  border: 1px solid #999;
+  border-radius: 4px;
+  text-align: center;
+  padding-top: 5px;
+}
+
+#footer {
+  margin: auto;
+  background-color: rgba(0, 0, 0, .1);
+  clear: both;
+}
+
+#footer_wrap p {
+  display: block;
+  text-align: center;
+}

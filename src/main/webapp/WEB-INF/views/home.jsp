@@ -85,7 +85,7 @@
                 <img src="../../resources/images/friendship.jpg" alt="">
             </div>
             <div class="user_btn">User</div>
-            <div class="admin_btn">Admin</div>
+            <div class="admin_btn" onclick="location.href='login'">Admin</div>
         </div>
     </div>
 </body>
