@@ -1,22 +1,22 @@
 package com.mycompany.app.codegroup;
-
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 @Service
-public class CodeGroupServiceImpl implements CodeGroupService {
+public class CodeGroupServiceImpl implements CodeGroupService  {
 	
 	@Autowired
-	
 	CodeGroupDao dao;
 	
 	@Override
-   public List<CodeGroup> selectList(){
+	public List<CodeGroup> selectList(CodeGroupVo vo) {
+		return dao.selectList(vo);
 		
-		List<CodeGroup> aaa= dao.selectList();
-		return aaa;
 	}
-
+	
+	@Override
+	public CodeGroup selectOne(CodeGroupVo vo) {
+		return dao.selectOne(vo);
+		
+	}
 }

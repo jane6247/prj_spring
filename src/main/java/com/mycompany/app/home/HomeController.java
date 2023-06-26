@@ -63,5 +63,12 @@ public class HomeController {
 		 // 아래의 jsp파일 호출
 		 return "/ui_04";
 	 }
+	 @RequestMapping(value="/search")
+	 public String search() {
+		 
+		 
+		 // 아래의 jsp파일 호출
+		 return "/search";
+	 }
 	 
 }
