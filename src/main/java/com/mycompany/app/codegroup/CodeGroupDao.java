@@ -5,7 +5,7 @@ import javax.inject.Inject;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 @Repository
-// =DAO임
+
 public class CodeGroupDao {
 	
 	@Inject
@@ -18,11 +18,32 @@ public class CodeGroupDao {
 		return sqlSession.selectList(namespace + ".selectList", vo);
 		}
 	
-//	public List<CodeGroup> selectList(){
-//		return sqlSession.selectList(namespace + ".selectList", "");
-	public CodeGroup selectOne(CodeGroupVo vo) {
-		CodeGroup codeGroup = sqlSession.selectOne(namespace + ".selectList", vo);
+
+	
+	public CodeGroup selectOne(CodeGroupVo vo){
+		CodeGroup codeGroup = sqlSession.selectOne(namespace+ ".selectOne", vo);
 		return codeGroup;
 	}
+		
+		
+	public int update(CodeGroup dto) {return sqlSession.update(namespace + ".update", dto);}
 	
+	public int delete(CodeGroup vo) {return sqlSession.delete(namespace + ".delete", vo);}
+
+
+
+	public int insert(CodeGroup vo) {
+		
+		return sqlSession.insert(namespace + ".insert", vo);
 	}
+
+
+
+
+}
+	
+	
+	
+	
+	
+	

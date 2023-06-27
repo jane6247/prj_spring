@@ -20,6 +20,25 @@
     	FROM
     	 	codeGroup
     	WHERE
-    		name = #{name}
+    		seq = #{seq}
     </select>
+    
+    <update id="update">
+		 UPDATE codeGroup
+		 
+		 SET
+		    name = #{name}
+		 WHERE    
+    		seq =#{seq}
+    
+    
+    </update>
+    <delete id="delete">
+    	DELETE From
+    	 codeGroup
+    	 WHERE
+    	 seq = #{seq}    	
+    </delete>
+    
+
 </mapper>

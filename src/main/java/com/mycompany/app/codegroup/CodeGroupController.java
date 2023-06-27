@@ -20,7 +20,7 @@ public class CodeGroupController {
 		
 		System.out.println("list.size(): " + list.size());
 		
-//		왼쪽의 list는 isp에서 사용할 변수명
+//		왼쪽의 list는 jsp에서 사용할 변수명
 		model.addAttribute("list",list);
 		
 		
@@ -30,15 +30,40 @@ public class CodeGroupController {
 	@RequestMapping("/codeGroupForm")
 	public String codeGroupForm(CodeGroupVo vo, Model model) {
 		
-		CodeGroup codeGroup = service.selectOne(vo);
+		CodeGroup item = service.selectOne(vo);
 		
-//		왼쪽의 list는 isp에서 사용할 변수명
-		model.addAttribute("list",codeGroup);
+
+		model.addAttribute("item",item);
 		
 		
-		return "codeGroupListForm";
+		return "codeGroupForm";
 	
 	}
+	
+	@RequestMapping("/codeGroupUpdt")
+	public String codeGroupUpdt(CodeGroup dto) {
+		
+		
+		service.update(dto);
+		
+		
+		return "redirect:/codeGroupList";
+	
+	}
+	@RequestMapping("/codeGroupDelt")
+	
+	public String codeGroupDelt(CodeGroup vo) {
+		
+
+		service.delete(vo);
+		
+		
+		return "redirect:/codeGroupList";
+	
+	}
+	
+
+	
 }
 
 

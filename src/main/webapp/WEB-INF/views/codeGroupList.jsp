@@ -24,8 +24,7 @@
 	<c:otherwise>
 	<!-- $(list) 자바에서 넘겨준 객체 이름 --> <!-- var="list" jst1블럭에서 사용할 변수 이름 -->
 		<c:forEach items="${list}" var="list" varStatus="status">
-			<c:out value="${list.seq }"></c:out>
-			<c:out value="${list.name }"></c:out>
+			<a href="/codeGroupForm?seq=<c:out value="${list.seq}"/>"><c:out value="${list.name}"></c:out></a>
 			
 			<br>
 		</c:forEach>
