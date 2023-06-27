@@ -40,5 +40,13 @@
     	 seq = #{seq}    	
     </delete>
     
-
+    <insert id="insert">
+    	INSERT INTO
+    		codeGroup
+    		(name)
+    	
+    	  VALUES
+    	  (#{name})
+    	  
+    </insert>
 </mapper>

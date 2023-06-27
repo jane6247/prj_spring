@@ -14,6 +14,7 @@
 	<input type="text" name="shKeyword">
 	
 	<button type="button" class="btn btn-primary" id="btn">Search</button>
+	<a href="codeGroupForm"><button type="button" class="btn btn-primary" id="btn">추가</button></a>
 </form>
 <c:choose>
 	<c:when test="${fn:length(list) eq 0}">
@@ -30,6 +31,8 @@
 		</c:forEach>
 	</c:otherwise>
 </c:choose>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script type="text/javascript">
 	
 $("#btn").on("click", function(){

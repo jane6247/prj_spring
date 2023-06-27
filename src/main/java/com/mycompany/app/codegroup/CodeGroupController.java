@@ -62,7 +62,17 @@ public class CodeGroupController {
 	
 	}
 	
-
+	@RequestMapping("/codeGroupInsert")
+		
+		public String codeGroupInsert(CodeGroup vo) {
+			
+	
+			service.insert(vo);
+			
+			
+			return "redirect:/codeGroupList";
+		
+		}
 	
 }
 

@@ -33,5 +33,12 @@
 		
 	});
 	
+$("#btnUelete").on("click", function(){
+		
+
+		$("form[name=form]").attr("action", "/codeGroupInsert").submit();
+		
+	});
+	
 	
 </script>

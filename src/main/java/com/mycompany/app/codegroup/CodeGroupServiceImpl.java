@@ -28,6 +28,12 @@ public class CodeGroupServiceImpl implements CodeGroupService  {
 		
 		return dao.delete(vo);
 	}
+
+	@Override
+	public int insert(CodeGroup vo) {
+		// TODO Auto-generated method stub
+		return dao.insert(vo);
+	}
 	
 
 	

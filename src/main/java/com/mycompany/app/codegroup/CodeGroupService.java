@@ -7,6 +7,7 @@ public interface CodeGroupService {
 	public int update(CodeGroup dto);
 	
 	public int delete(CodeGroup vo);
+	public int insert(CodeGroup vo);
 	
 	
 	
