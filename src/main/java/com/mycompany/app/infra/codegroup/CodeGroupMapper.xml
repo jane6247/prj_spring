@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="com.mycompany.app.infra.codegroup.CodeGroupMapper">  
+
+    <resultMap id="resultMapObj" type="com.mycompany.app.infra.codegroup.CodeGroup"></resultMap>
+    
+    <sql id="abc">
+      seq
+    	,name
+    	,delNy
+    </sql>
+    
+   	<select id="selectList" resultMap="resultMapObj">
+   		SELECT
+			<include refid="abc" />
+   		FROM
+   			codeGroup
+		WHERE 1=1
+			<if test="shKeyword != null and !shKeyword.equals('')">AND name LIKE CONCAT('%',#{shKeyword},'%')</if>		
+   	</select>
+   	
+   	<select id="selectOne" resultMap="resultMapObj">
+   		SELECT
+			<include refid="abc" />
+   		FROM
+   			codeGroup
+		WHERE 1=1
+			AND seq = #{seq}	
+   	</select>   	
+   	
+   	<update id="update">
+   		UPDATE codeGroup
+   		SET
+   			name = #{name}
+		WHERE 1=1
+			seq = #{seq}	
+   	</update>   	
+   	
+   	<delete id="delete">
+   		delete from codeGroup 
+   		WHERE 1=1
+   		 seq = #{seq}	
+   	</delete>   	
+   	
+   	<update id="uelete">
+   		UPDATE codeGroup
+   		SET
+   			delNy = 1
+			seq = #{seq}	
+   	</update>   	
+   	
+   	<insert id="insert">
+   		INSERT INTO codeGroup (
+   			name
+   			,delNy
+   		) values (
+   		   	#{name}
+   			,0
+   		)
+   	</insert>   	
+
+</mapper>    
