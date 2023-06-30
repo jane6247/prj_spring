@@ -8,7 +8,7 @@
     <resultMap id="resultMapObj" type="com.mycompany.app.infra.codegroup.CodeGroup"></resultMap>
     
     <sql id="abc">
-      seq
+    	seq
     	,name
     	,delNy
     </sql>
@@ -35,20 +35,19 @@
    		UPDATE codeGroup
    		SET
    			name = #{name}
-		WHERE 1=1
+		WHERE
 			seq = #{seq}	
    	</update>   	
    	
    	<delete id="delete">
-   		delete from codeGroup 
-   		WHERE 1=1
-   		 seq = #{seq}	
+   		delete from codeGroup WHERE seq = #{seq}	
    	</delete>   	
-   	
+   	 
    	<update id="uelete">
    		UPDATE codeGroup
    		SET
    			delNy = 1
+		WHERE
 			seq = #{seq}	
    	</update>   	
    	
@@ -62,4 +61,4 @@
    		)
    	</insert>   	
 
-</mapper>    
+</mapper> 

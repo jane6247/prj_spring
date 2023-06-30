@@ -17,18 +17,18 @@ public class IndexController {
 		return "usr/infra/biography/login";
 	}
 	
-	@RequestMapping("/codeGroupIndex")
+	@RequestMapping("/indexJdmView")
 	public String codeGroupIndex() {
-		return "jdmin/infra/codegroup/codeGroupIndex";
+		return "jdmin/infra/index/indexJdmView";
 	}
-	@RequestMapping("/codeGroupTable")
-	public String codeGroupTable() {
-		return "jdmin/infra/codegroup/codeGroupTable";
-	}
-	@RequestMapping("/codeGroupTableSearch")
-	public String codeGroupTableSearch() {
-		return "jdmin/infra/codegroup/codeGroupTableSearch";
-	}
+//	@RequestMapping("/codeGroupTable")
+//	public String codeGroupTable() {
+//		return "jdmin/infra/codegroup/codeGroupTable";
+//	}
+//	@RequestMapping("/codeGroupTableSearch")
+//	public String codeGroupTableSearch() {
+//		return "jdmin/infra/codegroup/codeGroupTableSearch";
+//	}
 	
 	
 }

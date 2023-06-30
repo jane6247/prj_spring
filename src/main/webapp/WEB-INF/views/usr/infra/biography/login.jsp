@@ -351,7 +351,7 @@ input {
                     <span>Password</span>
                     <input type="password" />
                 </label>
-                <button type="button" class="submit" onclick="location.href='codeGroupIndex'" >Sign Up</button>
+                <button type="button" class="submit" onclick="location.href='indexJdmView'" >Sign Up</button>
                 
             </div>
         </div>

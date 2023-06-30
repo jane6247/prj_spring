@@ -541,26 +541,12 @@
              <c:out value="${param.seq }"/>
 
 			<form name="form" method="post">
-			
-			
-				
-				<input type="text" name="name" id="name" value="<c:out value="${item.name }"/>">
-				
-			<c:choose>
-				<c:when test="${empty item.seq }">
-					<button type="button" class="btn btn-primary" id="btnInst">save</button>
-				</c:when>
-				<c:otherwise>
+				    <input type="text" name="name" id="name" value="<c:out value="${item.name }"/>">
 					<button type="button" class="btn btn-danger" id="btnDelete">Delete</button>
 					<button type="button" class="btn btn-danger" id="btnUelete">Uelete</button>
+					<button type="button" class="btn btn-danger" id="btnUpdate">Update</button>
 					<button type="button" class="btn btn-primary" id="btnUpdt">save</button>
-				</c:otherwise>	
-			</c:choose>
 			</form>
-
-           
-              
-              
               <!-- End Table with stripped rows -->
 
             </div>
