@@ -35,7 +35,7 @@
                   <tr>
                     <th scope="col">#</th>
                     <th scope="col">Name</th>
-                    <th scope="col">DelNy</th>
+                    <th scope="col">codeGroup_seq</th>
                   </tr>
                 </thead>
                 <tbody>			
@@ -50,8 +50,8 @@
 		<c:forEach items="${list}" var="list" varStatus="status">
 		          <tr>
                     <th scope="row"><c:out value="${list.seq }"/></th>
-                    <td><a href="codeGroupForm?seq=<c:out value="${list.seq }"/>"><c:out value="${list.name }"/></a></td>
-                    <td><c:out value="${list.delNy }"/></td>
+                    <td><a href="codeForm?seq=<c:out value="${list.seq }"/>"><c:out value="${list.name }"/></a></td>
+                    <td><c:out value="${list.codeGroup_seq }"/></td>
                   </tr>
 		</c:forEach>
 	</c:otherwise>
@@ -59,7 +59,7 @@
                 </tbody>
               </table>
               <!-- End Table with stripped rows -->
-				<a href="codeGroupForm"><button type="button" class="btn btn-primary" id="btn">Add</button></a>
+				<a href="codeForm"><button type="button" class="btn btn-primary" id="btn">Add</button></a>
             </div>
           </div>
 
@@ -88,7 +88,7 @@
 $("#btn").on("click", function(){
 	
 // 	$("form[name=formList]").attr("method","get");
-	$("form[name=formList]").attr("action", "/codeGroupTable").submit();
+	$("form[name=formList]").attr("action", "/codeList").submit();
 	
 });
 </script>

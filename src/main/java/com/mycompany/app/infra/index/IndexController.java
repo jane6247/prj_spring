@@ -17,8 +17,7 @@ public class IndexController {
 		return "usr/infra/biography/login";
 	}
 	
-	@RequestMapping("/indexJdmView")
-	public String codeGroupIndex() {
+	public String indexJdmView() {
 		return "jdmin/infra/index/indexJdmView";
 	}
 //	@RequestMapping("/codeGroupTable")

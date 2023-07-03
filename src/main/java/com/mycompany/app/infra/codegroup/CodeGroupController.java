@@ -13,23 +13,20 @@ public class CodeGroupController {
 	@Autowired
 	CodeGroupServiceImpl service;
 	
-	/*
-	 * @RequestMapping("/codeGroupList") public String codeGroupList(CodeGroupVo vo,
-	 * Model model) { List<CodeGroup> list = service.selectList(vo);
-	 * model.addAttribute("list", list); return
-	 * "jdmin/infra/codegroup/codeGroupList"; }
-	 * 
-	 * @RequestMapping("/codeGroupForm") public String codeGroupForm(CodeGroupVo vo,
-	 * Model model) { CodeGroup codeGroup = service.selectOne(vo);
-	 * model.addAttribute("item", codeGroup); return
-	 * "jdmin/infra/codegroup/codeGroupForm"; }
-	 */
-	
+
 	@RequestMapping("/codeGroupTable")
 	public String codeGroupTable(CodeGroupVo vo, Model model) {
+		
+		
+		//vo.setShKeyword("회원");//검색창에 회원값 디폴트로 들어가 있기/
+		
+		vo.setShKeyword(vo.getShKeyword()==null ? "회원" : vo.getShKeyword());//검색한 값에 따라 검색창 내용 바뀌기.
+		
+		
 		// 목록을 가져온다.
 		List<CodeGroup> list = service.selectList(vo);
 		model.addAttribute("list", list);
+		model.addAttribute("vo",vo);
 		return "jdmin/infra/codegroup/codeGroupTable";
 	}
 	
@@ -60,7 +57,7 @@ public class CodeGroupController {
 	@RequestMapping("/codeGroupUele")
 	public String codeGroupUele(CodeGroup dto) {
 		service.uelete(dto);
-		return "redirect:/codeGroupList";
+		return "redirect:/codeGroupTable";
 	}
 	
 	@RequestMapping("/codeGroupInst")

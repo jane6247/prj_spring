@@ -46,6 +46,13 @@
                     <input type="text" class="form-control" name="name" id="name" value="<c:out value="${item.name }"/>">
                   </div>
                 </div>
+                
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label">CodeGroup_seq</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="CodeGroup_seq" id="CodeGroup_seq" value="<c:out value="${item.CodeGroup_seq }"/>">
+                  </div>
+                </div>
 
                 <div class="row mb-3">
                   <label class="col-sm-2 col-form-label">Submit Button</label>
@@ -92,22 +99,22 @@
 <script type="text/javascript">
 	
 $("#btnUpdate").on("click", function(){
- 	$("form[name=form]").attr("action", "/codeGroupUpdt").submit();
+ 	$("form[name=form]").attr("action", "/codeUpdt").submit();
 });
 
 
 $("#btnDelete").on("click", function(){
- 	$("form[name=form]").attr("action", "/codeGroupDele").submit();
+ 	$("form[name=form]").attr("action", "/codeDele").submit();
 });
 
 
 $("#btnUelete").on("click", function(){
- 	$("form[name=form]").attr("action", "/codeGroupUele").submit();
+ 	$("form[name=form]").attr("action", "/codeUele").submit();
 });
 
 
 $("#btnSave").on("click", function(){
- 	$("form[name=form]").attr("action", "/codeGroupInst").submit();
+ 	$("form[name=form]").attr("action", "/codeInst").submit();
 });
 
 	
