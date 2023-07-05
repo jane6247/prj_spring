@@ -20,8 +20,7 @@
               <form name="formList" method="post">
               
               <input type="hidden" name="thisPage" value="<c:out value="${vo.thisPage}" default="1"/>">
-			  <input type="hidden" name="rowNumToShow" value="<c:out value="${vo.rowNumToShow}"/>">
-              
+			<input type="hidden" name="rowNumToShow" value="<c:out value="${vo.rowNumToShow}"/>">
 					<select name="shOption">
 					    <option value="">--선택하세요--</option>
 					    <option value="1">Name</option>
@@ -38,8 +37,13 @@
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">codeGroup_seq</th>
+                    <th scope="col">Id</th>
+                    <th scope="col">Password</th>
+                    <th scope="col">FristName</th>
+                    <th scope="col">LastName</th>
+                    <th scope="col">EmailFull</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Age</th>
                   </tr>
                 </thead>
                 <tbody>			
@@ -54,16 +58,19 @@
 		<c:forEach items="${list}" var="list" varStatus="status">
 		          <tr>
                     <th scope="row"><c:out value="${list.seq }"/></th>
-                    <td><a href="codeForm?seq=<c:out value="${list.seq }"/>"><c:out value="${list.name }"/></a></td>
-                    <td><c:out value="${list.codeGroup_seq }"/></td>
+                    <td><a href="memberForm?seq=<c:out value="${list.seq }"/>"><c:out value="${list.id}"/></a></td>
+                    <td><c:out value="${list.password }"/></td>
+                    <td><c:out value="${list.firstName }"/></td>
+                    <td><c:out value="${list.lastName }"/></td>
+                    <td><c:out value="${list.emailFull }"/></td>
+                    <td><c:out value="${list.gender }"/></td>
+                    <td><c:out value="${list.age }"/></td>
                   </tr>
 		</c:forEach>
 	</c:otherwise>
 </c:choose>
                 </tbody>
               </table>
-              
-              <!-- End Table with stripped rows -->
               <div class="container-fluid px-0 mt-2">
     <div class="row">
         <div class="col">
@@ -91,7 +98,6 @@
         </div>
     </div>
 </div>
-				<a href="codeForm"><button type="button" class="btn btn-primary" id="btn">Add</button></a>
             </div>
           </div>
 
@@ -120,13 +126,13 @@
 $("#btn").on("click", function(){
 	
 // 	$("form[name=formList]").attr("method","get");
-	$("form[name=formList]").attr("action", "/codeList").submit();
+	$("form[name=formList]").attr("action", "/memberList").submit();
 	
 });
 
 goList = function(thisPage) {
 	$("input:hidden[name=thisPage]").val(thisPage);
-	$("form[name=formList]").attr("action", "codeList").submit();
+	$("form[name=formList]").attr("action", "memberList").submit();
 }
 </script>
 </body>

@@ -3,21 +3,26 @@
     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
     
-<mapper namespace="com.mycompany.app.infra.code.CodeMapper">
+<mapper namespace="com.mycompany.app.infra.member.MemberMapper">
  
-    <resultMap id="resultMapObj" type="com.mycompany.app.infra.code.Code"></resultMap>
+    <resultMap id="resultMapObj" type="com.mycompany.app.infra.member.Member"></resultMap>
     
     <sql id="abc">
     	seq
-    	,name
-    	,codeGroup_seq
+    	,id
+    	,password
+    	,firstName
+    	,lastName
+    	,emailFull
+    	,gender
+    	,age
     </sql>
     
    <sql id ="selectCommon">
    		FROM    
-	    	code
+	    	member
 		WHERE 1=1
-			<if test="shKeyword != null and !shKeyword.equals('')">AND name LIKE CONCAT('%',#{shKeyword},'%')</if>
+			<if test="shKeyword != null and !shKeyword.equals('')">AND id LIKE CONCAT('%',#{shKeyword},'%')</if>
     </sql>
 
    	<select id="selectOneCount" resultType="Integer">
@@ -31,47 +36,57 @@
 				<include refid="abc" />
 	   			<include refid="selectCommon" />
 		) aa
-		LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}	   			
-   	</select>
-   	
+		LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}	
+	</select>
+	
    	<select id="selectOne" resultMap="resultMapObj">
    		SELECT
 			<include refid="abc" />
    		FROM
-   			code
+   			member
 		WHERE 1=1
 			AND seq = #{seq}	
    	</select>   	
    	
    	<update id="update">
-   		UPDATE code
+   		UPDATE member
    		SET
-   			name = #{name}
+   			id = #{id}
 		WHERE
 			seq = #{seq}	
    	</update>   	
    	
    	<delete id="delete">
-   		delete from code WHERE seq = #{seq}	
+   		delete from member WHERE seq = #{seq}	
    	</delete>   	
    	 
    	<update id="uelete">
-   		UPDATE code
+   		UPDATE member
    		SET
-   			codeGroup_seq= 1
+   			seq= 1
 		WHERE
 			seq = #{seq}	
    	</update>   	
    	
    	<insert id="insert">
-   		INSERT INTO code (
-   			seq
-   			,name
-   			,codeGroup_seq
+   		INSERT INTO member (
+   		
+    	id
+    	,password
+    	,firstName
+    	,lastName
+    	,emailFull
+    	,gender
+    	,age
    		) values (
-   		    #{seq}
-   		   ,#{name}
-   			,#{codeGroup_seq}
+   		    
+   		   #{id}
+   		   ,#{password}
+   		   ,#{firstName}
+   		   ,#{lastName}
+   		   ,#{emailFull}
+   		   ,#{gender}
+   		   ,#{age}
    		)
    	</insert>   	
 

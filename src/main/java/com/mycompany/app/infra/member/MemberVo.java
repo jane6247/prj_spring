@@ -1,5 +1,7 @@
-package com.mycompany.app.infra.code;
-public class CodeVo {
+package com.mycompany.app.infra.member;
+
+public class MemberVo {
+
 	private Integer shOption;
 	private String shKeyword;
 	private String seq;
@@ -23,8 +25,7 @@ public class CodeVo {
 	private Integer RNUM;
 
 	private int startRnumForMysql = 0;							// 쿼리 시작 row
-	
-//	-----
+
 	public Integer getShOption() {
 		return shOption;
 	}
@@ -150,28 +151,16 @@ public class CodeVo {
 			setStartRnumForMysql((getRowNumToShow() * (getThisPage()-1)));
 		}
 		
+		System.out.println("getThisPage():" + getThisPage());
+		System.out.println("getTotalRows():" + getTotalRows());
+		System.out.println("getRowNumToShow():" + getRowNumToShow());
+		System.out.println("getTotalPages():" + getTotalPages());
+		System.out.println("getStartPage():" + getStartPage());
+		System.out.println("getEndPage():" + getEndPage());		
+		System.out.println("getStartRnumForOracle():" + getStartRnumForOracle());
+		System.out.println("getEndRnumForOracle():" + getEndRnumForOracle());
+		System.out.println("getStartRnumForMysql(): " + getStartRnumForMysql());
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
 	
 }

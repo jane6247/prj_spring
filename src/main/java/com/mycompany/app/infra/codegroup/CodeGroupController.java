@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -15,19 +16,22 @@ public class CodeGroupController {
 	
 
 	@RequestMapping("/codeGroupTable")
-	public String codeGroupTable(CodeGroupVo vo, Model model) {
+	public String codeGroupList(@ModelAttribute("vo") CodeGroupVo vo, Model model) {
 		
+		vo.setShKeyword(vo.getShKeyword() == null ? "" : vo.getShKeyword());
+	
+		vo.setParamsPaging(service.selectOneCount(vo));
 		
-		//vo.setShKeyword("회원");//검색창에 회원값 디폴트로 들어가 있기/
+		if(vo.getTotalRows() > 0) {
+			List<CodeGroup> list = service.selectList(vo);
+			model.addAttribute("list", list);
+//			model.addAttribute("vo", vo);
+		} else {
+//			by pass
+		}
 		
-		vo.setShKeyword(vo.getShKeyword()==null ? "회원" : vo.getShKeyword());//검색한 값에 따라 검색창 내용 바뀌기.
-		
-		
-		// 목록을 가져온다.
-		List<CodeGroup> list = service.selectList(vo);
-		model.addAttribute("list", list);
-		model.addAttribute("vo",vo);
 		return "jdmin/infra/codegroup/codeGroupTable";
+		
 	}
 	
 	@RequestMapping("/codeGroupForm")
@@ -41,6 +45,15 @@ public class CodeGroupController {
 		return "jdmin/infra/codegroup/codeGroupForm";
 	}
 		
+	
+
+	   @RequestMapping("/indexUsrLoginView")
+	   public String indexUsrLoginView(){
+	   return "usr/infra/biography/login";  
+	  
+	  }
+		
+	
 	
 	@RequestMapping("/codeGroupUpdt")
 	public String codeGroupUpdt(CodeGroup dto) {
@@ -72,9 +85,6 @@ public class CodeGroupController {
 
 }
 //보여질 화면이 없으면 바로  redirect
-
-
-
 
 
 // views/ usr/infra/index/indexUserView.jsp

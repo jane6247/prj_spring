@@ -1,4 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="rb" uri="http://www.springframework.org/tags" %>
+
+
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -38,7 +45,7 @@ button {
     overflow: hidden;
     position: relative;
     width: 900px;
-    height: 550px;
+    height: 700px;
     margin: 0 auto 100px;
     background: #fff;
     box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.3), 10px 10px 15px rgba(70, 70, 70, 0.15), inset -10px -10px 15px rgba(255, 255, 255, 0.3), inset 10px 10px 15px rgba(70, 70, 70, 0.15);
@@ -52,9 +59,13 @@ button {
     transition: -webkit-transform 1.2s ease-in-out;
     transition: transform 1.2s ease-in-out;
     transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
-    padding: 50px 30px 0;
+    padding: 150px 30px 0;
 }
 
+.sign-up{
+
+padding:50px 30px 0;
+}
 .sub-cont {
     overflow: hidden;
     position: absolute;
@@ -337,30 +348,54 @@ input {
                     <span class="m--in">Sign In</span>
                 </div>
             </div>
+<form name="formSignup" method="post">            
             <div class="form sign-up">
                 <h2>Create your Account</h2>
                 <label>
-                    <span>Name</span>
-                    <input type="text" />
+                    <span>FirstName</span>
+                    <input type="text" name="firstName"/>
+                </label>
+                 <label>
+                    <span>LastName</span>
+                    <input type="text" name="lastName"/>
+                </label>
+                 <label>
+                    <span>Id</span>
+                    <input type="text" name="id"/>
+                </label>
+                 <label>
+                    <span>Gender</span>
+                    <input type="text" name="gender" />
+                </label>
+                 <label>
+                    <span>Age</span>
+                    <input type="text" name="age" />
                 </label>
                 <label>
                     <span>Email</span>
-                    <input type="email" />
+                    <input type="email" name="emailFull" />
                 </label>
                 <label>
                     <span>Password</span>
-                    <input type="password" />
+                    <input type="password" name="password"  />
                 </label>
-                <button type="button" class="submit" onclick="location.href='indexJdmView'" >Sign Up</button>
-                
+           
+				<button id="btnSave" type="button" class="submit" >Sign Up</button>
             </div>
+</form>
         </div>
     </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script type="text/javascript">
 
-    <script>
         document.querySelector('.img__btn').addEventListener('click', function() {
             document.querySelector('.cont').classList.toggle('s--signup');
         });
+        
+        $("#btnSave").on("click", function(){
+         	$("form[name=formSignup]").attr("action", "/memberInst").submit();
+        });
+
     </script>
 </body>
 </html>

@@ -16,7 +16,8 @@ public class CodeDao {
 	private SqlSession sqlSession;
 	
 	private static String namespace = "com.mycompany.app.infra.code.CodeMapper";
-	                                                                                
+
+	public int selectOneCount(CodeVo vo){ return sqlSession.selectOne(namespace + ".selectOneCount", vo); }
 	public List<Code> selectList(CodeVo vo) {return sqlSession.selectList(namespace + ".selectList", vo); }	
 	public Code selectOne(CodeVo vo){ return sqlSession.selectOne(namespace + ".selectOne", vo); }
 	public int update(Code dto){ return sqlSession.update(namespace + ".update", dto); }

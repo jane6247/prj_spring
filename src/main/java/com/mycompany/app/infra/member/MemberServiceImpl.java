@@ -1,48 +1,49 @@
-package com.mycompany.app.infra.codegroup;
+package com.mycompany.app.infra.member;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
 @Service
-public class CodeGroupServiceImpl implements CodeGroupService{
+public class MemberServiceImpl implements MemberService{
 
 	@Autowired
-	CodeGroupDao dao;
+	MemberDao dao;
 	
 	@Override
-	public List<CodeGroup> selectList(CodeGroupVo vo) { 
+	public List<Member> selectList(MemberVo vo) { 
 		return dao.selectList(vo); 
 	}
 
 	@Override
-	public CodeGroup selectOne(CodeGroupVo vo) {
+	public Member selectOne(MemberVo vo) {
 		return dao.selectOne(vo);
 	}
 
 	@Override
-	public int update(CodeGroup dto) {
+	public int update(Member dto) {
 		return dao.update(dto); 
 	}
 
 	@Override
-	public int delete(CodeGroup dto) {
+	public int delete(Member dto) {
 		return dao.delete(dto);
 	}
 
 	@Override
-	public int uelete(CodeGroup dto) {
+	public int uelete(Member dto) {
 		return dao.uelete(dto);
 	}
 
 	@Override
-	public int insert(CodeGroup dto) {
+	public int insert(Member dto) {
 		return dao.insert(dto);
 	}
 
 	@Override
-	public int selectOneCount(CodeGroupVo vo) {
+	public int selectOneCount(MemberVo vo) {
 		// TODO Auto-generated method stub
 		return dao.selectOneCount(vo);
 	}

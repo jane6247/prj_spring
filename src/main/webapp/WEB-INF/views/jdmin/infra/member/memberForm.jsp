@@ -39,19 +39,26 @@
 
                 
                 <div class="row mb-3">
-                  <label for="inputText" class="col-sm-2 col-form-label">Name</label>
+                  <label for="inputText" class="col-sm-2 col-form-label">Id</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="name" id="name" value="<c:out value="${item.name }"/>">
+                    <input type="text" class="form-control" name="id" id="id" value="<c:out value="${item.id }"/>">
                   </div>
                 </div>
                 
                 <div class="row mb-3">
-                  <label for="inputText" class="col-sm-2 col-form-label">CodeGroup_seq</label>
+                  <label for="inputText" class="col-sm-2 col-form-label">Password</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="CodeGroup_seq" id="CodeGroup_seq" value="<c:out value="${item.CodeGroup_seq }"/>">
+                    <input type="text" class="form-control" name="password" id="password" value="<c:out value="${item.password }"/>">
                   </div>
                 </div>
-
+                
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label">Email</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="emailFull" id="emailFull" value="<c:out value="${item.emailFull }"/>">
+                  </div>
+                </div>
+             
                 <div class="row mb-3">
                   <label class="col-sm-2 col-form-label">Submit Button</label>
                   <div class="col-sm-10">
@@ -97,22 +104,22 @@
 <script type="text/javascript">
 	
 $("#btnUpdate").on("click", function(){
- 	$("form[name=form]").attr("action", "/codeUpdt").submit();
+ 	$("form[name=form]").attr("action", "/memberUpdt").submit();
 });
 
 
 $("#btnDelete").on("click", function(){
- 	$("form[name=form]").attr("action", "/codeDele").submit();
+ 	$("form[name=form]").attr("action", "/memberDele").submit();
 });
 
 
 $("#btnUelete").on("click", function(){
- 	$("form[name=form]").attr("action", "/codeUele").submit();
+ 	$("form[name=form]").attr("action", "/memberUele").submit();
 });
 
 
 $("#btnSave").on("click", function(){
- 	$("form[name=form]").attr("action", "/codeInst").submit();
+ 	$("form[name=form]").attr("action", "/memberInst").submit();
 });
 
 	

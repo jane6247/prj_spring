@@ -42,5 +42,11 @@ public class CodeServiceImpl implements CodeService{
 	public int insert(Code dto) {
 		return dao.insert(dto);
 	}
+
+	@Override
+	public int selectOneCount(CodeVo vo) {
+		// TODO Auto-generated method stub
+		return dao.selectOneCount(vo);
+	}
 	
 }

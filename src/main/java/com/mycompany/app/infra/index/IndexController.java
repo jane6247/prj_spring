@@ -12,14 +12,14 @@ public class IndexController {
 	}
 	
 	
-	@RequestMapping("/indexUsrLoginView")
-	public String indexUsrLoginView() {
-		return "usr/infra/biography/login";
-	}
+//	@RequestMapping("/indexUsrLoginView")
+//	public String indexUsrLoginView() {
+//		return "usr/infra/biography/login";
+//	}
 	
-	public String indexJdmView() {
-		return "jdmin/infra/index/indexJdmView";
-	}
+	/*
+	 * public String indexJdmView() { return "jdmin/infra/index/indexJdmView"; }
+	 */
 //	@RequestMapping("/codeGroupTable")
 //	public String codeGroupTable() {
 //		return "jdmin/infra/codegroup/codeGroupTable";
