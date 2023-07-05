@@ -7,7 +7,7 @@
 <%@include file="../../include/includeJdmHeader.jsp"%>
 <%@include file="../../include/includeJdmSlideMenu.jsp"%>
 
-
+ 	 
 
     <section class="section">
       <div class="row">
@@ -21,11 +21,11 @@
               
               <input type="hidden" name="thisPage" value="<c:out value="${vo.thisPage}" default="1"/>">
 			<input type="hidden" name="rowNumToShow" value="<c:out value="${vo.rowNumToShow}"/>">
-					<select name="shOption">
+					<!-- <select name="shOption">
 					    <option value="">--선택하세요--</option>
 					    <option value="1">Name</option>
 					    <option value="2">Gender</option>
-					</select>
+					</select> -->
 					
 					<input type="text" name="shKeyword" value="<c:out value="${vo.shKeyword}"/>">
 					
