@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: 'Unbounded', cursive;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.wrap {
+  width: 100%;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+p {
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+}
+button {
+  cursor: pointer;
+}
+/* header */
+
+.header {
+  width: 100%;
+  height: 10vh;
+  /* background-color: rgba(0, 0, 0, 0.1); */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.568);
+}
+.logo {
+  width: 15vw;
+  height: 10vh;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  /* background-color: #3e8e41; */
+}
+
+.menu {
+  width: 30vw;
+  height: 5vh;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+  position: absolute;
+  left: 300px;
+}
+.menu li {
+  float: left;
+  margin-right: 4vw;
+}
+.menu li a {
+  color: black;
+}
+/* .menu li a:hover {
+  text-decoration: underline;
+} */
+.underline {
+  /* color: #fff; */
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  position: relative;
+}
+.underline:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  top: 22px;
+  background: #ff9800;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.underline:hover {
+  color: #ff9800;
+}
+.underline:hover:after {
+  width: 100%;
+  left: 0;
+}
+ul.breadcrumb {
+  padding: 35px 30px;
+  padding-left: 80px;
+}
+ul.breadcrumb li {
+  display: inline-block;
+
+  font-size: 15px;
+}
+ul.breadcrumb li + li:before {
+  padding: 8px;
+  color: rgba(0, 0, 0, 0.286);
+  content: '>';
+}
+ul.breadcrumb li a {
+  color: rgba(0, 0, 0, 0.286);
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #ff9800;
+  text-decoration: underline;
+}
+.Profile {
+  width: 20vw;
+  height: 5vh;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav_img img {
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+}
+
+/* mainContent */
+.main_content {
+  width: 100%;
+  height: 130vh;
+  margin: auto;
+  /* background-color: rgba(0, 0, 0, 0.3); */
+}
+
+.main_wrap {
+  width: 90vw;
+  height: 105vh;
+  /* background-color: antiquewhite; */
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin: auto;
+}
+
+.info_text {
+  width: 60vw;
+  height: 105vh;
+  /* background-color: rgba(0, 0, 0, 0.1); */
+}
+.info_box {
+  width: 60vw;
+  height: 25vh;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  /* display: block; */
+}
+#new_show {
+  border: 2px solid rgba(0, 0, 0, 0.09);
+  padding: 5px 5px;
+  width: 500px;
+  height: 170px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  resize: none;
+}
+.hidden {
+  display: none;
+}
+
+.info_box p {
+  color: rgba(0, 0, 0, 0.744);
+}
+.info_box h4 {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 16px;
+  font-family: 'Nunito', sans-serif;
+  font-size: x-large;
+}
+.infopic {
+  display: flex;
+  align-items: center;
+  gap: 5vw;
+  position: relative;
+  border: 0;
+}
+.infopic .info_about {
+  height: 30vh;
+}
+.info_lang {
+  border: 0;
+}
+.info_note {
+  height: 20vh;
+}
+.star_box {
+  position: absolute;
+  top: 7vh;
+  left: 25vw;
+  width: 300px;
+  height: 60px;
+  /* background-color: aquamarine; */
+  display: flex;
+  justify-content: space-between;
+}
+.star_box i {
+  margin-right: 10px;
+}
+.card__image {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+}
+
+.card__image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.name_text {
+  width: 15vw;
+  height: 15vh;
+  font-family: 'Nunito', sans-serif;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+}
+.name_text h3 {
+  font-weight: bolder;
+  font-size: 25px;
+}
+.name_text p {
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.main_picture_wrap {
+  width: 25vw; /*25*/
+  height: 70vh;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+  border-radius: 30px;
+  position: absolute;
+  bottom: 80px;
+  right: 48px;
+}
+.slider {
+  width: 100%;
+  height: 30vh;
+  /* background-color: rgba(0, 0, 0, 0.3); */
+}
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.send_message_wrap {
+  width: 100%;
+  height: 40vh;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+}
+.edit_txt {
+  width: 100%;
+  height: 7vh;
+  background-color: #5196a6;
+  border-radius: 20px;
+  margin-top: 8px;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: #fff;
+}
+.edit_txt:hover {
+  background-color: #3f8797;
+}
+
+/* footer */
+.footer {
+  width: 100%;
+  height: 30vh;
+  background-color: #72a689;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer_text {
+  width: 10vw;
+  height: 25vh;
+  /* background-color: rgba(0, 0, 0, 0.6); */
+  margin-top: 5vh;
+  line-height: 40px;
+  color: #fff;
+}
+.logo_02 {
+  width: 15vw;
+  height: 10vh;
+  padding-top: 0;
+  box-sizing: border-box;
+}
+
+.sns li {
+  font-size: x-large;
+}

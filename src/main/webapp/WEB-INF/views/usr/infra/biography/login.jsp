@@ -130,7 +130,7 @@ button {
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: #72a689;
 }
 
 .cont.s--signup .img:before {
@@ -276,8 +276,13 @@ input {
 .submit {
     margin-top: 40px;
     margin-bottom: 20px;
-    background: #d4af7a;
+    background: #346751;
     text-transform: uppercase;
+  
+}
+.submit a {
+	
+	color: #fff;
 }
 
 .fb-btn {
@@ -348,6 +353,7 @@ input {
                     <span class="m--in">Sign In</span>
                 </div>
             </div>
+            
 <form name="formSignup" method="post">            
             <div class="form sign-up">
                 <h2>Create your Account</h2>

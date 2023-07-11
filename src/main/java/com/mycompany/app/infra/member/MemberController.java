@@ -15,7 +15,6 @@ public class MemberController {
 	MemberServiceImpl service;
 	
 	
-	
 	@RequestMapping("/memberList")
 	public String codeGroupList(@ModelAttribute("vo") MemberVo vo, Model model) {
 		

@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: 'Unbounded', cursive;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.wrap {
+  width: 100%;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+p {
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+}
+button {
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+}
+body {
+  position: relative;
+}
+/* header */
+
+.header {
+  width: 100%;
+  height: 10vh;
+  /* background-color: rgba(0, 0, 0, 0.1); */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  transition: 0.5s;
+}
+.logo {
+  width: 15vw;
+  height: 10vh;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  margin-right: 20px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content span p {
+  float: right;
+  margin-top: 3px;
+  margin-left: 8px;
+}
+.material-symbols-outlined {
+}
+.hoverable span {
+  margin-right: 5px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.menu {
+  width: 30vw;
+  height: 5vh;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+  position: absolute;
+  left: 300px;
+}
+.menu li {
+  float: left;
+  margin-right: 4vw;
+  cursor: pointer;
+}
+.menu li a {
+  color: black;
+}
+.aboutUs:hover {
+  color: #ff9800;
+}
+.underline {
+  /* color: #fff; */
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  position: relative;
+}
+.underline:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  top: 22px;
+  background: #ff9800;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.underline:hover {
+  color: #ff9800;
+}
+.underline:hover:after {
+  width: 100%;
+  left: 0;
+}
+.Profile {
+  width: 20vw;
+  height: 5vh;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav_img img {
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+}
+.where_text {
+  margin-top: 10vh;
+  font-size: xxx-large;
+  font-weight: bold;
+  text-align: center;
+  /* margin-top: 4vh; */
+  width: 100%;
+  height: 4em;
+  background: #f7971e; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ffd200,
+    #f7971e
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffd200, #f7971e);
+}
+.where_text span {
+  font-size: xxx-large;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  display: block;
+  padding-top: 3.5rem;
+}
+ul.breadcrumb {
+  padding: 35px 30px;
+  padding-left: 80px;
+}
+ul.breadcrumb li {
+  display: inline-block;
+
+  font-size: 15px;
+}
+ul.breadcrumb li + li:before {
+  padding: 8px;
+  color: rgba(0, 0, 0, 0.286);
+  content: '>';
+}
+ul.breadcrumb li a {
+  color: rgba(0, 0, 0, 0.286);
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #ff9800;
+  text-decoration: underline;
+}
+
+/* mainContent */
+.account_wrap {
+  width: 100%;
+  height: 120vh;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+  margin-top: 15vh;
+}
+.account_contain {
+  width: 65rem;
+  height: 120vh;
+  /* background-color: rgba(0, 0, 0, 0.1); */
+  margin: auto;
+}
+.account_top {
+  width: 30vw;
+  height: 15vh;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+}
+.input_contain {
+  width: 45vw;
+  height: 100vh;
+  /* background-color: rgba(0, 0, 0, 0.1); */
+  margin-top: 100px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.acco_img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 2px dotted #ff9800;
+  display: grid;
+  place-items: center;
+  margin-right: 65px;
+  position: relative;
+  cursor: pointer;
+}
+
+.acco_img img {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+.middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.acco_img:hover .image {
+  opacity: 0.3;
+}
+
+.acco_img:hover .middle {
+  opacity: 1;
+}
+.account_input {
+  width: 27vw;
+  height: 77vh;
+  position: relative;
+  /* background-color: rgba(0, 0, 0, 0.3); */
+}
+
+.account_input p {
+  padding-left: 15px;
+  font-weight: 300;
+}
+.personal_info {
+  width: 25vw;
+  height: 5vh;
+  border: 1px solid gray;
+  border-radius: 20px;
+  margin-bottom: 25px;
+  margin-left: 15px;
+}
+.about_you {
+  width: 25vw;
+  height: 15vh;
+  border: 1px solid gray;
+  border-radius: 10px;
+  margin-left: 15px;
+}
+.update_btn {
+  width: 12vw;
+  height: 5vh;
+  background-color: #5196a6;
+  border-radius: 10px;
+  color: #fff;
+  margin-top: 2rem;
+  margin-left: 35px;
+  font-size: large;
+}
+
+/* footer */
+.footer {
+  width: 100%;
+  height: 30vh;
+  background-color: #72a689;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer_text {
+  width: 10vw;
+  height: 25vh;
+  /* background-color: rgba(0, 0, 0, 0.6); */
+  margin-top: 5vh;
+  line-height: 40px;
+  color: #fff;
+}
+.logo_02 {
+  width: 15vw;
+  height: 10vh;
+  padding-top: 0;
+  box-sizing: border-box;
+}
+
+.sns li {
+  font-size: x-large;
+}
+
+/* date 타입의 입력 요소의 텍스트를 숨깁니다. */
+input[type='date']::-webkit-datetime-edit {
+  display: none;
+}
+
+/* 선택한 날짜를 표시하는 텍스트를 숨깁니다. */
+input[type='date']::-webkit-datetime-edit-text {
+  display: none;
+}
+
+/* 날짜 선택 팝업에서 표시되는 날짜 텍스트를 숨깁니다. */
+input[type='date']::-webkit-datetime-edit-month-field,
+input[type='date']::-webkit-datetime-edit-day-field,
+input[type='date']::-webkit-datetime-edit-year-field {
+  display: none;
+}

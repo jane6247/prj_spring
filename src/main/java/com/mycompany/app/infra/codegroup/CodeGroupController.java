@@ -52,6 +52,12 @@ public class CodeGroupController {
 	   return "usr/infra/biography/login";  
 	  
 	  }
+	   
+	   @RequestMapping("/index")
+	   public String index_01(){
+	   return "usr/infra/wanderMate/index_01";  
+	  
+	  }
 		
 	
 	
@@ -78,10 +84,6 @@ public class CodeGroupController {
 		service.insert(dto);
 		return "redirect:/codeGroupTable";
 	}
-
-
-	
-
 
 }
 //보여질 화면이 없으면 바로  redirect

@@ -89,7 +89,32 @@
   <!-- Template Main JS File -->
   <script src="/resources/assets/js/main.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<scrpt src="/resources/js/validation.js"></scrpt>
 <script type="text/javascript">
+
+
+
+var objName = $("#name");
+
+function validationInst() {
+	if (validationUpdt() === false) {
+		return false;
+	}
+}
+
+function validationUpdt() {
+	if (checkOnlyNum(objName) === false) {
+		return false;
+	}
+}
+
+$("#btnSave").on("click", function() {
+	if (validationInst() === false) {
+		return false;
+	} 
+	$("form[name=form]").attr("action", "/codeGroupInst").submit();
+});
+
 	
 $("#btnUpdate").on("click", function(){
  	$("form[name=form]").attr("action", "/codeGroupUpdt").submit();
@@ -106,11 +131,6 @@ $("#btnUelete").on("click", function(){
 });
 
 
-$("#btnSave").on("click", function(){
- 	$("form[name=form]").attr("action", "/codeGroupInst").submit();
-});
-
-	
 </script>
 </body>
 
