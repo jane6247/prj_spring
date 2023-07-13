@@ -90,7 +90,21 @@
    		)
    		<selectKey resultType="String" keyProperty="seq" order="AFTER">
          SELECT last_insert_id()
-      </selectKey>
-   	</insert>   	
+        </selectKey>
+   	</insert>
+   	
+   <select id="selectOneAjax" resultMap="resultMapObj">
+      SELECT
+         
+         id
+         ,password
+      FROM
+         member
+      WHERE 1=1
+         AND id = #{id}
+         AND password = #{password}
+   </select>
+   	
+   	   	
 
 </mapper>

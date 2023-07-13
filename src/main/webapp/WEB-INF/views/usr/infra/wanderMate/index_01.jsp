@@ -51,7 +51,7 @@
         </ul>
 
         <div class="button">
-          <a href="wanderMate_login (1).html"
+          <a href="login"
             ><button type="button" class="btn btn1">Sign in</button></a
           >
           <a href="wanderMate_register (4).html"
@@ -183,15 +183,15 @@
             <p>Users of our service</p>
           </div>
           <div class="num_stat">
-            <span style="color: #bf9e80">186 </span><br />
+            <span class="counter" style="color: #bf9e80">186 </span><br />
             <p>Countries for travel</p>
           </div>
           <div class="num_stat">
-            <span style="color: #5196a6">45384 </span><br />
+            <span class="counter" style="color: #5196a6">45384 </span><br />
             <p>Hoeme visited</p>
           </div>
           <div class="num_stat">
-            <span style="color: #f2a341">43586 </span><br />
+            <span class="counter" style="color: #f2a341">43586 </span><br />
             <p>Positive reviews</p>
           </div>
         </div>
@@ -200,8 +200,16 @@
 
  <%@include file="../../include/includeWanderFooter.jsp"%>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
     <script>
-    
+    jQuery(document).ready(function($){
+    	
+    	$('.counter').counterUp({
+    	    delay: 10,
+    	    time: 1000
+    	});
+    });
     </script>
   </body>
 </html>

@@ -93,8 +93,19 @@
 <script type="text/javascript">
 
 
+checkOnlyNum = function(obj) {
+	onlyNum = /^(\(?\+?[0-9]*\)?)?[0-9_\- \(\)]*$/;
+    if(onlyNum.test($.trim(obj.val())) == false){
+        alert("숫자만 입력해 주세요")
+        obj.focus();//검색창으로 다시 돌아가게 하기.
+        return false;
+    } else {
+//    	by pass
+    }
+}
 
 var objName = $("#name");
+
 
 function validationInst() {
 	if (validationUpdt() === false) {
@@ -111,8 +122,8 @@ function validationUpdt() {
 $("#btnSave").on("click", function() {
 	if (validationInst() === false) {
 		return false;
-	} 
-	$("form[name=form]").attr("action", "/codeGroupInst").submit();
+	} $("form[name=form]").attr("action", "/codeGroupInst").submit();
+	
 });
 
 	

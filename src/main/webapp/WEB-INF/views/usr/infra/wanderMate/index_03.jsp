@@ -35,7 +35,7 @@
     <div class="wrap">
       <header class="header">
         <div class="logo">
-          <a href="index.html"><img src="img/main-logo.jpeg" /></a>
+          <a href="index.html"><img src="/resources/assets_wanderMate/img/main-logo.jpeg" /></a>
         </div>
 
         <ul class="menu">
@@ -98,7 +98,7 @@
           <div class="info_text">
             <div class="info_box infopic">
               <div class="card__image">
-                <img src="img/profile_pic02.webp" />
+                <img src="/resources/assets_wanderMate/img/profile_pic02.webp" />
               </div>
               <div class="name_text">
                 <h3>Jessica</h3>
@@ -173,8 +173,8 @@ I am looking forward to exciting stories, smiling faces and unforgettable advent
 
           <div class="main_picture_wrap">
             <div class="slider">
-              <img src="img/effeltowr.jpeg" alt="" />
-              <img src="img/china.jpeg" alt="" />
+              <img src="/resources/assets_wanderMate/img/effeltowr.jpeg" alt="" />
+              <img src="/resources/assets_wanderMate/img/china.jpeg" alt="" />
             </div>
             <div class="send_message_wrap">
               <button class="send_txt">
@@ -214,7 +214,7 @@ I am looking forward to exciting stories, smiling faces and unforgettable advent
 
       <footer class="footer">
         <div class="footer_text logo_02">
-          <img src="img/footer.jpeg" />
+          <img src="/resources/assets_wanderMate/img/footer.jpeg" />
         </div>
 
         <ul class="footer_text about">

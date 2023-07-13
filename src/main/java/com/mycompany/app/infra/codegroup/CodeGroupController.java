@@ -47,11 +47,7 @@ public class CodeGroupController {
 		
 	
 
-	   @RequestMapping("/indexUsrLoginView")
-	   public String indexUsrLoginView(){
-	   return "usr/infra/biography/login";  
-	  
-	  }
+	   
 	   
 	   @RequestMapping("/index")
 	   public String index_01(){

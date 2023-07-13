@@ -47,5 +47,10 @@ public class MemberServiceImpl implements MemberService{
 		// TODO Auto-generated method stub
 		return dao.selectOneCount(vo);
 	}
+
+	public Member selectOneAjax(MemberVo vo) {
+		// TODO Auto-generated method stub
+		return dao.selectOneAjax(vo);
+	}
 	
 }

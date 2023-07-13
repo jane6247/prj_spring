@@ -318,6 +318,11 @@ input {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
+
+.invalid-feedback{
+color: red; important;
+}
+
     </style>
 </head>
 <body>
@@ -327,15 +332,15 @@ input {
         <div class="form sign-in">
             <h2>Welcome</h2>
             <label>
-                <span>Email</span>
-                <input type="email" />
+                <span>Id</span>
+                <input type="id" id="id" />
             </label>
             <label>
                 <span>Password</span>
-                <input type="password" />
+                <input type="password" id="password"/>
             </label>
             <p class="forgot-pass">Forgot password?</p>
-            <button type="button" class="submit"><a href="">Sign In</a></button>
+            <button type="button" class="submit" id="btnLogin">Sign In</button>
          
         </div>
         <div class="sub-cont">
@@ -354,53 +359,166 @@ input {
                 </div>
             </div>
             
-<form name="formSignup" method="post">            
-            <div class="form sign-up">
-                <h2>Create your Account</h2>
-                <label>
-                    <span>FirstName</span>
-                    <input type="text" name="firstName"/>
-                </label>
-                 <label>
-                    <span>LastName</span>
-                    <input type="text" name="lastName"/>
-                </label>
-                 <label>
-                    <span>Id</span>
-                    <input type="text" name="id"/>
-                </label>
-                 <label>
-                    <span>Gender</span>
-                    <input type="text" name="gender" />
-                </label>
-                 <label>
-                    <span>Age</span>
-                    <input type="text" name="age" />
-                </label>
-                <label>
-                    <span>Email</span>
-                    <input type="email" name="emailFull" />
-                </label>
-                <label>
-                    <span>Password</span>
-                    <input type="password" name="password"  />
-                </label>
-           
-				<button id="btnSave" type="button" class="submit" >Sign Up</button>
-            </div>
-</form>
-        </div>
+       <form name="formSignup" method="post">            
+    <div class="form sign-up">
+        <h2>Create your Account</h2>
+        <label>
+            <span>Id</span>
+            <input type="text" name="id" id="id" required />
+            <div class="invalid-feedback" id="idFeedback"></div>
+        </label>
+        <label>
+            <span>Password</span>
+            <input type="password" name="password" id="password" required />
+            <div class="invalid-feedback" id="passwordFeedback"></div>
+        </label>
+        <label>
+            <span>Email</span>
+            <input type="email" name="emailFull" id="emailFull" required />
+            <div class="invalid-feedback"  id="emailFeedback"></div>
+        </label>
+        <label>
+            <span>FirstName</span>
+            <input type="text" name="firstName" id="firstName" required />
+            <div class="invalid-feedback" id="nameFeedback"></div>
+        </label>
+        <label>
+            <span>LastName</span>
+            <input type="text" name="lastName" />
+        </label>
+        <label>
+            <span>Gender</span>
+            <input type="text" name="gender" />
+        </label>
+        <label>
+            <span>Age</span>
+            <input type="text" name="age" />
+        </label>
+              
+        <button id="btnSave" type="button" class="submit">Sign Up</button>
     </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<script type="text/javascript">
+</form>
 
-        document.querySelector('.img__btn').addEventListener('click', function() {
-            document.querySelector('.cont').classList.toggle('s--signup');
-        });
-        
-        $("#btnSave").on("click", function(){
-         	$("form[name=formSignup]").attr("action", "/memberInst").submit();
-        });
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="resources/js/validation.js"></script>
+<script type="text/javascript">
+    document.querySelector('.img__btn').addEventListener('click', function() {
+        document.querySelector('.cont').classList.toggle('s--signup');
+    });
+
+    
+    
+    function checkId(obj, message) {
+        var regExp = /^[A-Za-z0-9,_-]{4,20}$/;
+
+        if (regExp.test($.trim(obj.val())) === false) {
+            obj.addClass("is-invalid");
+            obj.focus();
+            $("#idFeedback").text(message);
+            return false;
+        } else {
+            obj.removeClass("is-invalid");
+            $("#idFeedback").text("");
+            return true;
+        }
+    }
+
+    function checkPw(obj, message) {
+        var regExp = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#$%^&*]).{8,20}$/;
+
+        if (regExp.test($.trim(obj.val())) === false) {
+            obj.addClass("is-invalid");
+            obj.focus();
+            $("#passwordFeedback").text(message);
+            return false;
+        } else {
+            obj.removeClass("is-invalid");
+            $("#passwordFeedback").text("");
+        }
+    }
+
+    function checkName(obj, message) {
+        var regExp = /^[ㄱ-ㅎ가-힣]{2,20}$/;
+
+        if (regExp.test($.trim(obj.val())) === false) {
+            obj.addClass("is-invalid");
+            obj.focus();
+            $("#nameFeedback").text(message);
+            return false;
+        } else {
+            obj.removeClass("is-invalid");
+            $("#nameFeedback").text("");
+        }
+    }
+
+    function checkEmail(obj, message) {
+        var regExp = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+
+        if (regExp.test($.trim(obj.val())) === false) {
+            obj.addClass("is-invalid");
+            obj.focus();
+            $("#emailFeedback").text(message);
+            return false;
+        } else {
+            obj.removeClass("is-invalid");
+            $("#emailFeedback").text("");
+        }
+    }
+
+    var objId = $("#id");
+    var objPw = $("#password");
+    var objName = $("#firstName");
+    var objEmail = $("#emailFull");
+
+    function validationInst() {
+        if (checkId(objId, "아이디를 입력하세요") === false) return false;
+        if (checkPw(objPw, "비밀번호를 입력하세요") === false) return false;
+        if (checkName(objName, "이름을 입력하세요") === false) return false;
+        if (checkEmail(objEmail, "유효한 이메일 주소를 입력해주세요.") === false) return false;
+    }
+	
+
+
+		// 인서트버튼 클릭이벤트
+		$("#btnSave").on("click", function(){
+			if (validationInst() == false) return false;
+			$("form[name=formSignup]").attr("action","/memberInst").submit();
+		});
+		
+		
+		//ajax
+		$("#btnLogin").on("click", function(){
+			
+			if(validation() == false) return false;
+			
+			$.ajax({
+				async: true 
+				,cache: false
+				,type: "post"
+				/* ,dataType:"json" */
+				,url: "/indexUsrLoginViewAjax"
+				/* ,data : $("#formLogin").serialize() */
+				,data : { "id" : $("#id").val(),
+					"password" : $("#password").val()}
+				,success: function(response) {
+					if(response.rt == "success") {
+						alert(response.rtMember.name);
+						location.href = "/";
+					} else {
+						alert("그런 회원 없습니다.");
+					}
+				}
+				,error : function(jqXHR, textStatus, errorThrown){
+					alert("ajaxUpdate " + jqXHR.textStatus + " : " + jqXHR.errorThrown);
+				}
+			});
+		});
+
+
+		validation = function() {
+			// if(!checkNull($("#ifmmId"), $.trim($("#ifmmId").val()), "아이디를 입력해 주세요!")) return false;
+			// if(!checkNull($("#ifmmPassword"), $.trim($("#ifmmPassword").val()), "비밀번호를 입력해 주세요!")) return false;
+		}
 
     </script>
 </body>
