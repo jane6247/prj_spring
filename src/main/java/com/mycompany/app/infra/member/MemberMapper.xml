@@ -94,8 +94,7 @@
    	</insert>
    	
    <select id="selectOneAjax" resultMap="resultMapObj">
-      SELECT
-         
+      SELECT 
          id
          ,password
       FROM

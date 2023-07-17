@@ -11,5 +11,6 @@ public interface MemberService {
 	public int delete(Member dto);
 	public int uelete(Member dto);
 	public int insert(Member dto);
+	public Member selectOneAjax(MemberVo vo);
 
 }

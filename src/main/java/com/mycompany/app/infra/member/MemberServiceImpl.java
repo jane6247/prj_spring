@@ -44,12 +44,12 @@ public class MemberServiceImpl implements MemberService{
 
 	@Override
 	public int selectOneCount(MemberVo vo) {
-		// TODO Auto-generated method stub
+		
 		return dao.selectOneCount(vo);
 	}
-
+	@Override
 	public Member selectOneAjax(MemberVo vo) {
-		// TODO Auto-generated method stub
+		
 		return dao.selectOneAjax(vo);
 	}
 	

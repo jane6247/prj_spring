@@ -63,7 +63,7 @@
       <section class="mainvisual">
         <div class="main_text">
           <p class="slide_in">Where next?</p>
-          <button type="button" class="btn btn_join">Join wander mate</button>
+          <button type="button" class="btn btn_join"><a href="index_02">Find wander mate</a></button>
         </div>
         <div class="pic pic_01"><img src="/resources/assets_wanderMate/img/seoul-tower new.avif" /></div>
         <div class="pic pic_02"><img src="/resources/assets_wanderMate/img/newwork.jpeg" /></div>
