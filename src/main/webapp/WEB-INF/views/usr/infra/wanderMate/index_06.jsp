@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>travel mate_06_profile</title>
-    <link rel="stylesheet" href="css/style_06.css" />
+    <link rel="stylesheet" href="/resources/assets_wanderMate/css/style_06.css" />
     <!-- google icon -->
     <link
       rel="stylesheet"
@@ -29,7 +29,7 @@
     <div class="wrap">
       <header class="header">
         <div class="logo">
-          <a href="index.html"><img src="img/main-logo.jpeg" /></a>
+          <a href="index"><img src="/resources/assets_wanderMate/img/main-logo.jpeg" /></a>
         </div>
 
         <ul class="menu">
@@ -43,8 +43,8 @@
               </div>
             
           </li>
-          <li><a class="underline" href="index_04.html">Host</a></li>
-          <li><a class="underline" href="index_02.html">Find Host</a></li>
+          <li><a class="underline" href="index04">Host</a></li>
+          <li><a class="underline" href="index02">Find Host</a></li>
         </ul>
         <ul class="Profile">
           <li>
@@ -55,7 +55,7 @@
             
              <div class="dropdown">
                 <div class="nav_img">
-                  <img src="img/profile_pic06.webp" />
+                  <img src="/resources/assets_wanderMate/img/profile_pic06.webp" />
                 </div>
                 <div class="dropdown-content">
 
@@ -88,7 +88,7 @@
         </div>
         <div class="input_contain">
         <div class="acco_img">
-                <img class="image" src="img/profile_pic06.webp" alt="">
+                <img class="image" src="/resources/assets_wanderMate/img/profile_pic06.webp" alt="">
                 <div class="middle">
                 <span class="material-symbols-outlined">
                     add_photo_alternate
@@ -101,7 +101,7 @@
             <input class="personal_info" type="text">
             <p>Date of brith</p>
             <input class="personal_info" type="date">
-            <p>Adress</p>
+            <p>Address</p>
             <input class="personal_info" type="text">
             <p>Gender</p>
             <input class="personal_info" type="text">

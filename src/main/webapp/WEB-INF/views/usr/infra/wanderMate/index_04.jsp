@@ -17,7 +17,7 @@
    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
  />
     <!-- css -->
-    <link rel="stylesheet" href="css/style_04.css" />
+    <link rel="stylesheet" href="/resources/assets_wanderMate/css/style_04.css" />
 
     <!-- fontawesome -->
     <script
@@ -33,7 +33,7 @@
       <div class="wrap">
         <header class="header">
           <div class="logo">
-            <a href="index.html"><img src="img/main-logo.jpeg" /></a>
+            <a href="index01"><img src="/resources/assets_wanderMate/img/main-logo.jpeg" /></a>
           </div>
   
           <ul class="menu">
@@ -47,8 +47,8 @@
                 </div>
               
             </li>
-            <li><a class="underline" href="index_04.html">Host</a></li>
-            <li><a class="underline" href="index_02.html">Find Host</a></li>
+            <li><a class="underline" href="index04">Host</a></li>
+            <li><a class="underline" href="index02">Find Host</a></li>
           </ul>
           <ul class="Profile">
             <li>
@@ -59,11 +59,11 @@
               
                <div class="dropdown">
                   <div class="nav_img">
-                    <img src="img/profile_pic03.webp" alt="" />
+                    <img src="/resources/assets_wanderMate/img/profile_pic03.webp" alt="" />
                   </div>
                   <div class="dropdown-content">
   
-                    <a class="hoverable" href="index_06.html">
+                    <a class="hoverable" href="index06">
                       <span
                         class="material-symbols-outlined"
                         style="font-size: x-large">
@@ -88,8 +88,8 @@
         </div>
   
         <ul class="breadcrumb">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index_02.html">Host</a></li>
+          <li><a href="index01">Home</a></li>
+          <li><a href="index02">Host</a></li>
           <li>Publication of an ad</li>
           
         </ul>
@@ -165,8 +165,8 @@
           <button id="close"><i class="fa-solid fa-xmark"></i></button>
           <h2>Congratulations!</h2>
           <p>Your ad has been successfully published. 😊</p>
-          <button id="close_ad"><a href="index_03.html">View the ad</a></button>
-          <div class="modal-img"><img src="img/friendship.jpg" alt=""></div>
+          <button id="close_ad"><a href="index03">View the ad</a></button>
+          <div class="modal-img"><img src="/resources/assets_wanderMate/img/friendship.jpg" alt=""></div>
         </div>
       </div>
 

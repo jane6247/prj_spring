@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>travel mate_03</title>
-    <link rel="stylesheet" href="css/style_03.css" />
+    <link rel="stylesheet" href="/resources/assets_wanderMate/css/style_03.css" />
     <!-- google icon -->
     <link
       rel="stylesheet"
@@ -35,7 +35,7 @@
     <div class="wrap">
       <header class="header">
         <div class="logo">
-          <a href="index.html"><img src="/resources/assets_wanderMate/img/main-logo.jpeg" /></a>
+          <a href="index01"><img src="/resources/assets_wanderMate/img/main-logo.jpeg" /></a>
         </div>
 
         <ul class="menu">
@@ -49,8 +49,8 @@
               </div>
             
           </li>
-          <li><a class="underline" href="index_04.html">Host</a></li>
-          <li><a class="underline" href="index_02.html">Find Host</a></li>
+          <li><a class="underline" href="index04">Host</a></li>
+          <li><a class="underline" href="index02">Find Host</a></li>
         </ul>
         <ul class="Profile">
           <li>
@@ -61,11 +61,11 @@
             
              <div class="dropdown">
                 <div class="nav_img">
-                  <img src="img/profile_pic03.webp" alt="" />
+                  <img src="/resources/assets_wanderMate/img/profile_pic03.webp" alt="" />
                 </div>
                 <div class="dropdown-content">
 
-                  <a class="hoverable" href="index_06.html">
+                  <a class="hoverable" href="index06">
                     <span
                       class="material-symbols-outlined"
                       style="font-size: x-large">
@@ -87,9 +87,9 @@
       </header>
       <div class="breadcrumb_wrap">
       <ul class="breadcrumb">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index_02.html">Find Host</a></li>
-        <li><a href="index_03.html">Card of host</a></li>
+        <li><a href="index01">Home</a></li>
+        <li><a href="index02">Find Host</a></li>
+        <li><a href="index03">Card of host</a></li>
         <li>Jessica</li>
       </ul>
 </div>

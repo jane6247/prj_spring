@@ -72,11 +72,9 @@
                   <a class="hoverable" href=""><p>Hello World!</p></a>
                   <a class="hoverable" href=""
                     ><span class="material-symbols-outlined"> logout<p>Log out</p> </span>
-                    </a
-                  >
+                    </a>
                 </div>
-              </div></a
-            >
+              </div></a>
           </li>
         </ul>
       </header>
@@ -166,7 +164,7 @@
               </div>
             </div>
             <div class="card_bottom">
-              <a href="index_03.html"
+              <a href="index03"
                 ><i class="fa-solid fa-arrow-right"></i
               ></a>
             </div>
@@ -222,7 +220,7 @@
               </div>
             </div>
             <div class="card_bottom">
-              <a href="index_03.html"
+              <a href="index03"
                 ><i class="fa-solid fa-arrow-right"></i
               ></a>
             </div>
@@ -277,7 +275,7 @@
               </div>
             </div>
             <div class="card_bottom">
-              <a href="index_03.html"
+              <a href="index03"
                 ><i class="fa-solid fa-arrow-right"></i
               ></a>
             </div>
@@ -333,7 +331,7 @@
               </div>
             </div>
             <div class="card_bottom">
-              <a href="index_03.html"
+              <a href="index03"
                 ><i class="fa-solid fa-arrow-right"></i
               ></a>
             </div>
@@ -389,7 +387,7 @@
               </div>
             </div>
             <div class="card_bottom">
-              <a href="index_03.html"
+              <a href="index03"
                 ><i class="fa-solid fa-arrow-right"></i
               ></a>
             </div>
@@ -445,7 +443,7 @@
               </div>
             </div>
             <div class="card_bottom">
-              <a href="index_03.html"
+              <a href="index03"
                 ><i class="fa-solid fa-arrow-right"></i
               ></a>
             </div>
