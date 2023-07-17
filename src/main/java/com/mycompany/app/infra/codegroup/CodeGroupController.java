@@ -47,14 +47,7 @@ public class CodeGroupController {
 		
 	
 
-	   
-	   
-	   @RequestMapping("/index")
-	   public String index_01(){
-	   return "usr/infra/wanderMate/index_01";  
-	  
-	  }
-		
+	
 	
 	
 	@RequestMapping("/codeGroupUpdt")

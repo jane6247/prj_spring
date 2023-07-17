@@ -182,41 +182,7 @@
         </div>
       </section>
 
-      <footer class="footer">
-        <div class="footer_text logo_02">
-          <img src="img/footer.jpeg" />
-        </div>
-
-        <ul class="footer_text about">
-          <li>About us</li>
-          <li>Find host</li>
-          <li>host</li>
-          <li>Profile</li>
-        </ul>
-        <ul class="footer_text faq">
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Verification</a></li>
-          <li><a href="#">Safety</a></li>
-          <li><a href="#">Settings</a></li>
-        </ul>
-        <ul class="footer_text tel">
-          <li><a href="index_07.html">Contacts</a></li>
-          <li><a href="#">Support</a></li>
-          <li><a href="#">+ 010 7771111</a></li>
-          <li><a href="#">Help@gmail.com</a></li>
-        </ul>
-        <ul class="footer_text sns">
-          <li>
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa-solid fa-phone"></i></a>
-          </li>
-        </ul>
-      </footer>
+     <%@include file="../../include/includeWanderFooter.jsp"%>
     </div>
 
     <script>

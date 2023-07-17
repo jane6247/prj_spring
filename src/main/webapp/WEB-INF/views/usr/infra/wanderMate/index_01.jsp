@@ -32,7 +32,7 @@
     <div class="wrap">
       <header class="header">
         <div class="logo">
-          <a href="index.html"><img src="/resources/assets_wanderMate/img/main-logo.jpeg" /></a>
+          <a href="index01"><img src="/resources/assets_wanderMate/img/main-logo.jpeg" /></a>
         </div>
 
         <ul class="menu">
@@ -179,19 +179,19 @@
         <p class="some">Some statistics</p>
         <div class="num_wrap">
           <div class="num_stat">
-            <span class="counter" style="color: #346751">150435</span><br />
+            <span span class="counter" data-start="150249" data-end="150435" style="color: #346751">150435</span><br />
             <p>Users of our service</p>
           </div>
           <div class="num_stat">
-            <span class="counter" style="color: #bf9e80">186 </span><br />
+            <span span class="counter" data-start="0" data-end="186" style="color: #bf9e80">186 </span><br />
             <p>Countries for travel</p>
           </div>
           <div class="num_stat">
-            <span class="counter" style="color: #5196a6">45384 </span><br />
+            <span span class="counter" data-start="45198" data-end="45384" style="color: #5196a6">45384 </span><br />
             <p>Hoeme visited</p>
           </div>
           <div class="num_stat">
-            <span class="counter" style="color: #f2a341">43586 </span><br />
+            <span span class="counter" data-start="43400" data-end="43586" style="color: #f2a341">43586 </span><br />
             <p>Positive reviews</p>
           </div>
         </div>
@@ -201,15 +201,43 @@
  <%@include file="../../include/includeWanderFooter.jsp"%>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-    <script>
-    jQuery(document).ready(function($){
-    	
-    	$('.counter').counterUp({
-    	    delay: 10,
-    	    time: 1000
-    	});
-    });
+   <script>
+
+   function counterUp(target, start, end, duration) {
+	   var range = end - start;
+	   var current = start;
+	   var increment = end > start ? 1 : -1;
+	   var stepTime = Math.abs(Math.floor(duration / range));
+	   var timer = setInterval(function() {
+	     current += increment;
+	     target.innerHTML = current;
+	     if ((increment > 0 && current >= end) || (increment < 0 && current <= end)) {
+	       clearInterval(timer);
+	     }
+	   }, stepTime);
+	 }
+
+	 var counterElements = document.getElementsByClassName("counter");
+	 var countersActivated = [];
+
+	 function checkScroll() {
+	   for (var i = 0; i < counterElements.length; i++) {
+	     var elementTop = counterElements[i].getBoundingClientRect().top;
+	     var windowHeight = window.innerHeight;
+
+	     if (elementTop < windowHeight && !countersActivated[i]) {
+	       var start = parseInt(counterElements[i].getAttribute("data-start"), 10);
+	       var end = parseInt(counterElements[i].getAttribute("data-end"), 10);
+	       counterUp(counterElements[i], start, end, 2000);
+	       countersActivated[i] = true;
+	     }
+	   }
+	 }
+
+	 window.addEventListener("scroll", checkScroll);
+
+
+
     </script>
   </body>
 </html>
