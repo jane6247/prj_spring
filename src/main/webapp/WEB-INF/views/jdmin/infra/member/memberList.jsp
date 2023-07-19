@@ -7,7 +7,8 @@
 <%@include file="../../include/includeJdmHeader.jsp"%>
 <%@include file="../../include/includeJdmSlideMenu.jsp"%>
 
- 	 
+
+ 	  <jsp:useBean id="CodeServiceImpl" class="com.mycompany.app.infra.code.CodeServiceImpl"/>
 
     <section class="section">
       <div class="row">
@@ -46,7 +47,12 @@
                     <th scope="col">Age</th>
                   </tr>
                 </thead>
-                <tbody>			
+                <tbody>		
+                
+                
+                <c:set var="listCodeGender" value="${CodeServiceImpl.selectListCachedCode('1')}"/>
+                
+                	
 	<c:choose>
 	<c:when test="${fn:length(list) eq 0}">
 		<tr>
@@ -63,7 +69,12 @@
                     <td><c:out value="${list.firstName }"/></td>
                     <td><c:out value="${list.lastName }"/></td>
                     <td><c:out value="${list.emailFull }"/></td>
-                    <td><c:out value="${list.gender }"/></td>
+                   <td><c:forEach items="${listCodeGender}" var="listGender" varStatus="statusGender">
+																<c:if test="${list.gender eq listGender.seq}">
+																	<c:out value="${listGender.name }"/>
+																</c:if> 
+															</c:forEach></td>
+                    
                     <td><c:out value="${list.age }"/></td>
                   </tr>
 		</c:forEach>

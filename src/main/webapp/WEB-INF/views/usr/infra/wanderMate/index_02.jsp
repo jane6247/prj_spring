@@ -44,8 +44,8 @@
               </div>
             
           </li>
-          <li><a class="underline" href="index_04.html">Host</a></li>
-          <li><a class="underline" href="index_02.html">Find Host</a></li>
+          <li><a class="underline" href="index04">Host</a></li>
+          <li><a class="underline" href="index02">Find Host</a></li>
         </ul>
         <ul class="Profile">
           <li>
@@ -60,7 +60,7 @@
                 </div>
                 <div class="dropdown-content">
 
-                  <a class="hoverable" href="index.html">
+                  <a class="hoverable" href="index01">
                     <span
                       class="material-symbols-outlined"
                       style="font-size: x-large">
