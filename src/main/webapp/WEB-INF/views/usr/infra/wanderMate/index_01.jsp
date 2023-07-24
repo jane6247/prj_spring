@@ -32,7 +32,7 @@
     <div class="wrap">
       <header class="header">
         <div class="logo">
-          <a href="index01"><img src="/resources/assets_wanderMate/img/main-logo.jpeg" /></a>
+          <a href="mainview"><img src="/resources/assets_wanderMate/img/main-logo.jpeg" /></a>
         </div>
 
         <ul class="menu">
@@ -46,8 +46,8 @@
               </div>
             </div>
           </li>
-          <li><a class="underline" href="index_04.html">Host</a></li>
-          <li><a class="underline" href="index_02.html">Find Host</a></li>
+          <li><a class="underline" href="Publication">Host</a></li>
+          <li><a class="underline" href="findhostview">Find Host</a></li>
         </ul>
 
         <div class="button">
@@ -63,7 +63,7 @@
       <section class="mainvisual">
         <div class="main_text">
           <p class="slide_in">Where next?</p>
-          <button type="button" class="btn btn_join"><a href="index_02">Find wander mate</a></button>
+          <button type="button" class="btn btn_join"><a href="findhostview">Find wander mate</a></button>
         </div>
         <div class="pic pic_01"><img src="/resources/assets_wanderMate/img/seoul-tower new.avif" /></div>
         <div class="pic pic_02"><img src="/resources/assets_wanderMate/img/newwork.jpeg" /></div>
@@ -82,7 +82,7 @@
         <div class="find_box Find_host">
           <img src="/resources/assets_wanderMate/img/map.jpeg" />
           <span>
-            <a class="find_btn" href="index_02.html"
+            <a class="find_btn" href="findhostview"
               >Find host<i class="fa-solid fa-location-arrow"></i
             ></a>
           </span>

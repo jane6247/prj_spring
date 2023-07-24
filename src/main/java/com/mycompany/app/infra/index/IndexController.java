@@ -11,38 +11,38 @@ public class IndexController {
 		return "usr/infra/biography/biographyUserView";
 	}
 	
-	   @RequestMapping("/index01")
+	   @RequestMapping("/mainview")
 	   public String index_01(){
 	   return "usr/infra/wanderMate/index_01";  
 	  
 	  }
 	   
-	   @RequestMapping("/index02")
+	   @RequestMapping("/findhostview")
 	   public String index_02(){
 	   return "usr/infra/wanderMate/index_02";  
 	  
 	  }
-	   @RequestMapping("/index03")
+	   @RequestMapping("/findepostview")
 	   public String index_03(){
 	   return "usr/infra/wanderMate/index_03";  
 	  
 	  }
-	   @RequestMapping("/index04")
+	   @RequestMapping("/Publication")
 	   public String index_04(){
 	   return "usr/infra/wanderMate/index_04";  
 	  
 	  }
-	   @RequestMapping("/index05")
+	   @RequestMapping("/hostpost")
 	   public String index_05(){
 	   return "usr/infra/wanderMate/index_05";  
 	  
 	  }
-	   @RequestMapping("/index06")
+	   @RequestMapping("/account")
 	   public String index_06(){
 	   return "usr/infra/wanderMate/index_06";  
 	  
 	  }
-	   @RequestMapping("/index07")
+	   @RequestMapping("/contact")
 	   public String index_07(){
 	   return "usr/infra/wanderMate/index_07";  
 	  

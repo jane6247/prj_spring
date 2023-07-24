@@ -30,7 +30,7 @@
     <div class="wrap">
       <header class="header">
         <div class="logo">
-          <a href="index01"><img src="/resources/assets_wanderMate/img/main-logo.jpeg" /></a>
+          <a href="mainview"><img src="/resources/assets_wanderMate/img/main-logo.jpeg" /></a>
         </div>
 
         <ul class="menu">
@@ -45,7 +45,7 @@
             
           </li>
           <li><a class="underline" href="index04">Host</a></li>
-          <li><a class="underline" href="index02">Find Host</a></li>
+          <li><a class="underline" href="findhostview">Find Host</a></li>
         </ul>
         <ul class="Profile">
           <li>
@@ -84,8 +84,8 @@
       </div>
 
       <ul class="breadcrumb">
-        <li><a href="index01">Home</a></li>
-        <li><a href="index02">Find Host</a></li>
+        <li><a href="mainview">Home</a></li>
+        <li><a href="findhostview">Find Host</a></li>
         <li>search</li>
       </ul>
       <section>
@@ -98,9 +98,9 @@
           </select>
           <select class="search-input" id="genre-input">
             <option value="" disabled selected>Type</option>
-            <option value="액션">Accommodation</option>
-            <option value="로맨스">Restaurant</option>
-            <option value="코미디">Travel</option>
+            <option value="숙소">Accommodation</option>
+            <option value="식당">Restaurant</option>
+            <option value="일정">Travel</option>
           </select>
           <input type="date" class="search-input" id="calendar-input" />
 
@@ -275,7 +275,7 @@
               </div>
             </div>
             <div class="card_bottom">
-              <a href="index03"
+              <a href="findepostview"
                 ><i class="fa-solid fa-arrow-right"></i
               ></a>
             </div>
@@ -331,7 +331,7 @@
               </div>
             </div>
             <div class="card_bottom">
-              <a href="index03"
+              <a href="findepostview"
                 ><i class="fa-solid fa-arrow-right"></i
               ></a>
             </div>
@@ -443,7 +443,7 @@
               </div>
             </div>
             <div class="card_bottom">
-              <a href="index03"
+              <a href="findepostview"
                 ><i class="fa-solid fa-arrow-right"></i
               ></a>
             </div>
