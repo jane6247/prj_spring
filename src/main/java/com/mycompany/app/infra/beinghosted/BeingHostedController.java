@@ -1,11 +1,11 @@
-package com.mycompany.app.infra.index;
+package com.mycompany.app.infra.beinghosted;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class IndexController {
-
+public class BeingHostedController {
+	
 	@RequestMapping("/biographyUsrView")
 	public String biographyUsrView() {
 		return "usr/infra/biography/biographyUserView";
@@ -48,5 +48,4 @@ public class IndexController {
 	  
 	  }
 
-	
 }

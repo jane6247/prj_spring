@@ -25,6 +25,9 @@
       crossorigin="anonymous"
     ></script>
     <!-- <script src="js/travel.js"></script> -->
+    
+    <!-- datepicker -->
+    <link href="https://fonts.googleapis.com/css?family=Coda|Open+Sans" rel="stylesheet">
 
 
   </head>
@@ -128,6 +131,7 @@
             <div>          
               <textarea class="textarea_you"></textarea>
             </div>
+            
         </section>
         <section class="input_right">
          <div><span>Adding photo:</span></div>
@@ -148,7 +152,7 @@
         
 
           <div>
-            <span>Additional information:(optional)</span>
+            <span>Language that I know</span>
           </div>
           <div>        
             <textarea class="textarea_additional"></textarea>
@@ -157,6 +161,8 @@
           
          
         </section>
+        
+        
       
 
        </main>

@@ -255,11 +255,11 @@ ul.breadcrumb li a:hover {
   border: 2px solid rgba(0, 0, 0, 0.09);
   padding: 5px 5px;
   width: 500px;
-  height: 170px;
+  height: 45px;
   border-radius: 10px;
   margin-top: 10px;
   margin-bottom: 20px;
-  resize: none;
+  
 }
 #open {
   width: 500px;
@@ -454,3 +454,6 @@ ul.breadcrumb li a:hover {
 .sns li {
   font-size: x-large;
 }
+
+/* datepicker*/
+
