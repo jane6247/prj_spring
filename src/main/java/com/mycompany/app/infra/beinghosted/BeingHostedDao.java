@@ -18,7 +18,7 @@ public class BeingHostedDao {
 	@Resource(name = "sqlSession")
 	private SqlSession sqlSession;
 	
-	private static String namespace = "com.mycompany.app.infra.code.CodeMapper";
+	private static String namespace = "com.mycompany.app.infra.beinghosted.BeingHostedMapper";
 
 	public int selectOneCount(BeingHostedVo vo){ return sqlSession.selectOne(namespace + ".selectOneCount", vo); }
 	public List<BeingHosted> selectList(BeingHostedVo vo) {return sqlSession.selectList(namespace + ".selectList", vo); }	

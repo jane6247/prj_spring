@@ -1,4 +1,4 @@
-package com.mycompany.app.infra.beinghosted;
+ package com.mycompany.app.infra.beinghosted;
 
 public class BeingHosted {
 	private String seq;

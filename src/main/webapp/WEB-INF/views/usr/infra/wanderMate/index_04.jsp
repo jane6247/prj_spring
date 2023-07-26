@@ -151,8 +151,26 @@
       
         
 
-          <div>
+         <div>
             <span>Language that I know</span>
+          </div>
+          <div>        
+            <textarea class="textarea_additional"></textarea>
+          </div>
+          <div>
+            <span>Budget</span>
+          </div>
+          <div>        
+            <textarea class="textarea_additional"></textarea>
+          </div>
+          <div>
+            <span>Date</span>
+          </div>
+          <div>        
+            <textarea class="textarea_additional"></textarea>
+          </div>
+          <div>
+            <span>Days</span>
           </div>
           <div>        
             <textarea class="textarea_additional"></textarea>

@@ -1,10 +1,19 @@
 package com.mycompany.app.infra.beinghosted;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class BeingHostedController {
+	
+	
+	@Autowired
+	BeingHostedServiceImpl service;
 	
 	@RequestMapping("/biographyUsrView")
 	public String biographyUsrView() {
@@ -47,5 +56,27 @@ public class BeingHostedController {
 	   return "usr/infra/wanderMate/index_07";  
 	  
 	  }
+	   
+	   
+	   
+	   @RequestMapping("/beingHostedList")
+	   public String beingHostedList(@ModelAttribute("vo") beingHostedListVo vo, Model model) {
+			
+			vo.setShKeyword(vo.getShKeyword() == null ? "" : vo.getShKeyword());
+		
+			vo.setParamsPaging(service.selectOneCount(vo));
+			
+			if(vo.getTotalRows() > 0) {
+				List<beingHostedList> list = service.selectList(vo);
+				model.addAttribute("list", list);
+
+			} else {
+
+			}
+			
+			return "jdmin/infra/beinghosted/beingHostedList";
+			
+		}
+	   
 
 }

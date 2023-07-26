@@ -106,8 +106,8 @@
             </a>
           </li>
           <li>
-            <a href="forms-layouts.html">
-              <i class="bi bi-circle"></i><span>Form Layouts</span>
+            <a href="beingHostedList">
+              <i class="bi bi-circle"></i><span>Being Hosted</span>
             </a>
           </li>
           <li>
