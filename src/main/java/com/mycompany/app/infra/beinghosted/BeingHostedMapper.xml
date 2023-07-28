@@ -3,16 +3,17 @@
     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
     
- <mapper namespace="com.mycompany.app.infra.beinghosted.BeingHosted">
+ <mapper namespace="com.mycompany.app.infra.beinghosted.BeingHostedMapper">
 
 <resultMap id="resultMapObj" type="com.mycompany.app.infra.beinghosted.BeingHosted"></resultMap>
 
 		<sql id="ddd">
-			seq
-			,aboutMe
+			 
+			aboutMe
 			,aboutPlan
 			,note
 			,language
+			,member_seq
 			,budget
 			,date
 			,days
@@ -70,17 +71,17 @@
 	   	
 	   	<insert id="insert">
 	   		INSERT INTO beingHosted (
-	   			seq
-				,aboutMe
+				aboutMe
 				,aboutPlan
 				,note
 				,language
+				,member_seq
 				,budget
 				,date
 				,days
 	   			
 	   		) values (
-	   		    #{seq}
+	   		   #{member_seq}
 	   		   ,#{aboutMe}
 	   		   ,#{aboutPlan}
 	   		   ,#{note}
@@ -88,17 +89,18 @@
 	   		   ,#{budget}
 	   		   ,#{date}
 	   		   ,#{days}
-	   		
 	   		)
 	   	</insert>   	
    
 		<select id="selectListCachedBeingHostedArrayList" resultMap="resultMapObj">
 			SELECT
-				seq
+			
+			member_seq
 			,aboutMe
 			,aboutPlan
 			,note
 			,language
+			
 			,budget
 			,date
 			,days

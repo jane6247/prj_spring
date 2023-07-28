@@ -45,10 +45,10 @@
                   </div>
                 </div>
                 
-                <div class="row mb-3">
+              <div class="row mb-3">
                   <label for="inputText" class="col-sm-2 col-form-label">CodeGroup_seq</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="CodeGroup_seq" id="CodeGroup_seq" value="<c:out value="${item.CodeGroup_seq }"/>">
+                    <input type="text" class="form-control" name="codeGroup_seq" id="codeGroup_seq" value="<c:out value="${item.codeGroup_seq }"/>">
                   </div>
                 </div>
 

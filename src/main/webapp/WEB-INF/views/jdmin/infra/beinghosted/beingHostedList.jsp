@@ -38,11 +38,11 @@
                 <thead>
                   <tr>
                     <th scope="col">#</th>
+                    <th scope="col">member_seq</th>
                     <th scope="col">aboutMe</th>
                     <th scope="col">aboutPlan</th>
                     <th scope="col">note</th>
                     <th scope="col">language</th>
-                    <th scope="col">member_seq</th>
                     <th scope="col">budget</th>
                     <th scope="col">date</th>
                     <th scope="col">days</th>
@@ -63,8 +63,15 @@
 		<c:forEach items="${list}" var="list" varStatus="status">
 		          <tr>
                     <th scope="row"><c:out value="${list.seq }"/></th>
-                    <td><a href="beingHostedForm?seq=<c:out value="${list.seq }"/>"><c:out value="${list.name }"/></a></td>
-                    <td><c:out value="${list.aboutMe }"/></td>
+                    <td><c:out value="${list.member_seq }"/></td>
+                     
+                    <td><a href="beingHostedForm?seq=<c:out value="${list.seq }"/>"><c:out value="${list.aboutMe }"/></a></td>
+                    <td><c:out value="${list.aboutPlan }"/></td>
+                    <td><c:out value="${list.note }"/></td>
+                    <td><c:out value="${list.language }"/></td>     
+                    <td><c:out value="${list.budget }"/></td>
+                    <td><c:out value="${list.date }"/></td>
+                    <td><c:out value="${list.days }"/></td>
                     
                   </tr>
                   
@@ -104,13 +111,14 @@
 		        </div>
 		    </div>
 		</div>
-						<a href="codeForm"><button type="button" class="btn btn-primary" id="btn">Add</button></a>
+						
             </div>
           </div>
 
         </div>
       </div>
     </section>
+    <a href="beingHostedForm"><button type="button" class="btn btn-primary" id="btn">Add</button></a>
 
   </main><!-- End #main -->
 

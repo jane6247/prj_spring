@@ -97,6 +97,8 @@
           
         </ul>
   
+  
+   <form name="ad" method="post">   
        <main class="main_input"> 
         <div class="input_wrap">
          <section class="input_left">
@@ -104,92 +106,85 @@
               <span>Adress:</span>
             </div>
             <div>
-              <textarea class="textarea_address" ></textarea>
+              <input type="text" name="shKeyword" class="textarea_address" >
             </div>
             <div>
               <span>Maximun number of people:</span>
             </div>
             <div>
-              <textarea class="textarea_address" ></textarea>
+              <input type="text" name="shKeyword" class="textarea_address" >
             </div>
-
             <div>
               <span>About plan:</span>
             </div>
             <div>
-             <textarea class="textarea_plan"></textarea>
+             <input type="text" name="aboutPlan" class="textarea_plan">
             </div>
             <div>
-              <span>About you:</span>
+              <span>About me:</span>
             </div>
             <div>         
-              <textarea class="textarea_you"></textarea>
+              <input type="text" name="aboutMe" class="textarea_you">
             </div>
             <div>
               <span>Travel conditions:</span>
             </div>
             <div>          
-              <textarea class="textarea_you"></textarea>
+              <input type="text" name="note" class="textarea_you">
             </div>
             
-        </section>
-        <section class="input_right">
-         <div><span>Adding photo:</span></div>
-          <div class="container image-slider">
+         </section>
+         	<section class="input_right">
+	           <div><span>Adding photo:</span></div>
+	           <div class="container image-slider">
             
+	            <input
+	              type="file"
+	              id="image-input"
+	              accept="image/*"
+	              style="display: none"
+	            />
+	            <button class="slider-button prev-button">&#8249;</button>
+	            <button class="slider-button next-button">&#8250;</button>
+	            <button class="insert-button">Img</button>
+	          </div>
+	          <div>
+	            <span>Language that I know</span>
+	          </div>
+	          <div>        
+	            <input type="text" name="language" class="textarea_additional">
+	          </div>
+	          <div>
+	            <span>Budget</span>
+	          </div>
+	          <div>        
+	            <input type="text" name="budget" class="textarea_additional">
+	          </div>
+	          <div>
+	            <span>Date</span>
+	          </div>
+	          <div>        
+	            <input type="text" name="date" class="textarea_additional">
+	          </div>
+	          <div>
+	            <span>Days</span>
+	          </div>
+	          <div>        
+	            <input type="text" name="days" class="textarea_additional">
+	          </div>
+	          <button id="open" class="" type="button"><p>Post an ad</p></button>    
           
-            <input
-              type="file"
-              id="image-input"
-              accept="image/*"
-              style="display: none"
-            />
-            <button class="slider-button prev-button">&#8249;</button>
-            <button class="slider-button next-button">&#8250;</button>
-            <button class="insert-button">Img</button>
-          </div>
-      
-        
-
-         <div>
-            <span>Language that I know</span>
-          </div>
-          <div>        
-            <textarea class="textarea_additional"></textarea>
-          </div>
-          <div>
-            <span>Budget</span>
-          </div>
-          <div>        
-            <textarea class="textarea_additional"></textarea>
-          </div>
-          <div>
-            <span>Date</span>
-          </div>
-          <div>        
-            <textarea class="textarea_additional"></textarea>
-          </div>
-          <div>
-            <span>Days</span>
-          </div>
-          <div>        
-            <textarea class="textarea_additional"></textarea>
-          </div>
-          <button id="open" type="button"><p>Post an ad</p></button>    
-          
-         
-        </section>
-        
-        
-      
-
+       	 </section>
        </main>
+      </form> 
+       
+       <!--modal show up -->
        <div class="modal-container" id="modal_container">
         <div class="modal">
           <button id="close"><i class="fa-solid fa-xmark"></i></button>
           <h2>Congratulations!</h2>
           <p>Your ad has been successfully published. 😊</p>
-          <button id="close_ad"><a href="index03">View the ad</a></button>
+          <button type="button" id="close_ad">View the ad</button>
           <div class="modal-img"><img src="/resources/assets_wanderMate/img/friendship.jpg" alt=""></div>
         </div>
       </div>
@@ -197,6 +192,9 @@
     
        <%@include file="../../include/includeWanderFooter.jsp"%>
       </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+      
+      
       <script>
         const open = document.getElementById('open');
         const modalContainer = document.getElementById('modal_container');
@@ -209,6 +207,12 @@
         close.addEventListener('click', () => {
           modalContainer.style.display = 'none';
         });
+        
+     // 인서트버튼 클릭이벤트
+		$("#close_ad").on("click", function(){
+// 			if (validationInst() == false) return false;
+			$("form[name=ad]").attr("action","/beingHostedListInst").submit();
+		});
 
 
         const prevButton = document.querySelector(".prev-button");

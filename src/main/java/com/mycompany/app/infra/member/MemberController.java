@@ -75,14 +75,6 @@ public class MemberController {
 		return "redirect:/memberList";
 	}
 
-	
-	@RequestMapping("/indexUsrLoginView") public String indexUsrLoginView(){
-	
-		return "usr/infra/biography/login";
-	 
-	 }
-	 
-
 	// ajax
 	@ResponseBody
 	@RequestMapping("/indexUsrLoginViewAjax")

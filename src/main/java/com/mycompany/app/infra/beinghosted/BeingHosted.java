@@ -6,6 +6,7 @@ public class BeingHosted {
 	private String aboutPlan;
 	private String note;
 	private String language;
+	private Integer member_seq;
 	private Integer budget;
 	private Integer days;
 	private Integer date;
@@ -61,6 +62,12 @@ public class BeingHosted {
 	}
 	public void setDate(Integer date) {
 		this.date = date;
+	}
+	public Integer getMember_seq() {
+		return member_seq;
+	}
+	public void setMember_seq(Integer member_seq) {
+		this.member_seq = member_seq;
 	}
 	
 }

@@ -35,6 +35,7 @@ public class Code {
 	public void setCodeGroup_seq(String codeGroup_seq) {
 		this.codeGroup_seq = codeGroup_seq;
 	}
+
 //	public String getDelNy() {
 //		return delNy;
 //	}

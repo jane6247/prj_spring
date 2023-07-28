@@ -8,6 +8,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.mycompany.app.infra.code.Code;
+import com.mycompany.app.infra.member.Member;
+
+
 @Controller
 public class BeingHostedController {
 	
@@ -19,6 +23,13 @@ public class BeingHostedController {
 	public String biographyUsrView() {
 		return "usr/infra/biography/biographyUserView";
 	}
+	
+	@RequestMapping("/indexUsrLoginView") public String indexUsrLoginView(){
+		
+		return "usr/infra/biography/login";
+	 
+	 }
+	
 	
 	   @RequestMapping("/mainview")
 	   public String index_01(){
@@ -60,14 +71,14 @@ public class BeingHostedController {
 	   
 	   
 	   @RequestMapping("/beingHostedList")
-	   public String beingHostedList(@ModelAttribute("vo") beingHostedListVo vo, Model model) {
+	   public String beingHostedList(@ModelAttribute("vo") BeingHostedVo vo, Model model) {
 			
 			vo.setShKeyword(vo.getShKeyword() == null ? "" : vo.getShKeyword());
 		
 			vo.setParamsPaging(service.selectOneCount(vo));
 			
 			if(vo.getTotalRows() > 0) {
-				List<beingHostedList> list = service.selectList(vo);
+				List<BeingHosted> list = service.selectList(vo);
 				model.addAttribute("list", list);
 
 			} else {
@@ -76,6 +87,23 @@ public class BeingHostedController {
 			
 			return "jdmin/infra/beinghosted/beingHostedList";
 			
+		}
+	   
+		@RequestMapping("/beingHostedForm")
+		public String beingHostedForm(BeingHostedVo vo, Model model) {
+
+//			객체 한개를 가져와야 된다.
+			BeingHosted item = service.selectOne(vo);
+			
+			model.addAttribute("item", item);
+			
+			return "jdmin/infra/beinghosted/beingHostedList";
+		}
+			
+		@RequestMapping("/beingHostedListInst")
+		public String beingHostedListInst(BeingHosted dto) {
+			service.insert(dto);
+			return "redirect:/beingHostedList";
 		}
 	   
 

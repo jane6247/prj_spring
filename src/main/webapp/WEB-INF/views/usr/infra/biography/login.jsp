@@ -360,43 +360,43 @@ color: red; important;
             </div>
             
        <form name="formSignup" method="post">            
-    <div class="form sign-up">
-        <h2>Create your Account</h2>
-        <label>
-            <span>Id</span>
-            <input type="text" name="id" id="id" required />
-            <div class="invalid-feedback" id="idFeedback"></div>
-        </label>
-        <label>
-            <span>Password</span>
-            <input type="password" name="password" id="password" required />
-            <div class="invalid-feedback" id="passwordFeedback"></div>
-        </label>
-        <label>
-            <span>Email</span>
-            <input type="email" name="emailFull" id="emailFull" required />
-            <div class="invalid-feedback"  id="emailFeedback"></div>
-        </label>
-        <label>
-            <span>FirstName</span>
-            <input type="text" name="firstName" id="firstName" required />
-            <div class="invalid-feedback" id="nameFeedback"></div>
-        </label>
-        <label>
-            <span>LastName</span>
-            <input type="text" name="lastName" />
-        </label>
-        <label>
-            <span>Gender</span>
-            <input type="text" name="gender" />
-        </label>
-        <label>
-            <span>Age</span>
-            <input type="text" name="age" />
-        </label>
-              
-        <button id="btnSave" type="button" class="submit">Sign Up</button>
-    </div>
+	    <div class="form sign-up">
+	        <h2>Create your Account</h2>
+	        <label>
+	            <span>Id</span>
+	            <input type="text" name="id" id="id" required />
+	            <div class="invalid-feedback" id="idFeedback"></div>
+	        </label>
+	        <label>
+	            <span>Password</span>
+	            <input type="password" name="password" id="password" required />
+	            <div class="invalid-feedback" id="passwordFeedback"></div>
+	        </label>
+	        <label>
+	            <span>Email</span>
+	            <input type="email" name="emailFull" id="emailFull" required />
+	            <div class="invalid-feedback"  id="emailFeedback"></div>
+	        </label>
+	        <label>
+	            <span>FirstName</span>
+	            <input type="text" name="firstName" id="firstName" required />
+	            <div class="invalid-feedback" id="nameFeedback"></div>
+	        </label>
+	        <label>
+	            <span>LastName</span>
+	            <input type="text" name="lastName" />
+	        </label>
+	        <label>
+	            <span>Gender</span>
+	            <input type="text" name="gender" />
+	        </label>
+	        <label>
+	            <span>Age</span>
+	            <input type="text" name="age" />
+	        </label>
+
+	        <button id="btnSave" type="button" class="submit">Sign Up</button>
+	    </div>
 </form>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
