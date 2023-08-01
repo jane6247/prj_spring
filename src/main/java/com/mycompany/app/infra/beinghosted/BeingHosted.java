@@ -6,10 +6,12 @@ public class BeingHosted {
 	private String aboutPlan;
 	private String note;
 	private String language;
+	private String address;
 	private Integer member_seq;
 	private Integer budget;
 	private Integer days;
 	private Integer date;
+	private Integer maxPeople;
 	
 	
 	
@@ -68,6 +70,18 @@ public class BeingHosted {
 	}
 	public void setMember_seq(Integer member_seq) {
 		this.member_seq = member_seq;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public Integer getMaxPeople() {
+		return maxPeople;
+	}
+	public void setMaxPeople(Integer maxPeople) {
+		this.maxPeople = maxPeople;
 	}
 	
 }

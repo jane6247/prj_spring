@@ -8,12 +8,13 @@
 <resultMap id="resultMapObj" type="com.mycompany.app.infra.beinghosted.BeingHosted"></resultMap>
 
 		<sql id="ddd">
-			 
-			aboutMe
+			address
+			,maxPeople
+			,aboutMe
 			,aboutPlan
 			,note
 			,language
-			,member_seq
+			
 			,budget
 			,date
 			,days
@@ -71,17 +72,20 @@
 	   	
 	   	<insert id="insert">
 	   		INSERT INTO beingHosted (
-				aboutMe
+				address
+				,maxPeople
+				,aboutMe
 				,aboutPlan
 				,note
 				,language
-				,member_seq
+				
 				,budget
 				,date
 				,days
 	   			
 	   		) values (
-	   		   #{member_seq}
+	   		   #{address}
+	   		   ,#{maxPeople}
 	   		   ,#{aboutMe}
 	   		   ,#{aboutPlan}
 	   		   ,#{note}
@@ -95,7 +99,8 @@
 		<select id="selectListCachedBeingHostedArrayList" resultMap="resultMapObj">
 			SELECT
 			
-			member_seq
+			address
+			,maxPeople
 			,aboutMe
 			,aboutPlan
 			,note

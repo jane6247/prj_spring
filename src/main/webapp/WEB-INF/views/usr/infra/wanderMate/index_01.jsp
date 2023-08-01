@@ -51,10 +51,10 @@
         </ul>
 
         <div class="button">
-          <a href="login"
+          <a href="indexUsrLoginView"
             ><button type="button" class="btn btn1">Sign in</button></a
           >
-          <a href="wanderMate_register (4).html"
+          <a href="indexUsrLoginView"
             ><button type="button" class="btn btn2">Sign up</button></a
           >
         </div>

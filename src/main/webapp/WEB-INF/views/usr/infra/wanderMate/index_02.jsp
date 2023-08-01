@@ -44,7 +44,7 @@
               </div>
             
           </li>
-          <li><a class="underline" href="index04">Host</a></li>
+          <li><a class="underline" href="Publication">Host</a></li>
           <li><a class="underline" href="findhostview">Find Host</a></li>
         </ul>
         <ul class="Profile">

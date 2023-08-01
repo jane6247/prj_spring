@@ -36,7 +36,7 @@
       <div class="wrap">
         <header class="header">
           <div class="logo">
-            <a href="index01"><img src="/resources/assets_wanderMate/img/main-logo.jpeg" /></a>
+            <a href="mainview"><img src="/resources/assets_wanderMate/img/main-logo.jpeg" /></a>
           </div>
   
           <ul class="menu">
@@ -50,8 +50,8 @@
                 </div>
               
             </li>
-            <li><a class="underline" href="index04">Host</a></li>
-            <li><a class="underline" href="index02">Find Host</a></li>
+            <li><a class="underline" href="Publication">Host</a></li>
+            <li><a class="underline" href="findhostview">Find Host</a></li>
           </ul>
           <ul class="Profile">
             <li>
@@ -91,8 +91,8 @@
         </div>
   
         <ul class="breadcrumb">
-          <li><a href="index01">Home</a></li>
-          <li><a href="index02">Host</a></li>
+          <li><a href="mainview">Home</a></li>
+          <li><a href="findhostview">Host</a></li>
           <li>Publication of an ad</li>
           
         </ul>
@@ -115,19 +115,19 @@
               <input type="text" name="shKeyword" class="textarea_address" >
             </div>
             <div>
-              <span>About plan:</span>
+              <span>About me:</span>
             </div>
             <div>
              <input type="text" name="aboutPlan" class="textarea_plan">
             </div>
             <div>
-              <span>About me:</span>
+              <span>About plan:</span>
             </div>
             <div>         
               <input type="text" name="aboutMe" class="textarea_you">
             </div>
             <div>
-              <span>Travel conditions:</span>
+              <span>Note:</span>
             </div>
             <div>          
               <input type="text" name="note" class="textarea_you">
@@ -149,25 +149,25 @@
 	            <button class="insert-button">Img</button>
 	          </div>
 	          <div>
-	            <span>Language that I know</span>
+	            <span>Language that I know:</span>
 	          </div>
 	          <div>        
 	            <input type="text" name="language" class="textarea_additional">
 	          </div>
 	          <div>
-	            <span>Budget</span>
+	            <span>Budget:</span>
 	          </div>
 	          <div>        
 	            <input type="text" name="budget" class="textarea_additional">
 	          </div>
 	          <div>
-	            <span>Date</span>
+	            <span>Date:</span>
 	          </div>
 	          <div>        
 	            <input type="text" name="date" class="textarea_additional">
 	          </div>
 	          <div>
-	            <span>Days</span>
+	            <span>Days:</span>
 	          </div>
 	          <div>        
 	            <input type="text" name="days" class="textarea_additional">
@@ -214,8 +214,8 @@
 			$("form[name=ad]").attr("action","/beingHostedListInst").submit();
 		});
 
-
-        const prevButton = document.querySelector(".prev-button");
+dhoehtlfkrdmf wlrmaghwksdmfgkrh
+      const prevButton = document.querySelector(".prev-button");
       const nextButton = document.querySelector(".next-button");
       const imageSlider = document.querySelector(".image-slider");
       const insertButton = document.querySelector(".insert-button");
