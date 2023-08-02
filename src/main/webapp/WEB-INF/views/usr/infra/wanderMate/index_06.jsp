@@ -29,7 +29,7 @@
     <div class="wrap">
       <header class="header">
         <div class="logo">
-          <a href="index"><img src="/resources/assets_wanderMate/img/main-logo.jpeg" /></a>
+          <a href="mainview"><img src="/resources/assets_wanderMate/img/main-logo.jpeg" /></a>
         </div>
 
         <ul class="menu">
@@ -43,8 +43,8 @@
               </div>
             
           </li>
-          <li><a class="underline" href="index04">Host</a></li>
-          <li><a class="underline" href="index02">Find Host</a></li>
+          <li><a class="underline" href="Publication">Host</a></li>
+          <li><a class="underline" href="findhostview">Find Host</a></li>
         </ul>
         <ul class="Profile">
           <li>
@@ -59,7 +59,7 @@
                 </div>
                 <div class="dropdown-content">
 
-                  <a class="hoverable" href="index_06.html">
+                  <a class="hoverable" href="account">
                     <span
                       class="material-symbols-outlined"
                       style="font-size: x-large">

@@ -45,11 +45,6 @@ public class BeingHostedController {
 	  
 	  }
 	   
-	   @RequestMapping("/findhostview")
-	   public String index_02(){
-	   return "usr/infra/wanderMate/index_02";  
-	  
-	  }
 	   @RequestMapping("/findepostview")
 	   public String index_03(){
 	   return "usr/infra/wanderMate/index_03";  

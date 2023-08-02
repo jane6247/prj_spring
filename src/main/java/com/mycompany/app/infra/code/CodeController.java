@@ -71,8 +71,4 @@ public class CodeController {
 		return "redirect:/codeList";
 	}
 
-
-	
-
-
 }

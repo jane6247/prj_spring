@@ -113,63 +113,11 @@
       <div class="hostThat"><h3>Host that are popular now:</h3></div>
 
       <div class="swiper-wrapper">
+       
+       
         <div class="slide_box">
-          <div class="card card-blue">
-            <div class="img_info">
-              <div class="card__image">
-                <img src="/resources/assets_wanderMate/img/profile_pic01.webp" alt="card image" />
-              </div>
-              <p class="card__title">
-                <strong>Jessica</strong><br />
-                (Seoul,Korea)<br />age:28 <br />
-                Language:
-              </p>
-              <div class="star_box">
-                <i
-                  class="fa-solid fa-star"
-                  style="font-size: x-large; color: yellow"
-                ></i>
-                4.9 <br />
-
-                <i
-                  class="fa-solid fa-user-group"
-                  style="font-size: x-large"
-                ></i>
-                &gt; 2
-              </div>
-            </div>
-
-            <div class="card__content">
-              <h4>About plan:</h4>
-              <p class="card__text">
-                Hi! I am looking for someone who want to go to art gallery with
-                me!
-              </p>
-              <div class="date">
-                <i
-                  class="fa-solid fa-calendar-days"
-                  style="font-size: x-large; color: #346751"
-                ></i>
-                <p>30 June 2023</p>
-                <i
-                  class="fa-regular fa-clock"
-                  style="font-size: x-large; color: #346751"
-                ></i>
-                <p>2days</p>
-                <i
-                  class="fa-solid fa-sack-dollar"
-                  style="font-size: x-large; color: #346751"
-                ></i>
-                <p>$150</p>
-              </div>
-            </div>
-            <div class="card_bottom">
-              <a href="index03"
-                ><i class="fa-solid fa-arrow-right"></i
-              ></a>
-            </div>
-          </div>
-
+        
+<c:forEach items="${card}" var="list" varStatus="status">
           <div class="card swiper-slide">
             <div class="img_info">
               <div class="card__image">
@@ -197,16 +145,15 @@
 
             <div class="card__content">
               <h4>About plan:</h4>
-              <p class="card__text">
-                Hi! I am looking for someone who want to go to art gallery with
-                me!
+              <p class="card__text"><c:out value="${list.aboutPlan }"/>
+                
               </p>
               <div class="date">
                 <i
                   class="fa-solid fa-calendar-days"
                   style="font-size: x-large; color: #346751"
                 ></i>
-                <p>30 June 2023</p>
+                <p><c:out value="${list.date }"/></p>
                 <i
                   class="fa-regular fa-clock"
                   style="font-size: x-large; color: #346751"
@@ -216,7 +163,7 @@
                   class="fa-solid fa-sack-dollar"
                   style="font-size: x-large; color: #346751"
                 ></i>
-                <p>$150</p>
+                <p><c:out value="${list.days }"/></p>
               </div>
             </div>
             <div class="card_bottom">
@@ -225,7 +172,9 @@
               ></a>
             </div>
           </div>
-        
+</c:forEach>
+          
+        <%-- 
           <div class="card swiper-slide">
             <div class="img_info">
               <div class="card__image">
@@ -310,7 +259,7 @@
               <h4>About plan:</h4>
               <p class="card__text">
                 Hi! I am looking for someone who want to go to art gallery with
-                me!
+                m!e
               </p>
               <div class="date">
                 <i
@@ -364,9 +313,8 @@
 
             <div class="card__content">
               <h4>About plan:</h4>
-              <p class="card__text">
-                Hi! I am looking for someone who want to go to art gallery with
-                me!
+              <p class="card__text" >
+              <c:out value="${list.aboutPlan }"/>
               </p>
               <div class="date">
                 <i
@@ -447,7 +395,8 @@
                 ><i class="fa-solid fa-arrow-right"></i
               ></a>
             </div>
-          </div>
+          </div> --%>
+       
         </div>
         
       </div>
@@ -465,13 +414,15 @@
 
      <%@include file="../../include/includeWanderFooter.jsp"%>
     </div>
-    <script>
+    
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	 <script type="text/javascript">
+    
       function search() {
         var destination = document.getElementById('destination-input').value;
         var genre = document.getElementById('genre-input').value;
         var calendar = document.getElementById('calendar-input').value;
-        // 검색 로직을 이곳에 작성하세요.
-        // destination, genre, calendar 변수에는 사용자가 선택한 값이 들어 있습니다.
+       
       }
     </script>
   </body>

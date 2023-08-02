@@ -1,5 +1,7 @@
 package com.mycompany.app.infra.beinghosted;
 
+
+// API연동
 public class Home {
 
 	public Object header;

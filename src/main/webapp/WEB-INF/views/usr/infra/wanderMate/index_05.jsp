@@ -35,7 +35,7 @@
     <div class="wrap">
       <header class="header">
         <div class="logo">
-          <a href="index01"><img src="/resources/assets_wanderMate/img/main-logo.jpeg" /></a>
+          <a href="mainview"><img src="/resources/assets_wanderMate/img/main-logo.jpeg" /></a>
         </div>
 
         <ul class="menu">
@@ -49,8 +49,8 @@
               </div></a
             >
           </li>
-          <li><a class="underline" href="index04">Host</a></li>
-          <li><a class="underline" href="index02">Find Host</a></li>
+          <li><a class="underline" href="Publication">Host</a></li>
+          <li><a class="underline" href="findhostview">Find Host</a></li>
         </ul>
         <ul class="Profile">
           <li>
@@ -64,7 +64,7 @@
                   <img src="/resources/assets_wanderMate/img/profile_pic03.webp" alt="" />
                 </div>
                 <div class="dropdown-content">
-                  <a class="hoverable" href="index06"
+                  <a class="hoverable" href="account"
                     ><p>Hello World!</p></a
                   >
                   <a class="hoverable" href=""><p>Hello World!</p></a>
@@ -77,9 +77,9 @@
       </header>
 
       <ul class="breadcrumb">
-        <li><a href="index">Home</a></li>
-        <li><a href="index02">Find Host</a></li>
-        <li><a href="index03">Card of host</a></li>
+        <li><a href="mainview">Home</a></li>
+        <li><a href="findhostview">Find Host</a></li>
+        <li><a href="findepostview">Card of host</a></li>
         <li>Jessica</li>
       </ul>
 

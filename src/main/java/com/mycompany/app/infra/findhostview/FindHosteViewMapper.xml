@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+   
+ <mapper namespace="com.mycompany.app.infra.findhostview.FindHostViewMapper">
+
+<resultMap id="resultMapObj" type="com.mycompany.app.infra.findhostview.FindHostView"></resultMap>
+
+		<sql id="ddd">
+			address
+			,maxPeople
+			,aboutMe
+			,aboutPlan
+			,note
+			,language
+			
+			,budget
+			,date
+			,days
+		</sql>
+		
+		<sql id="selectCommon">
+			FROM
+				beingHosted
+			WHERE 1=1
+			 	<if test="shKeyword != null and !shKeyword.equals('')">AND id LIKE CONCAT('%',#{shKeyword},'%')</if>			
+		</sql>
+		
+		<select id="selectOneCount" resultType="Integer">
+			SELECT count(*)
+			<include refid="selectCommon" />
+	    </select>
+	    
+	    <select id="selectCard" resultMap="resultMapObj">
+	    	SELECT
+		    	aboutPlan
+		    	,budget
+				,date
+				,days
+			 From 
+			 	beingHosted
+			WHERE 1=1 
+	    </select>
+	    
+	    
+	    <select id="selectList" resultMap="resultMapObj">
+			SELECT aa.* FROM (   	
+		   		SELECT
+					<include refid="ddd" />
+		   			<include refid="selectCommon" />
+			) aa
+			LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}	   			
+   		</select>
+
+		<select id="selectOne" resultMap="resultMapObj">
+	   		SELECT
+				<include refid="ddd" />
+	   		FROM
+	   			beingHosted
+			WHERE 1=1
+				AND seq = #{seq}	
+   		</select>   
+
+		<update id="update">
+	   		UPDATE beingHosted
+	   		SET
+	   			name = #{name}
+			WHERE
+				seq = #{seq}	
+   		</update>   	
+   	
+	   	<delete id="delete">
+	   		delete from beingHosted WHERE seq = #{seq}	
+	   	</delete>   	
+   	 
+	   	<update id="uelete">
+	   		UPDATE beingHosted
+	   		SET
+	   			member_seq= 1
+			WHERE
+				seq = #{seq}	
+	   	</update>   	
+	   	
+	   	<insert id="insert">
+	   		INSERT INTO beingHosted (
+				address
+				,maxPeople
+				,aboutMe
+				,aboutPlan
+				,note
+				,language
+				
+				,budget
+				,date
+				,days
+	   			
+	   		) values (
+	   		   #{address}
+	   		   ,#{maxPeople}
+	   		   ,#{aboutMe}
+	   		   ,#{aboutPlan}
+	   		   ,#{note}
+	   		   ,#{language}
+	   		   ,#{budget}
+	   		   ,#{date}
+	   		   ,#{days}
+	   		)
+	   	</insert>   	
+   
+		<select id="selectListCachedBeingHostedArrayList" resultMap="resultMapObj">
+			SELECT
+			
+			address
+			,maxPeople
+			,aboutMe
+			,aboutPlan
+			,note
+			,language
+			
+			,budget
+			,date
+			,days
+				
+			FROM
+				beingHosted
+		
+	    </select>
+
+
+</mapper>  
