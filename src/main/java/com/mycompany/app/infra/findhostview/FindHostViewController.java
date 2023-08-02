@@ -21,14 +21,10 @@ public class FindHostViewController {
 		   
 		   
 		   List<FindHostView> card = service.selectCard(vo);
-		   System.out.println("card.size(): " + card.size());
 		   model.addAttribute("card",card);
 		  
 	   return "usr/infra/wanderMate/index_02";  
 	  
 	  }
-	
-	   
-	   
 		
 }
