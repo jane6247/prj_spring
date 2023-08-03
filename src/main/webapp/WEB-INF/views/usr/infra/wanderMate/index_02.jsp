@@ -167,8 +167,8 @@
               </div>
             </div>
             <div class="card_bottom">
-              <a href="index03"
-                ><i class="fa-solid fa-arrow-right"></i
+              <a href="/hostpost?seq=<c:out value="${list.seq }"/>">
+                <i class="fa-solid fa-arrow-right"></i
               ></a>
             </div>
           </div>

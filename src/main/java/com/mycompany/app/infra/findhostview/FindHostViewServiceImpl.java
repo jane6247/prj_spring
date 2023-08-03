@@ -56,4 +56,10 @@ public class FindHostViewServiceImpl implements FindHostViewService {
 		return dao.selectCard(vo);
 	}	
 	
+	@Override
+	public FindHostView selectPost(FindHostViewVo vo) {
+		
+		return dao.selectPost(vo);
+	}
+	
 }

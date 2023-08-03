@@ -55,11 +55,7 @@ public class BeingHostedController {
 	   return "usr/infra/wanderMate/index_04";  
 	  
 	  }
-	   @RequestMapping("/hostpost")
-	   public String index_05(){
-	   return "usr/infra/wanderMate/index_05";  
 	  
-	  }
 	   @RequestMapping("/account")
 	   public String index_06(){
 	   return "usr/infra/wanderMate/index_06";  

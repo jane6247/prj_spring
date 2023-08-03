@@ -11,6 +11,7 @@ public interface FindHostViewService {
 	public int selectOneCount(FindHostViewVo vo);
 	
 	public List<FindHostView> selectCard(FindHostViewVo vo); //데이터 뽑고싶어서 추가
+	public FindHostView selectPost(FindHostViewVo vo);
 	public FindHostView selectOne(FindHostViewVo vo);
 	public int update(FindHostView dto);
 	public int delete(FindHostView dto);

@@ -46,10 +46,6 @@ public class CodeGroupController {
 	}
 		
 	
-
-	
-	
-	
 	@RequestMapping("/codeGroupUpdt")
 	public String codeGroupUpdt(CodeGroup dto) {
 		service.update(dto);
@@ -74,6 +70,11 @@ public class CodeGroupController {
 		return "redirect:/codeGroupTable";
 	}
 
+	
+	
+	
+	
+	
 }
 //보여질 화면이 없으면 바로  redirect
 

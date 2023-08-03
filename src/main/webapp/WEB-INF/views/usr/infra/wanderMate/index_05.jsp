@@ -64,9 +64,9 @@
                   <img src="/resources/assets_wanderMate/img/profile_pic03.webp" alt="" />
                 </div>
                 <div class="dropdown-content">
-                  <a class="hoverable" href="account"
-                    ><p>Hello World!</p></a
-                  >
+                  <a class="hoverable" href="account" >
+                   <p>Hello World!</p></a>
+                  
                   <a class="hoverable" href=""><p>Hello World!</p></a>
                   <a class="hoverable" href=""><p>Hello World!</p></a>
                 </div>
@@ -83,6 +83,8 @@
         <li>Jessica</li>
       </ul>
 
+
+ 	
       <section class="main_content">
         <div class="main_wrap">
           <div class="info_text">
@@ -91,7 +93,7 @@
                 <img src="/resources/assets_wanderMate/img/profile_pic02.webp" />
               </div>
               <div class="name_text">
-                <h3>Jessica</h3>
+                <h3>Jessica <c:out value="${item.seq }"/></h3>
                 <br />
                 <p>
                   Age: 28<br />
@@ -125,40 +127,25 @@
             <div class="info_box">
               <h4>About me:</h4>
               <p class="gone">
-                The standard Lorem Ipsum passage, used since the 1500s "Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse "
+             <c:out value="${item.aboutMe }"/>
               </p>
               <textarea id="new_show" class="hidden"></textarea>
             </div>
             <div class="info_box info_about">
               <h4>About plane:</h4>
               <p class="gone">
-                The standard Lorem Ipsum passage, used since the 1500s "Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum."
+               <c:out value="${item.aboutPlan }"/>
               </p>
             </div>
             <div class="info_box info_note">
               <h4>Note:</h4>
               <p class="gone">
-                The standard Lorem Ipsum passage, used since the 1500s "Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam,
+               <c:out value="${item.note }"/>
               </p>
             </div>
             <div class="info_box info_lang x">
               <h4>Language that I know:</h4>
-              <p class="gone">flag flag</p>
+              <p class="gone"><c:out value="${item.language}"/></p>
             </div>
           </div>
 
@@ -182,10 +169,12 @@
         </div>
       </section>
 
+
      <%@include file="../../include/includeWanderFooter.jsp"%>
     </div>
 
-    <script>
+ 
+	 <script>
       $(document).ready(function () {
         $('.slider').bxSlider();
       });

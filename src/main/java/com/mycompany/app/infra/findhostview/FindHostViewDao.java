@@ -24,6 +24,7 @@ public class FindHostViewDao {
 	public int selectOneCount(FindHostViewVo vo){ return sqlSession.selectOne(namespace + ".selectOneCount", vo); }
 	public List<FindHostView> selectList(FindHostViewVo vo) {return sqlSession.selectList(namespace + ".selectList", vo); }	
 	public List<FindHostView> selectCard(FindHostViewVo vo) {return sqlSession.selectList(namespace + ".selectCard", vo); }	
+	public FindHostView selectPost(FindHostViewVo vo) {return sqlSession.selectOne(namespace + ".selectPost", vo); }	
 	public FindHostView selectOne(FindHostViewVo vo){ return sqlSession.selectOne(namespace + ".selectOne", vo); }
 	public int update(FindHostView dto){ return sqlSession.update(namespace + ".update", dto); }
 	public int delete(FindHostView dto){ return sqlSession.delete(namespace + ".delete", dto); }

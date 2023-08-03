@@ -26,5 +26,22 @@ public class FindHostViewController {
 	   return "usr/infra/wanderMate/index_02";  
 	  
 	  }
+	   
+	   
+	   @RequestMapping("/hostpost")
+	   public String index_05(@ModelAttribute("vo")FindHostViewVo vo, Model model){
+		   
+		   
+		   FindHostView item = service.selectPost(vo);
+		   model.addAttribute("item",item);
+		   
+		   
+	   return "usr/infra/wanderMate/index_05";  
+	  
+	  }
+	   
+	   
+	   
+	   
 		
 }

@@ -34,7 +34,8 @@
 	    
 	    <select id="selectCard" resultMap="resultMapObj">
 	    	SELECT
-		    	aboutPlan
+	    		seq
+		    	,aboutPlan
 		    	,budget
 				,date
 				,days
@@ -42,6 +43,20 @@
 			 	beingHosted
 			WHERE 1=1 
 	    </select>
+	    
+	     <select id="selectPost" resultMap="resultMapObj">
+	    	SELECT
+	    		seq
+	    		,aboutMe
+		    	,aboutPlan
+		    	,note
+		    	,language
+		    	
+			 From 
+			 	beingHosted
+			WHERE 1=1 
+	    </select>
+	    
 	    
 	    
 	    <select id="selectList" resultMap="resultMapObj">
