@@ -55,6 +55,7 @@
 			 From 
 			 	beingHosted
 			WHERE 1=1 
+				AND seq = #{seq}
 	    </select>
 	    
 	    
