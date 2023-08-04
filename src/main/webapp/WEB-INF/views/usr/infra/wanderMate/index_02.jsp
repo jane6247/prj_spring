@@ -74,7 +74,7 @@
                     ><span class="material-symbols-outlined"> logout<p>Log out</p> </span>
                     </a>
                 </div>
-              </div></a>
+              </div>
           </li>
         </ul>
       </header>
@@ -115,8 +115,13 @@
       <div class="swiper-wrapper">
        
        
+       <form name="formList" method="post">
+              	<input type="hidden" name="thisPage" value="<c:out value="${vo.thisPage}" default="1"/>">
+				<input type="hidden" name="rowNumToShow" value="<c:out value="${vo.rowNumToShow}"/>">
         <div class="slide_box">
-        
+ 
+ 
+  
 <c:forEach items="${card}" var="list" varStatus="status">
           <div class="card swiper-slide">
             <div class="img_info">
@@ -125,8 +130,8 @@
               </div>
               <p class="card__title">
                 <strong>Tony</strong><br />
-                (Seoul,Korea)<br />age:31 <br />
-                Language:
+                (<c:out value="${list.address }"/>)<br />age:31 <br />
+                Language: <c:out value="${list.language }"/>
               </p>
               <div class="star_box">
                 <i
@@ -173,244 +178,52 @@
             </div>
           </div>
 </c:forEach>
-          
-        <%-- 
-          <div class="card swiper-slide">
-            <div class="img_info">
-              <div class="card__image">
-                <img src="/resources/assets_wanderMate/img/profile_pic03.webp" alt="card image" />
-              </div>
-              <p class="card__title">
-                <strong>Kate</strong><br />
-                (Seoul,Korea)<br />age:31 <br />
-                Language: English
-              </p>
-              <div class="star_box">
-                <i
-                  class="fa-solid fa-star"
-                  style="font-size: x-large; color: yellow"
-                ></i>
-                4.9 <br />
+</form>
 
-                <i
-                  class="fa-solid fa-user-group"
-                  style="font-size: x-large"
-                ></i>
-                &gt; 4
-              </div>
-            </div>
+    </div>
+   </div>
+</div>      
 
-            <div class="card__content">
-              <h4>About plan:</h4>
-              <p class="card__text">
-                I am planning to go to the han-river for picnic!! It would be better have some friends
-              </p>
-              <div class="date">
-                <i
-                  class="fa-solid fa-calendar-days"
-                  style="font-size: x-large; color: #346751"
-                ></i>
-                <p>15 July 2023</p>
-                <i
-                  class="fa-regular fa-clock"
-                  style="font-size: x-large; color: #346751"
-                ></i>
-                <p>2days</p>
-                <i
-                  class="fa-solid fa-sack-dollar"
-                  style="font-size: x-large; color: #346751"
-                ></i>
-                <p>$150</p>
-              </div>
-            </div>
-            <div class="card_bottom">
-              <a href="findepostview"
-                ><i class="fa-solid fa-arrow-right"></i
-              ></a>
-            </div>
-          </div>
 
-          <div class="card">
-            <div class="img_info">
-              <div class="card__image">
-                <img src="/resources/assets_wanderMate/img/profile_pic04.webp" alt="card image" />
-              </div>
-              <p class="card__title">
-                <strong>Anna</strong><br />
-                (Seoul,Korea)<br />age:31 <br />
-                Language:
-              </p>
-              <div class="star_box">
-                <i
-                  class="fa-solid fa-star"
-                  style="font-size: x-large; color: yellow"
-                ></i>
-                4.9 <br />
+<!--           <div class="pagination"> -->
+<!--             <a href="#">&laquo;</a> -->
+<!--             <a href="#">1</a> -->
+<!--             <a class="active" href="#">2</a> -->
+<!--             <a href="#">3</a> -->
+<!--             <a href="#">4</a> -->
+<!--             <a href="#">5</a> -->
+<!--             <a href="#">6</a> -->
+<!--             <a href="#">&raquo;</a> -->
+<!--           </div> -->
 
-                <i
-                  class="fa-solid fa-user-group"
-                  style="font-size: x-large"
-                ></i>
-                &gt; 2
-              </div>
-            </div>
 
-            <div class="card__content">
-              <h4>About plan:</h4>
-              <p class="card__text">
-                Hi! I am looking for someone who want to go to art gallery with
-                m!e
-              </p>
-              <div class="date">
-                <i
-                  class="fa-solid fa-calendar-days"
-                  style="font-size: x-large; color: #346751"
-                ></i>
-                <p>30 June 2023</p>
-                <i
-                  class="fa-regular fa-clock"
-                  style="font-size: x-large; color: #346751"
-                ></i>
-                <p>2days</p>
-                <i
-                  class="fa-solid fa-sack-dollar"
-                  style="font-size: x-large; color: #346751"
-                ></i>
-                <p>$150</p>
-              </div>
-            </div>
-            <div class="card_bottom">
-              <a href="findepostview"
-                ><i class="fa-solid fa-arrow-right"></i
-              ></a>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="img_info">
-              <div class="card__image">
-                <img src="/resources/assets_wanderMate/img/profile_pic05.webp" alt="card image" />
-              </div>
-              <p class="card__title">
-                <strong>Jane</strong><br />
-                (Seoul,Korea)<br />age:21 <br />
-                Language:Engish
-              </p>
-              <div class="star_box">
-                <i
-                  class="fa-solid fa-star"
-                  style="font-size: x-large; color: yellow"
-                ></i>
-                4.9 <br />
-
-                <i
-                  class="fa-solid fa-user-group"
-                  style="font-size: x-large"
-                ></i>
-                &gt; 3
-              </div>
-            </div>
-
-            <div class="card__content">
-              <h4>About plan:</h4>
-              <p class="card__text" >
-              <c:out value="${list.aboutPlan }"/>
-              </p>
-              <div class="date">
-                <i
-                  class="fa-solid fa-calendar-days"
-                  style="font-size: x-large; color: #346751"
-                ></i>
-                <p>7 June 2023</p>
-                <i
-                  class="fa-regular fa-clock"
-                  style="font-size: x-large; color: #346751"
-                ></i>
-                <p>1day</p>
-                <i
-                  class="fa-solid fa-sack-dollar"
-                  style="font-size: x-large; color: #346751"
-                ></i>
-                <p>$80</p>
-              </div>
-            </div>
-            <div class="card_bottom">
-              <a href="index03"
-                ><i class="fa-solid fa-arrow-right"></i
-              ></a>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="img_info">
-              <div class="card__image">
-                <img src="/resources/assets_wanderMate/img/profile_pic06.webp" alt="card image" />
-              </div>
-              <p class="card__title">
-                <strong>Kelly</strong><br />
-                (Seoul,Korea)<br />age:26 <br />
-                Language:English
-              </p>
-              <div class="star_box">
-                <i
-                  class="fa-solid fa-star"
-                  style="font-size: x-large; color: yellow"
-                ></i>
-                4.9 <br />
-
-                <i
-                  class="fa-solid fa-user-group"
-                  style="font-size: x-large"
-                ></i>
-                &gt; 2
-              </div>
-            </div>
-
-            <div class="card__content">
-              <h4>About plan:</h4>
-              <p class="card__text">
-                Hi! I am looking for someone who want to go to art gallery with
-                me!
-              </p>
-              <div class="date">
-                <i
-                  class="fa-solid fa-calendar-days"
-                  style="font-size: x-large; color: #346751"
-                ></i>
-                <p>12 June 2023</p>
-                <i
-                  class="fa-regular fa-clock"
-                  style="font-size: x-large; color: #346751"
-                ></i>
-                <p>1day</p>
-                <i
-                  class="fa-solid fa-sack-dollar"
-                  style="font-size: x-large; color: #346751"
-                ></i>
-                <p>$50</p>
-              </div>
-            </div>
-            <div class="card_bottom">
-              <a href="findepostview"
-                ><i class="fa-solid fa-arrow-right"></i
-              ></a>
-            </div>
-          </div> --%>
-       
+<div class="container-fluid px-0 mt-2">
+    <div class="row">
+        <div class="col">
+            <!-- <ul class="pagination pagination-sm justify-content-center mb-0"> -->
+            <ul class="pagination justify-content-center mb-0">
+                <!-- <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-angles-left"></i></a></li> -->
+<c:if test="${vo.startPage gt vo.pageNumToShow}">
+                <li class="page-item"><a class="page-link" href="javascript:goList(${vo.startPage - 1})"><i class="fa-solid fa-angle-left"></i></a></li>
+</c:if>
+<c:forEach begin="${vo.startPage}" end="${vo.endPage}" varStatus="i">
+	<c:choose>
+		<c:when test="${i.index eq vo.thisPage}">
+                <li class="page-item active"><a class="page-link" href="javascript:goList(${i.index})">${i.index}</a></li>
+		</c:when>
+		<c:otherwise>             
+                <li class="page-item"><a class="page-link" href="javascript:goList(${i.index})">${i.index}</a></li>
+		</c:otherwise>
+	</c:choose>
+</c:forEach>                
+<c:if test="${vo.endPage ne vo.totalPages}">                
+                <li class="page-item"><a class="page-link" href="javascript:goList(${vo.endPage + 1})"><i class="fa-solid fa-angle-right"></i></a></li>
+</c:if>
+                <!-- <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-angles-right"></i></a></li> -->
+            </ul>
         </div>
-        
-      </div>
-
-          <div class="pagination">
-            <a href="#">&laquo;</a>
-            <a href="#">1</a>
-            <a class="active" href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <a href="#">5</a>
-            <a href="#">6</a>
-            <a href="#">&raquo;</a>
-          </div>
+    </div>
+</div>
 
      <%@include file="../../include/includeWanderFooter.jsp"%>
     </div>
@@ -424,6 +237,63 @@
         var calendar = document.getElementById('calendar-input').value;
        
       }
+      
+      goList = function(thisPage) {
+    		$("input:hidden[name=thisPage]").val(thisPage);
+    		$("form[name=formList]").attr("action", "findhostview").submit();
+    	}
+      
+ /*      $(document).ready(function() {
+    	  // 방향 선택 시
+    	  $("#destination-input").change(function() {
+    	    const direction = $("#destination-input").val();
+    	    const genre = $("#genre-input").val();
+    	    const selectedDate = $("#calendar-input").val();
+    	    showFilteredData(direction, genre, selectedDate);
+    	  });
+
+    	  // 장르 선택 시
+    	  $("#genre-input").change(function() {
+    	    const direction = $("#destination-input").val();
+    	    const genre = $("#genre-input").val();
+    	    const selectedDate = $("#calendar-input").val();
+    	    showFilteredData(direction, genre, selectedDate);
+    	  });
+
+    	  // 날짜 선택 시
+    	  $("#calendar-input").change(function() {
+    	    const direction = $("#destination-input").val();
+    	    const genre = $("#genre-input").val();
+    	    const selectedDate = $("#calendar-input").val();
+    	    showFilteredData(direction, genre, selectedDate);
+    	  });
+    	});
+
+    	function showFilteredData(direction, genre, selectedDate) {
+    	  $.ajax({
+    	    async: true,
+    	    cache: false,
+    	    type: "post",
+    	    url: "/getDataByFilters",
+    	    data: {
+    	    	"direction" : $("#destination-input").val(),
+			"genre" : $("#genre-input").val()
+    	    },
+    	    success: function (response) {
+    	      if (response.rt == "success") {
+    	        // 서버로부터 받아온 데이터를 이용하여 필터링된 결과를 화면에 보여줍니다.
+    	        displayFilteredData(response.data);
+    	      } else {
+    	        alert("failed");
+    	      }
+    	    },
+    	    error: function (jqXHR, textStatus, errorThrown) {
+    	      console.log("AJAX Error:", textStatus, errorThrown);
+    	      alert("AJAX Error: " + textStatus + " - " + errorThrown);
+    	    }
+    	  });
+    	} */
+
     </script>
   </body>
 </html>

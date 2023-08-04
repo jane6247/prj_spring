@@ -6,13 +6,8 @@ public class FindHostViewVo {
 	private Integer shOption;
 	private String shKeyword;
 	private String seq;
-	
-	
-
 	private int thisPage = 1;								
-
-	
-	private int rowNumToShow = 10;		
+	private int rowNumToShow = 6;		
 	private int pageNumToShow = 5;		
 
 	private int totalRows;										

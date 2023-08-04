@@ -8,7 +8,8 @@
 <resultMap id="resultMapObj" type="com.mycompany.app.infra.findhostview.FindHostView"></resultMap>
 
 		<sql id="ddd">
-			address
+			seq
+			,address
 			,maxPeople
 			,aboutMe
 			,aboutPlan
@@ -35,6 +36,7 @@
 	    <select id="selectCard" resultMap="resultMapObj">
 	    	SELECT
 	    		seq
+	    		,address
 		    	,aboutPlan
 		    	,budget
 				,date
@@ -42,6 +44,7 @@
 			 From 
 			 	beingHosted
 			WHERE 1=1 
+			
 	    </select>
 	    
 	     <select id="selectPost" resultMap="resultMapObj">
@@ -142,6 +145,17 @@
 				beingHosted
 		
 	    </select>
+	    
+	     <!-- <select id="selectOneAjax" resultMap="resultMapObj">
+      SELECT 
+         address
+         ,date
+      FROM
+         beingHosted
+      WHERE 1=1
+         AND address = #{address}
+         AND date = #{date}
+   </select> -->
 
 
 </mapper>  

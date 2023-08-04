@@ -134,6 +134,8 @@
             </div>
             
          </section>
+         
+         
          	<section class="input_right">
 	           <div><span>Adding photo:</span></div>
 	           <div class="container image-slider">
@@ -175,6 +177,7 @@
 	          <button id="open" class="" type="button"><p>Post an ad</p></button>    
           
        	 </section>
+       	 </div>
        </main>
       </form> 
        
@@ -214,7 +217,7 @@
 			$("form[name=ad]").attr("action","/beingHostedListInst").submit();
 		});
 
-dhoehtlfkrdmf wlrmaghwksdmfgkrh
+//사진 슬라이드
       const prevButton = document.querySelector(".prev-button");
       const nextButton = document.querySelector(".next-button");
       const imageSlider = document.querySelector(".image-slider");

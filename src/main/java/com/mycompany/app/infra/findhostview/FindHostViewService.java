@@ -4,6 +4,8 @@ import java.util.List;
 
 import com.mycompany.app.infra.beinghosted.BeingHosted;
 import com.mycompany.app.infra.beinghosted.BeingHostedVo;
+import com.mycompany.app.infra.member.Member;
+import com.mycompany.app.infra.member.MemberVo;
 
 public interface FindHostViewService {
 
@@ -18,5 +20,7 @@ public interface FindHostViewService {
 	public int uelete(FindHostView dto);
 	public int insert(FindHostView dto);
 	List<FindHostView> selectList(FindHostViewVo vo);
-	
+	/*
+	 * public FindHostView selectOneAjax(FindHostViewVo vo);
+	 */
 }

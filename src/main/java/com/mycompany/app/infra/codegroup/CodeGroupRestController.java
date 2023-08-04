@@ -16,7 +16,9 @@ import com.mycompany.app.infra.member.MemberVo;
 
 
 
-//API 연동해서 CodeGroup에있는 데이터 불러오기
+//API 연동해서 CodeGroup에있는 데이터 불러오기 (내가 직접 api보내는 방법임)
+//API제공할 때 1. annotation신경쓰기, 2.
+//주소에 rest를 쓴 이유는 인터셉트에 안 걸리게 하기 위해서 
 @RestController
 @RequestMapping("/rest/member")
 public class CodeGroupRestController {

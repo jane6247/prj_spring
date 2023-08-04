@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.mycompany.app.infra.member.Member;
+
 
 @Service
 public class FindHostViewServiceImpl implements FindHostViewService {
@@ -61,5 +63,11 @@ public class FindHostViewServiceImpl implements FindHostViewService {
 		
 		return dao.selectPost(vo);
 	}
+
+
+	/*
+	 * public FindHostView selectOneAjax(FindHostViewVo vo) { // TODO Auto-generated
+	 * method stub return dao.selectOneAjax(vo); }
+	 */
 	
 }
