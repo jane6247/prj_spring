@@ -15,7 +15,6 @@
 			,aboutPlan
 			,note
 			,language
-			
 			,budget
 			,date
 			,days
@@ -146,7 +145,7 @@
 		
 	    </select>
 	    
-	     <!-- <select id="selectOneAjax" resultMap="resultMapObj">
+	     <select id="selectOneAjax" resultMap="resultMapObj">
       SELECT 
          address
          ,date
@@ -155,7 +154,7 @@
       WHERE 1=1
          AND address = #{address}
          AND date = #{date}
-   </select> -->
+   </select> 
 
 
 </mapper>  

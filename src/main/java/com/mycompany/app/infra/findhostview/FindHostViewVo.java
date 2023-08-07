@@ -6,6 +6,11 @@ public class FindHostViewVo {
 	private Integer shOption;
 	private String shKeyword;
 	private String seq;
+	private String address;
+	private Integer date;
+	
+	 
+	
 	private int thisPage = 1;								
 	private int rowNumToShow = 6;		
 	private int pageNumToShow = 5;		
@@ -149,9 +154,18 @@ public class FindHostViewVo {
 		
 		
 	}
-	
-	
-	
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public Integer getDate() {
+		return date;
+	}
+	public void setDate(Integer date) {
+		this.date = date;
+	}
 	
 		
 }

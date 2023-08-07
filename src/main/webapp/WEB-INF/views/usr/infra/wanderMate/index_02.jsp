@@ -88,15 +88,17 @@
         <li><a href="findhostview">Find Host</a></li>
         <li>search</li>
       </ul>
+      
+       <form name="formList" method="post">
       <section>
         <div class="search-container">
-          <select class="search-input" id="destination-input">
-            <option value="" disabled selected>Direction</option>
-            <option value="서울">Seoul</option>
-            <option value="도쿄">Vancuver</option>
-            <option value="파리">Paris</option>
+            <select class="search-input" id="destination-input" name="shKeyword" value="<c:out value="${vo.address}"/>">
+	            <option value="" disabled selected>Direction</option>
+	            <option value="서울">Seoul</option>
+	            <option value="도쿄">Vancouver</option>
+	            <option value="파리">Paris</option>
           </select>
-          <select class="search-input" id="genre-input">
+          <select class="search-input" id="genre-input" name="shKeyword" value="<c:out value="${vo.date}"/>">
             <option value="" disabled selected>Type</option>
             <option value="숙소">Accommodation</option>
             <option value="식당">Restaurant</option>
@@ -104,12 +106,15 @@
           </select>
           <input type="date" class="search-input" id="calendar-input" />
 
+ 
+ 			
           <button class="search-button" onclick="search()">
             <i class="fa-solid fa-magnifying-glass" style="font-size: 25px"></i>
           </button>
         </div>
-        <form action=""></form>
+     
       </section>
+      </form>
       <div class="hostThat"><h3>Host that are popular now:</h3></div>
 
       <div class="swiper-wrapper">
@@ -129,7 +134,7 @@
                 <img src="/resources/assets_wanderMate/img/profile_pic02.webp" alt="card image" />
               </div>
               <p class="card__title">
-                <strong>Tony</strong><br />
+                <strong>Darae</strong><br />
                 (<c:out value="${list.address }"/>)<br />age:31 <br />
                 Language: <c:out value="${list.language }"/>
               </p>
@@ -144,7 +149,7 @@
                   class="fa-solid fa-user-group"
                   style="font-size: x-large"
                 ></i>
-                &gt; 2
+                &gt;<c:out value="${list.maxPeople }"/>
               </div>
             </div>
 
@@ -184,17 +189,6 @@
    </div>
 </div>      
 
-
-<!--           <div class="pagination"> -->
-<!--             <a href="#">&laquo;</a> -->
-<!--             <a href="#">1</a> -->
-<!--             <a class="active" href="#">2</a> -->
-<!--             <a href="#">3</a> -->
-<!--             <a href="#">4</a> -->
-<!--             <a href="#">5</a> -->
-<!--             <a href="#">6</a> -->
-<!--             <a href="#">&raquo;</a> -->
-<!--           </div> -->
 
 
 <div class="container-fluid px-0 mt-2">
@@ -243,7 +237,9 @@
     		$("form[name=formList]").attr("action", "findhostview").submit();
     	}
       
- /*      $(document).ready(function() {
+      
+      
+       $(document).ready(function() {
     	  // 방향 선택 시
     	  $("#destination-input").change(function() {
     	    const direction = $("#destination-input").val();
@@ -276,15 +272,15 @@
     	    type: "post",
     	    url: "/getDataByFilters",
     	    data: {
-    	    	"direction" : $("#destination-input").val(),
+    	    "direction" : $("#destination-input").val(),
 			"genre" : $("#genre-input").val()
     	    },
     	    success: function (response) {
     	      if (response.rt == "success") {
-    	        // 서버로부터 받아온 데이터를 이용하여 필터링된 결과를 화면에 보여줍니다.
+    	       
     	        displayFilteredData(response.data);
     	      } else {
-    	        alert("failed");
+    	        alert("선택이 안됩니다");
     	      }
     	    },
     	    error: function (jqXHR, textStatus, errorThrown) {
@@ -292,7 +288,7 @@
     	      alert("AJAX Error: " + textStatus + " - " + errorThrown);
     	    }
     	  });
-    	} */
+    	}
 
     </script>
   </body>

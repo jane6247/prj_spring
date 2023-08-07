@@ -10,6 +10,8 @@ import org.springframework.stereotype.Repository;
 
 import com.mycompany.app.infra.beinghosted.BeingHosted;
 import com.mycompany.app.infra.beinghosted.BeingHostedVo;
+import com.mycompany.app.infra.member.Member;
+import com.mycompany.app.infra.member.MemberVo;
 
 @Repository
 public class FindHostViewDao {
@@ -30,6 +32,7 @@ public class FindHostViewDao {
 	public int delete(FindHostView dto){ return sqlSession.delete(namespace + ".delete", dto); }
 	public int uelete(FindHostView dto){ return sqlSession.update(namespace + ".uelete", dto); }
 	public int insert(FindHostView dto){ return sqlSession.insert(namespace + ".insert", dto); }
+	public FindHostView selectOneAjax(FindHostViewVo vo) {return sqlSession.selectOne(namespace + ".selectOneAjax", vo); }
 	}
 	
 	

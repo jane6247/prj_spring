@@ -22,12 +22,12 @@
               	<input type="hidden" name="thisPage" value="<c:out value="${vo.thisPage}" default="1"/>">
 				<input type="hidden" name="rowNumToShow" value="<c:out value="${vo.rowNumToShow}"/>">
 				
-					<!-- <select name="shOption">
+				<%-- 	<select name="shOption" value="<c:out value="${vo.shKeyword}"/>">
 					    <option value="">--선택하세요--</option>
 					    <option value="1">Name</option>
 					    <option value="2">Gender</option>
-					</select> -->
-					
+					</select> 
+					 --%>
 					<input type="text" name="shKeyword" value="<c:out value="${vo.shKeyword}"/>">
 					
 					<button type="button" class="btn btn-primary" id="btn">Search</button>

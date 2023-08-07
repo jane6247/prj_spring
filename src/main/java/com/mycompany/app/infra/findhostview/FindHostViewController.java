@@ -18,59 +18,52 @@ import com.mycompany.app.infra.member.MemberVo;
 @Controller
 public class FindHostViewController {
 
-	
 	@Autowired
 	FindHostViewServiceImpl service;
-	
 
-	   @RequestMapping("/findhostview")
-	   public String index_02(@ModelAttribute("vo")FindHostViewVo vo, Model model){
-		   
-		   List<FindHostView> card = service.selectCard(vo);
-		   model.addAttribute("card",card);
-		   
-		   
-			vo.setParamsPaging(service.selectOneCount(vo));
-			
-			if(vo.getTotalRows() > 0) {
-				List<FindHostView> list = service.selectList(vo);
-				model.addAttribute("card", list);
+	@RequestMapping("/findhostview")
+	public String index_02(@ModelAttribute("vo") FindHostViewVo vo, Model model) {
+
+		List<FindHostView> card = service.selectCard(vo);
+		model.addAttribute("card", card);
+
+		vo.setParamsPaging(service.selectOneCount(vo));
+
+		if (vo.getTotalRows() > 0) {
+			List<FindHostView> list = service.selectList(vo);
+			model.addAttribute("card", list);
 //				model.addAttribute("vo", vo);
-			} else {
+		} else {
 //				by pass
-			}
-		  
-	   return "usr/infra/wanderMate/index_02";  
+		}
+
+		return "usr/infra/wanderMate/index_02";
+
+	}
+
+	@RequestMapping("/hostpost")
+	public String index_05(@ModelAttribute("vo") FindHostViewVo vo, Model model) {
+
+		FindHostView item = service.selectPost(vo);
+		model.addAttribute("item", item);
+
+		return "usr/infra/wanderMate/index_05";
+
+	}
+
+	
+	  // ajax
+	  
+	  @ResponseBody
+	  
+	  @RequestMapping("/getDataByFilters") public Map<String, Object>
+	  FindHostView(FindHostViewVo vo) { Map<String, Object> returnMap = new
+	  HashMap<String, Object>(); com.mycompany.app.infra.findhostview.FindHostView
+	  rtFindHostView = service.selectOneAjax(vo); if (rtFindHostView!= null) {
+	  returnMap.put("rtFindHostView", rtFindHostView); returnMap.put("rt",
+	  "success"); } else { returnMap.put("rt", "fail"); } return returnMap;
 	  
 	  }
-	   
-	   
-	   @RequestMapping("/hostpost")
-	   public String index_05(@ModelAttribute("vo")FindHostViewVo vo, Model model){
-		   
-		   
-		   FindHostView item = service.selectPost(vo);
-		   model.addAttribute("item",item);
-		   
-	   return "usr/infra/wanderMate/index_05";  
-	  
-	  }
-	   
-		/*
-		 * // ajax
-		 * 
-		 * @ResponseBody
-		 * 
-		 * @RequestMapping("/getDataByFilters") public Map<String, Object>
-		 * FindHostView(FindHostViewVo vo) { Map<String, Object> returnMap = new
-		 * HashMap<String, Object>(); com.mycompany.app.infra.findhostview.FindHostView
-		 * rtFindHostView = service.selectOneAjax(vo); if (rtFindHostView!= null) {
-		 * returnMap.put("rtFindHostView", rtFindHostView); returnMap.put("rt",
-		 * "success"); } else { returnMap.put("rt", "fail"); } return returnMap;
-		 * 
-		 * }
-		 */
-	   
-	   
-		
+	 
+
 }
