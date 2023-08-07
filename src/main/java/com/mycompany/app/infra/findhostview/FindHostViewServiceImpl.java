@@ -1,12 +1,14 @@
 package com.mycompany.app.infra.findhostview;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.mycompany.app.infra.member.Member;
-import com.mycompany.app.infra.member.MemberVo;
+import com.mycompany.app.infra.findhostview.FindHostView;
 
 
 @Service
@@ -65,13 +67,22 @@ public class FindHostViewServiceImpl implements FindHostViewService {
 		return dao.selectPost(vo);
 	}
 
+	
+//	for cache
+	@PostConstruct
+	public void selectListCachedFindHostViewArrayList() throws Exception {
+	    List<FindHostView> findHostViewListFromDb = dao.selectListCachedFindHostViewArrayList(); // Fix variable name
+	    FindHostView.cachedFindHostViewArrayList.clear();
+	    FindHostView.cachedFindHostViewArrayList.addAll(findHostViewListFromDb); // Fix variable name
+	    System.out.println("cachedFindHostViewArrayList: " + FindHostView.cachedFindHostViewArrayList.size() + " cached!"); // Fix spelling
+	}
+
+	public static void clear() throws Exception {
+	    FindHostView.cachedFindHostViewArrayList.clear();
+	}
+
 
 	
-	@Override
-	public FindHostView selectOneAjax(FindHostViewVo vo) {
-		
-		return dao.selectOneAjax(vo);
-	}
-	 
+
 	
 }

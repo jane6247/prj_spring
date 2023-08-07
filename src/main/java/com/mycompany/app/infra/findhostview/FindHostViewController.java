@@ -52,18 +52,6 @@ public class FindHostViewController {
 	}
 
 	
-	  // ajax
-	  
-	  @ResponseBody
-	  
-	  @RequestMapping("/getDataByFilters") public Map<String, Object>
-	  FindHostView(FindHostViewVo vo) { Map<String, Object> returnMap = new
-	  HashMap<String, Object>(); com.mycompany.app.infra.findhostview.FindHostView
-	  rtFindHostView = service.selectOneAjax(vo); if (rtFindHostView!= null) {
-	  returnMap.put("rtFindHostView", rtFindHostView); returnMap.put("rt",
-	  "success"); } else { returnMap.put("rt", "fail"); } return returnMap;
-	  
-	  }
-	 
+
 
 }

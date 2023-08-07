@@ -18,6 +18,8 @@
 			,budget
 			,date
 			,days
+			,type_seq
+			,region_seq
 		</sql>
 		
 		<sql id="selectCommon">
@@ -40,6 +42,8 @@
 		    	,budget
 				,date
 				,days
+				,type_seq
+			    ,region_seq
 			 From 
 			 	beingHosted
 			WHERE 1=1 
@@ -112,6 +116,9 @@
 				,budget
 				,date
 				,days
+				,type_seq
+				,region_seq
+				
 	   			
 	   		) values (
 	   		   #{address}
@@ -123,10 +130,12 @@
 	   		   ,#{budget}
 	   		   ,#{date}
 	   		   ,#{days}
+	   		   ,#{type_seq}
+	   		   ,#{region_seq}
 	   		)
 	   	</insert>   	
    
-		<select id="selectListCachedBeingHostedArrayList" resultMap="resultMapObj">
+		<select id="selectListCachedFindHostViewArrayList" resultMap="resultMapObj">
 			SELECT
 			
 			address
@@ -135,26 +144,18 @@
 			,aboutPlan
 			,note
 			,language
-			
 			,budget
 			,date
 			,days
+			,type_seq
+			,region_seq
 				
 			FROM
 				beingHosted
 		
 	    </select>
 	    
-	     <select id="selectOneAjax" resultMap="resultMapObj">
-      SELECT 
-         address
-         ,date
-      FROM
-         beingHosted
-      WHERE 1=1
-         AND address = #{address}
-         AND date = #{date}
-   </select> 
+	
 
 
 </mapper>  

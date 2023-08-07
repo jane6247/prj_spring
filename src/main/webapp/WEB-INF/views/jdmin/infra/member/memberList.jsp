@@ -22,6 +22,7 @@
               
               <input type="hidden" name="thisPage" value="<c:out value="${vo.thisPage}" default="1"/>">
 			<input type="hidden" name="rowNumToShow" value="<c:out value="${vo.rowNumToShow}"/>">
+					
 					<!-- <select name="shOption">
 					    <option value="">--선택하세요--</option>
 					    <option value="1">Name</option>

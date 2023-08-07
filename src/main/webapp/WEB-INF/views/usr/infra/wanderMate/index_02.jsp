@@ -92,13 +92,13 @@
        <form name="formList" method="post">
       <section>
         <div class="search-container">
-            <select class="search-input" id="destination-input" name="shKeyword" value="<c:out value="${vo.address}"/>">
+            <select class="search-input" id="destination-input"  >
 	            <option value="" disabled selected>Direction</option>
 	            <option value="서울">Seoul</option>
 	            <option value="도쿄">Vancouver</option>
 	            <option value="파리">Paris</option>
           </select>
-          <select class="search-input" id="genre-input" name="shKeyword" value="<c:out value="${vo.date}"/>">
+          <select class="search-input" id="genre-input" >
             <option value="" disabled selected>Type</option>
             <option value="숙소">Accommodation</option>
             <option value="식당">Restaurant</option>
@@ -135,7 +135,7 @@
               </div>
               <p class="card__title">
                 <strong>Darae</strong><br />
-                (<c:out value="${list.address }"/>)<br />age:31 <br />
+                (<c:out value="${list.type_seq }"/>)<br />age:31 <br />
                 Language: <c:out value="${list.language }"/>
               </p>
               <div class="star_box">
@@ -154,7 +154,7 @@
             </div>
 
             <div class="card__content">
-              <h4>About plan:</h4>
+              <h4>About plan:</h4> <span><c:out value="${list.date }"/></span>
               <p class="card__text"><c:out value="${list.aboutPlan }"/>
                 
               </p>

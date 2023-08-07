@@ -21,6 +21,6 @@ public interface FindHostViewService {
 	public int insert(FindHostView dto);
 	List<FindHostView> selectList(FindHostViewVo vo);
 	
-	 public FindHostView selectOneAjax(FindHostViewVo vo);
+	 
 	
 }

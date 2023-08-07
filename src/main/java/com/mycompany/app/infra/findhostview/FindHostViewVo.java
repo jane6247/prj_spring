@@ -160,12 +160,7 @@ public class FindHostViewVo {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public Integer getDate() {
-		return date;
-	}
-	public void setDate(Integer date) {
-		this.date = date;
-	}
+
 	
 		
 }
