@@ -136,19 +136,20 @@
 	   	</insert>   	
    
 		<select id="selectListCachedFindHostViewArrayList" resultMap="resultMapObj">
+			
 			SELECT
 			
-			address
-			,maxPeople
-			,aboutMe
-			,aboutPlan
-			,note
-			,language
-			,budget
-			,date
-			,days
-			,type_seq
-			,region_seq
+				address
+				,maxPeople
+				,aboutMe
+				,aboutPlan
+				,note
+				,language
+				,budget
+				,date
+				,days
+				,type_seq
+				,region_seq
 				
 			FROM
 				beingHosted

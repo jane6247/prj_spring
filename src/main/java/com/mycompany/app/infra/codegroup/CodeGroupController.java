@@ -46,6 +46,14 @@ public class CodeGroupController {
 	}
 		
 	
+	@RequestMapping("/indexJdmview")
+	
+		public String indexJdmView(){
+		
+		return "jdmin/infra/index/indexJdmView";
+	 
+	 }
+	
 	@RequestMapping("/codeGroupUpdt")
 	public String codeGroupUpdt(CodeGroup dto) {
 		service.update(dto);

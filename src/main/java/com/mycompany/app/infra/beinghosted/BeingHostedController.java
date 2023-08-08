@@ -38,6 +38,8 @@ public class BeingHostedController {
 	 
 	 }
 	
+
+	
 	
 	   @RequestMapping("/mainview")
 	   public String index_01(){
@@ -104,6 +106,8 @@ public class BeingHostedController {
 			service.insert(dto);
 			return "redirect:/beingHostedList";
 		}
+		
+		
 		//API 받아서 연동 하는 법
 		@RequestMapping(value="publicCorona1List")
 		public String publicCorona1List(Model model)throws Exception {

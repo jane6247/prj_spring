@@ -135,7 +135,11 @@
               </div>
               <p class="card__title">
                 <strong>Darae</strong><br />
-                (<c:out value="${list.type_seq }"/>)<br />age:31 <br />
+                (<c:forEach items="${listFindHostViewType_seq}" var="listType_seq" varStatus="statusType_seq">
+																<c:if test="${list.type_seq eq listType_seq.seq}">
+																	<c:out value="${listType_seq.name }"/>
+																</c:if> 
+															</c:forEach>)<br />age:31 <br />
                 Language: <c:out value="${list.language }"/>
               </p>
               <div class="star_box">

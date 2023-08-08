@@ -46,10 +46,7 @@ public class MemberController {
 		return "jdmin/infra/member/memberForm";
 	}
 
-	/*
-	 * @RequestMapping("/indexUsrLoginView") public String indexUsrLoginView() {
-	 * return "usr/infra/biography/login"; }
-	 */
+	
 
 	@RequestMapping("/memberUpdt")
 	public String memberUpdt(Member dto) {

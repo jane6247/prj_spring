@@ -8,8 +8,6 @@ import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.mycompany.app.infra.findhostview.FindHostView;
-
 
 @Service
 public class FindHostViewServiceImpl implements FindHostViewService {
@@ -80,7 +78,31 @@ public class FindHostViewServiceImpl implements FindHostViewService {
 	public static void clear() throws Exception {
 	    FindHostView.cachedFindHostViewArrayList.clear();
 	}
+	
+	public static List<FindHostView> selectListCachedFindHostView(String type_seq) throws Exception {
+		List<FindHostView> rt = new ArrayList<FindHostView>();
+		for(FindHostView findhostviewRow : FindHostView.cachedFindHostViewArrayList) {
+			if (findhostviewRow.getType_seq().equals(type_seq)) {
+				rt.add(findhostviewRow);
+			} else {
+				// by pass
+			}
+		}
+		return rt;
+	}
 
+	
+	public static String selectOneCachedFindHostView(int findhostview) throws Exception {
+		String rt = "";
+		for(FindHostView findhostviewRow : FindHostView.cachedFindHostViewArrayList) {
+			if (findhostviewRow.getSeq().equals(Integer.toString(findhostview))) {
+				rt = findhostviewRow.getName();
+			} else {
+				// by pass
+			}
+		}
+		return rt;
+	}
 
 	
 
