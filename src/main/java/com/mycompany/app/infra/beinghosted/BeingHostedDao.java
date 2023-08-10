@@ -28,6 +28,4 @@ public class BeingHostedDao {
 	public int uelete(BeingHosted dto){ return sqlSession.update(namespace + ".uelete", dto); }
 	public int insert(BeingHosted dto){ return sqlSession.insert(namespace + ".insert", dto); }
 	
-//	for cache
-	public List<BeingHosted> selectListCachedBeingHostedArrayList(){ return sqlSession.selectList(namespace + ".selectListCachedBeingHostedArrayList", null); }
 }

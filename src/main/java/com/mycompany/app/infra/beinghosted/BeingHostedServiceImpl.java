@@ -47,13 +47,13 @@ public class BeingHostedServiceImpl implements BeingHostedService{
 
 	@Override
 	public int selectOneCount(BeingHostedVo vo) {
-		// TODO Auto-generated method stub
+		
 		return dao.selectOneCount(vo);
 	}
 
 	@Override
 	public List<BeingHosted> selectList1(BeingHostedVo vo) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 	

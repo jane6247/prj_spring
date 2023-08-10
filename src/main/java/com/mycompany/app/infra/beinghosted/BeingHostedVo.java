@@ -117,7 +117,7 @@ public class BeingHostedVo {
 
 		setTotalRows(totalRows);
 //		this.totalRows = totalRows;
-//     get,set쓰는게 맞는건 아님 큰 문제는 없지만,,,,,,ㄴ		
+//     get,set쓰는게 맞는건 아님 큰 문제는 없지만,,,,,,	
 
 		if (getTotalRows() == 0) {
 			setTotalPages(1);

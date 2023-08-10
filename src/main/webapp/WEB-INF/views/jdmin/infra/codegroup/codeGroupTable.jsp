@@ -119,7 +119,6 @@
 	
 $("#btn").on("click", function(){
 	
-// 	$("form[name=formList]").attr("method","get");
 	$("form[name=formList]").attr("action", "/codeGroupTable").submit();
 	
 });

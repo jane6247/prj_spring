@@ -27,6 +27,9 @@
     ></script>
   </head>
   <body>
+  
+  <jsp:useBean id="CodeServiceImpl" class="com.mycompany.app.infra.code.CodeServiceImpl"/>
+   
     <div class="wrap">
       <header class="header">
         <div class="logo">
@@ -126,6 +129,8 @@
         <div class="slide_box">
  
  
+  <c:set var="listFindRegion" value="${CodeServiceImpl.selectListCachedCode('3')}"/>
+    <c:set var="listFindType" value="${CodeServiceImpl.selectListCachedCode('2')}"/> 
   
 <c:forEach items="${card}" var="list" varStatus="status">
           <div class="card swiper-slide">
@@ -135,11 +140,21 @@
               </div>
               <p class="card__title">
                 <strong>Darae</strong><br />
-                (<c:forEach items="${listFindHostViewType_seq}" var="listType_seq" varStatus="statusType_seq">
-																<c:if test="${list.type_seq eq listType_seq.seq}">
-																	<c:out value="${listType_seq.name }"/>
-																</c:if> 
-															</c:forEach>)<br />age:31 <br />
+                (
+                
+                <c:forEach items="${listFindType}" var="listType" varStatus="statusType">
+						<c:if test="${list.type_seq eq listType.seq}">
+							<c:out value="${listType.name }"/>
+						</c:if> 					
+				</c:forEach>
+                
+                /
+                <c:forEach items="${listFindRegion}" var="listRegion" varStatus="statusRegion">
+						<c:if test="${list.region_seq eq listRegion.seq}">
+							<c:out value="${listRegion.name }"/>
+						</c:if> 					
+				</c:forEach>								
+								 )<br />age:31 <br />
                 Language: <c:out value="${list.language }"/>
               </p>
               <div class="star_box">
@@ -158,7 +173,7 @@
             </div>
 
             <div class="card__content">
-              <h4>About plan:</h4> <span><c:out value="${list.date }"/></span>
+              <h4>About plan:</h4> <h5><c:out value="${list.date }"/></h5>
               <p class="card__text"><c:out value="${list.aboutPlan }"/>
                 
               </p>

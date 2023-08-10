@@ -98,13 +98,10 @@ public class FindHostViewServiceImpl implements FindHostViewService {
 			if (findhostviewRow.getSeq().equals(Integer.toString(findhostview))) {
 				rt = findhostviewRow.getName();
 			} else {
-				// by pass
+				
 			}
 		}
 		return rt;
 	}
 
-	
-
-	
 }
