@@ -196,7 +196,7 @@
               </div>
             </div>
             <div class="card_bottom">
-              <a href="/hostpost?seq=<c:out value="${list.seq }"/>">
+              <a href="/myposting?seq=<c:out value="${list.seq }"/>">
                 <i class="fa-solid fa-arrow-right"></i
               ></a>
             </div>

@@ -22,7 +22,7 @@ public class FindHostViewController {
 	FindHostViewServiceImpl service;
 
 	@RequestMapping("/findhostview")
-	public String index_02(@ModelAttribute("vo") FindHostViewVo vo, Model model) {
+	public String findhostview(@ModelAttribute("vo") FindHostViewVo vo, Model model) {
 
 		List<FindHostView> card = service.selectCard(vo);
 		model.addAttribute("card", card);
@@ -37,17 +37,17 @@ public class FindHostViewController {
 //				by pass
 		}
 
-		return "usr/infra/wanderMate/index_02";
+		return "usr/infra/wanderMate/findhostview";
 
 	}
 
-	@RequestMapping("/hostpost")
-	public String index_05(@ModelAttribute("vo") FindHostViewVo vo, Model model) {
+	@RequestMapping("/myposting")
+	public String myposting(@ModelAttribute("vo") FindHostViewVo vo, Model model) {
 
 		FindHostView item = service.selectPost(vo);
 		model.addAttribute("item", item);
 
-		return "usr/infra/wanderMate/index_05";
+		return "usr/infra/wanderMate/myposting";
 
 	}
 

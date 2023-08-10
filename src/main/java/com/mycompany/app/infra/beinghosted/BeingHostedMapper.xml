@@ -19,6 +19,9 @@
 			,budget
 			,date
 			,days
+			,member_seq
+			,type_seq
+			,region_seq
 		</sql>
 		
 		<sql id="selectCommon">
@@ -63,39 +66,37 @@
 	   		delete from beingHosted WHERE seq = #{seq}	
 	   	</delete>   	
    	 
-	   	<update id="uelete">
+    	<update id="uelete"> 
 	   		UPDATE beingHosted
 	   		SET
 	   			member_seq= 1
 			WHERE
 				seq = #{seq}	
-	   	</update>   	
+	   	</update>   	 
 	   	
 	   	<insert id="insert">
-	   		INSERT INTO beingHosted (
-				address
-				,maxPeople
-				,aboutMe
-				,aboutPlan
-				,note
-				,language
-				
-				,budget
-				,date
-				,days
-	   			
-	   		) values (
-	   		   #{address}
-	   		   ,#{maxPeople}
-	   		   ,#{aboutMe}
-	   		   ,#{aboutPlan}
-	   		   ,#{note}
-	   		   ,#{language}
-	   		   
-	   		   ,#{budget}
-	   		   ,#{date}
-	   		   ,#{days}
-	   		)
-	   	</insert>   	
+	    INSERT INTO beingHosted (
+	        address,
+	        maxPeople,
+	        aboutMe,
+	        aboutPlan,
+	        note,
+	        language,
+	        budget,
+	        date,
+	        days
+	    ) VALUES (
+	        #{address},
+	        #{maxPeople},
+	        #{aboutMe},
+	        #{aboutPlan},
+	        #{note},
+	        #{language},
+	        #{budget},
+	        #{date},
+	        #{days}
+	    )
+       </insert>
+	
    
 </mapper>  

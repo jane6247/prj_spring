@@ -12,6 +12,8 @@ public class BeingHosted {
 	private Integer days;
 	private Integer date;
 	private Integer maxPeople;
+	private Integer type_seq;
+	private Integer region_seq;
 	
 	
 	
@@ -82,6 +84,18 @@ public class BeingHosted {
 	}
 	public void setMaxPeople(Integer maxPeople) {
 		this.maxPeople = maxPeople;
+	}
+	public Integer getType_seq() {
+		return type_seq;
+	}
+	public void setType_seq(Integer type_seq) {
+		this.type_seq = type_seq;
+	}
+	public Integer getRegion_seq() {
+		return region_seq;
+	}
+	public void setRegion_seq(Integer region_seq) {
+		this.region_seq = region_seq;
 	}
 	
 }

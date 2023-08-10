@@ -214,7 +214,7 @@
      // 인서트버튼 클릭이벤트
 		$("#close_ad").on("click", function(){
 // 			if (validationInst() == false) return false;
-			$("form[name=ad]").attr("action","/beingHostedListInst").submit();
+			$("form[name=ad]").attr("action","/myposting").submit();
 		});
 
 //사진 슬라이드

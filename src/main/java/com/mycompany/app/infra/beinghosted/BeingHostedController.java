@@ -42,30 +42,30 @@ public class BeingHostedController {
 	
 	
 	   @RequestMapping("/mainview")
-	   public String index_01(){
-	   return "usr/infra/wanderMate/index_01";  
+	   public String mainview(){
+	   return "usr/infra/wanderMate/mainview";  
 	  
 	  }
 	   
-	   @RequestMapping("/findepostview")
-	   public String index_03(){
-	   return "usr/infra/wanderMate/index_03";  
+	   @RequestMapping("/postingview")
+	   public String postingview(){
+	   return "usr/infra/wanderMate/postingview";  
 	  
 	  }
 	   @RequestMapping("/Publication")
-	   public String index_04(){
-	   return "usr/infra/wanderMate/index_04";  
+	   public String Publication(){
+	   return "usr/infra/wanderMate/Publication";  
 	  
 	  }
 	  
 	   @RequestMapping("/account")
-	   public String index_06(){
-	   return "usr/infra/wanderMate/index_06";  
+	   public String account(){
+	   return "usr/infra/wanderMate/account";  
 	  
 	  }
 	   @RequestMapping("/contact")
-	   public String index_07(){
-	   return "usr/infra/wanderMate/index_07";  
+	   public String contact(){
+	   return "usr/infra/wanderMate/contact";  
 	  
 	  }
 	   

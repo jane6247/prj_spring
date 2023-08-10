@@ -38,7 +38,7 @@
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">member_seq</th>
+<!--                     <th scope="col">member_seq</th> -->
                     <th scope="col">aboutMe</th>
                     <th scope="col">aboutPlan</th>
                     <th scope="col">note</th>
@@ -63,7 +63,7 @@
 		<c:forEach items="${list}" var="list" varStatus="status">
 		          <tr>
                     <th scope="row"><c:out value="${list.seq }"/></th>
-                    <td><c:out value="${list.member_seq }"/></td>
+<%--                     <td><c:out value="${list.member_seq }"/></td> --%>
                      
                     <td><a href="beingHostedForm?seq=<c:out value="${list.seq }"/>"><c:out value="${list.aboutMe }"/></a></td>
                     <td><c:out value="${list.aboutPlan }"/></td>

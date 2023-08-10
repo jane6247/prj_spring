@@ -101,7 +101,7 @@
                 <img src="/resources/assets_wanderMate/img/profile_pic02.webp" />
               </div>
               <div class="name_text">
-                <h3>Jessica</h3>
+                <h3>Jessica<c:out value="${item.seq }"/></h3>
                 <br />
                 <p>
                   Age: 28<br />
@@ -135,39 +135,24 @@
             <div class="info_box">
               <h4>About me:</h4>
               <p>
-                Hey there! 👋🏽
-My name is Carina and I am from Austria 🇦🇹 Here a small summary of myself. 
-
-Grew up surrounded by the Alps, which gave me free rein to enjoy mountain life- in winter with my skis and summer through hiking. Besides my love for outdoor sports I am also passionated to travel, getting to know new cultures and like-minded people 🥰.
-
-I am looking forward to exciting stories, smiling faces and unforgettable adventures!
+                <c:out value="${item.aboutMe }"/>
               </p>
             </div>
             <div class="info_box info_about">
               <h4>About plane:</h4>
               <p>
-                The standard Lorem Ipsum passage, used since the 1500s "Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum."
+               <c:out value="${item.aboutPlan }"/>
               </p>
             </div>
             <div class="info_box info_note">
               <h4>Note:</h4>
               <p>
-                The standard Lorem Ipsum passage, used since the 1500s "Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam,
+                <c:out value="${item.note }"/>
               </p>
             </div>
             <div class="info_box info_lang">
               <h4>Language that I know:</h4>
-              <p>English/Korean</p>
+              <p><c:out value="${item.language}"/></p>
             </div>
           </div>
 
