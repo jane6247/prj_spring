@@ -129,8 +129,8 @@
         <div class="slide_box">
  
  
-  <c:set var="listFindRegion" value="${CodeServiceImpl.selectListCachedCode('3')}"/>
-    <c:set var="listFindType" value="${CodeServiceImpl.selectListCachedCode('2')}"/> 
+    <c:set var="listFindRegion" value="${CodeServiceImpl.selectListCachedCode('2')}"/>
+    <c:set var="listFindType" value="${CodeServiceImpl.selectListCachedCode('3')}"/> 
   
 <c:forEach items="${card}" var="list" varStatus="status">
           <div class="card swiper-slide">
@@ -142,18 +142,18 @@
                 <strong>Darae</strong><br />
                 (
                 
-                <c:forEach items="${listFindType}" var="listType" varStatus="statusType">
-						<c:if test="${list.type_seq eq listType.seq}">
-							<c:out value="${listType.name }"/>
+                 <c:forEach items="${listFindRegion}" var="listRegion" varStatus="statusRegion">
+						<c:if test="${list.region_seq eq listRegion.seq}">
+							<c:out value="${listRegion.name }"/>
 						</c:if> 					
 				</c:forEach>
                 
                 /
-                <c:forEach items="${listFindRegion}" var="listRegion" varStatus="statusRegion">
-						<c:if test="${list.region_seq eq listRegion.seq}">
-							<c:out value="${listRegion.name }"/>
-						</c:if> 					
-				</c:forEach>								
+                <c:forEach items="${listFindType}" var="listType" varStatus="statusType">
+					<c:if test="${list.type_seq eq listType.seq}">
+						<c:out value="${listType.name }"/>
+					</c:if> 					
+				</c:forEach>							
 								 )<br />age:31 <br />
                 Language: <c:out value="${list.language }"/>
               </p>
@@ -168,13 +168,22 @@
                   class="fa-solid fa-user-group"
                   style="font-size: x-large"
                 ></i>
-                &gt;<c:out value="${list.maxPeople }"/>
+                &gt; <c:out value="${list.maxPeople }"/>
               </div>
             </div>
 
             <div class="card__content">
-              <h4>About plan:</h4> <h5><c:out value="${list.date }"/></h5>
-              <p class="card__text"><c:out value="${list.aboutPlan }"/>
+              <h4>About plan:</h4> 
+              <p class="card__text">
+            <c:choose>
+              <c:when test="${fn:length(list.aboutPlan) gt 70}">
+                 <c:out value="${fn:substring(list.aboutPlan, 0, 69)}"/> ........
+        	  </c:when>
+             <c:otherwise>
+               <c:out value="${list.aboutPlan}"/>
+             </c:otherwise>
+            </c:choose>
+
                 
               </p>
               <div class="date">
@@ -187,12 +196,12 @@
                   class="fa-regular fa-clock"
                   style="font-size: x-large; color: #346751"
                 ></i>
-                <p>2days</p>
+                <p><c:out value="${list.days }"/>days</p>
                 <i
                   class="fa-solid fa-sack-dollar"
                   style="font-size: x-large; color: #346751"
                 ></i>
-                <p><c:out value="${list.days }"/></p>
+                <p>$<c:out value="${list.budget }"/></p>
               </div>
             </div>
             <div class="card_bottom">

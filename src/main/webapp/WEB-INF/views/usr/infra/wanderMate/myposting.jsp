@@ -32,6 +32,8 @@
   </head>
 
   <body>
+  <jsp:useBean id="CodeServiceImpl" class="com.mycompany.app.infra.code.CodeServiceImpl"/>
+  
     <div class="wrap">
       <header class="header">
         <div class="logo">
@@ -95,10 +97,31 @@
               <div class="name_text">
                 <h3>Jessica <c:out value="${item.seq }"/></h3>
                 <br />
+               
+               
                 <p>
-                  Age: 28<br />
-                  England,London
+                  Age: 2</p>
+                  
+                  <c:forEach items="${card}" var="list" varStatus="status">
+                  <c:set var="listFindRegion" value="${CodeServiceImpl.selectListCachedCode('2')}"/>
+                  <c:set var="listFindType" value="${CodeServiceImpl.selectListCachedCode('3')}"/> 
+                  <p>
+                  <c:forEach items="${listFindRegion}" var="listRegion" varStatus="statusRegion">
+						<c:if test="${list.region_seq eq listRegion.seq}">
+							<c:out value="${listRegion.name}"/>
+						</c:if> 					
+				</c:forEach>
+				/
+				<c:forEach items="${listFindType}" var="listType" varStatus="statusType">
+					<c:if test="${list.type_seq eq listType.seq}">
+						<c:out value="${listType.name }"/>
+					</c:if> 					
+				</c:forEach>
+					
+				
+				
                 </p>
+                </c:forEach>
               </div>
               <div class="star_box" style="font-weight: 400; font-size: 15px">
                 <div>
@@ -148,6 +171,7 @@
               <p class="gone"><c:out value="${item.language}"/></p>
             </div>
           </div>
+     
 
           <div class="main_picture_wrap">
             <div class="slider">

@@ -1,5 +1,6 @@
 package com.mycompany.app.infra.findhostview;
 
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -68,12 +69,7 @@ public class FindHostView {
 	public void setDays(Integer days) {
 		this.days = days;
 	}
-	public Integer getDate() {
-		return date;
-	}
-	public void setDate(Integer date) {
-		this.date = date;
-	}
+	
 	public Integer getMember_seq() {
 		return member_seq;
 	}
@@ -105,8 +101,18 @@ public class FindHostView {
 		this.region_seq = region_seq;
 	}
 	
-	
-//	for cache
+	public Integer getDate() {
+		return date;
+	}
+	public void setDate(Integer date) {
+		this.date = date;
+	}
+
+
+
+
+
+	//	for cache
 	public static List<FindHostView> cachedFindHostViewArrayList = new ArrayList<FindHostView>();
 	
 	

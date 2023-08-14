@@ -57,6 +57,8 @@
 		    	,aboutPlan
 		    	,note
 		    	,language
+		    	,type_seq
+			    ,region_seq
 		    	
 			 From 
 			 	beingHosted

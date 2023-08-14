@@ -32,9 +32,9 @@ public class FindHostViewController {
 		if (vo.getTotalRows() > 0) {
 			List<FindHostView> list = service.selectList(vo);
 			model.addAttribute("card", list);
-//				model.addAttribute("vo", vo);
+//				
 		} else {
-//				by pass
+//				
 		}
 
 		return "usr/infra/wanderMate/findhostview";
@@ -44,6 +44,7 @@ public class FindHostViewController {
 	@RequestMapping("/myposting")
 	public String myposting(@ModelAttribute("vo") FindHostViewVo vo, Model model) {
 
+		
 		FindHostView item = service.selectPost(vo);
 		model.addAttribute("item", item);
 

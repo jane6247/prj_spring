@@ -1,5 +1,7 @@
  package com.mycompany.app.infra.beinghosted;
 
+
+
 public class BeingHosted {
 	private String seq;
 	private String aboutMe;

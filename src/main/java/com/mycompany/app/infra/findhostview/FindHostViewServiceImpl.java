@@ -66,42 +66,4 @@ public class FindHostViewServiceImpl implements FindHostViewService {
 	}
 
 	
-//	for cache
-	@PostConstruct
-	public void selectListCachedFindHostViewArrayList() throws Exception {
-	    List<FindHostView> findHostViewListFromDb = dao.selectListCachedFindHostViewArrayList(); // Fix variable name
-	    FindHostView.cachedFindHostViewArrayList.clear();
-	    FindHostView.cachedFindHostViewArrayList.addAll(findHostViewListFromDb); // Fix variable name
-	    System.out.println("cachedFindHostViewArrayList: " + FindHostView.cachedFindHostViewArrayList.size() + " cached!"); // Fix spelling
-	}
-
-	public static void clear() throws Exception {
-	    FindHostView.cachedFindHostViewArrayList.clear();
-	}
-	
-	public static List<FindHostView> selectListCachedFindHostView(String type_seq) throws Exception {
-		List<FindHostView> rt = new ArrayList<FindHostView>();
-		for(FindHostView findhostviewRow : FindHostView.cachedFindHostViewArrayList) {
-			if (findhostviewRow.getType_seq().equals(type_seq)) {
-				rt.add(findhostviewRow);
-			} else {
-				// by pass
-			}
-		}
-		return rt;
-	}
-
-	
-	public static String selectOneCachedFindHostView(int findhostview) throws Exception {
-		String rt = "";
-		for(FindHostView findhostviewRow : FindHostView.cachedFindHostViewArrayList) {
-			if (findhostviewRow.getSeq().equals(Integer.toString(findhostview))) {
-				rt = findhostviewRow.getName();
-			} else {
-				
-			}
-		}
-		return rt;
-	}
-
 }
