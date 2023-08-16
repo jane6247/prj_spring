@@ -70,7 +70,7 @@ public class CodeServiceImpl implements CodeService{
 			if (codeRow.getCodeGroup_seq().equals(codeGroup_seq)) {
 				rt.add(codeRow);
 			} else {
-				// by pass
+				
 			}
 		}
 		return rt;
@@ -83,7 +83,7 @@ public class CodeServiceImpl implements CodeService{
 			if (codeRow.getSeq().equals(Integer.toString(code))) {
 				rt = codeRow.getName();
 			} else {
-				// by pass
+			
 			}
 		}
 		return rt;

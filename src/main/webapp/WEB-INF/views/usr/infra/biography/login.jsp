@@ -333,11 +333,11 @@ color: red; important;
             <h2>Welcome</h2>
             <label>
                 <span>Id</span>
-                <input type="id" id="id" />
+                <input type="id" name="id" id="id" placeholder="Enter User ID" value="test" />
             </label>
             <label>
                 <span>Password</span>
-                <input type="password" id="password"/>
+                <input type="password" name="password" id="password" placeholder="Enter password" value="11111d"/>
             </label>
             <p class="forgot-pass">Forgot password?</p>
             <button type="button" class="submit" id="btnLogin">Sign In</button>
@@ -358,18 +358,18 @@ color: red; important;
                     <span class="m--in">Sign In</span>
                 </div>
             </div>
-            
+     <!--START sing-up  -->      
        <form name="formSignup" method="post">            
 	    <div class="form sign-up">
 	        <h2>Create your Account</h2>
 	        <label>
 	            <span>Id</span>
-	            <input type="text" name="id" id="id" required />
+	            <input type="text" name="id" id="id" >
 	            <div class="invalid-feedback" id="idFeedback"></div>
 	        </label>
 	        <label>
 	            <span>Password</span>
-	            <input type="password" name="password" id="password" required />
+	            <input type="password" name="password" id="password"  >
 	            <div class="invalid-feedback" id="passwordFeedback"></div>
 	        </label>
 	        <label>
