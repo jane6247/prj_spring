@@ -179,20 +179,127 @@
               <img src="/resources/assets_wanderMate/img/china.jpeg" alt="" />
             </div>
             <div class="send_message_wrap">
-              <button class="edit_txt">
-                <p>Edit</p>
+              <button class="send_txt">
+               <span
+                  class="material-symbols-outlined"
+                  style="color: #fff; font-size: 30px"
+                >
+                  person_add
+                </span>
+                <p>Request stay</p>
               </button>
-              <button class="edit_txt edit_btn">
-                <p>Deactivate</p>
+              <button class="send_txt send_btn"">
+               <i
+                  class="fa-regular fa-paper-plane"
+                  style="color: #fff; font-size: 30px"
+                ></i>
+                <p>Send Message</p>
               </button>
-              <button type="button" class="edit_txt">
+              <button type="button" class="send_txt">
                 <p>Remove ad</p>
               </button>
-            </div>
           </div>
         </div>
       </section>
+      
+      <!--START comment list  -->
+   <div class="col-md-12 tour-wrap">
+    		<div class="pt-5">
+              <h3 class="mb-5" style="border-bottom: 1px solid #f2f2f2;">3 Comments</h3>
+              <ul class="comment-list">
+                <li class="comment">
+                  <div class="vcard bio">
+                    <img src="images/person_1.jpg" alt="Image placeholder">
+                  </div>
+                  <div class="comment-body">
+                    <h3>John Doe</h3>
+                    <div class="meta">October 03, 2018 at 2:21pm</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                    <p><a href="#" class="reply">Reply</a></p>
+                  </div>
+                </li>
 
+                <li class="comment">
+                  <div class="vcard bio">
+                    <img src="images/person_1.jpg" alt="Image placeholder">
+                  </div>
+                  <div class="comment-body">
+                    <h3>John Doe</h3>
+                    <div class="meta">October 03, 2018 at 2:21pm</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                    <p><a href="#" class="reply">Reply</a></p>
+                  </div>
+
+                  <ul class="children">
+                    <li class="comment">
+                      <div class="vcard bio">
+                        <img src="images/person_1.jpg" alt="Image placeholder">
+                      </div>
+                      <div class="comment-body">
+                        <h3>John Doe</h3>
+                        <div class="meta">October 03, 2018 at 2:21pm</div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                        <p><a href="#" class="reply">Reply</a></p>
+                      </div>
+
+
+                      <ul class="children">
+                        <li class="comment">
+                          <div class="vcard bio">
+                            <img src="images/person_1.jpg" alt="Image placeholder">
+                          </div>
+                          <div class="comment-body">
+                            <h3>John Doe</h3>
+                            <div class="meta">October 03, 2018 at 2:21pm</div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                            <p><a href="#" class="reply">Reply</a></p>
+                          </div>
+
+                            <ul class="children">
+                              <li class="comment">
+                                <div class="vcard bio">
+                                  <img src="images/person_1.jpg" alt="Image placeholder">
+                                </div>
+                                <div class="comment-body">
+                                  <h3>John Doe</h3>
+                                  <div class="meta">October 03, 2018 at 2:21pm</div>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                                  <p><a href="#" class="reply">Reply</a></p>
+                                </div>
+                              </li>
+                            </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="comment">
+                  <div class="vcard bio">
+                    <img src="images/person_1.jpg" alt="Image placeholder">
+                  </div>
+                  <div class="comment-body">
+                    <h3>John Doe</h3>
+                    <div class="meta">October 03, 2018 at 2:21pm</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                    <p><a href="#" class="reply">Reply</a></p>
+                  </div>
+                </li>
+              </ul><!-- END comment-list -->
+      <form name="comment" method="post">
+      <section class="comment_wrap">
+        <h1>Leave a comment</h1>
+        <div class="comment_box">
+          <p>Name *</p>
+          <input type="text" />
+          <p>Email *</p>
+          <input type="text" />
+          <p>Message *</p>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <button class="post_btn" type="button">Post Comment</button>
+        </div>
+      </section>
+	</form>
 
      <%@include file="../../include/includeWanderFooter.jsp"%>
     </div>
@@ -203,6 +310,19 @@
         $('.slider').bxSlider();
       });
 
+      const send = document.querySelector('.send_btn');
+      const comment_wrap = document.querySelector('.comment_wrap');
+
+      send.addEventListener('click', () => {
+        comment_wrap.style.display = 'block';
+      });
+      
+      // 인서트버튼 클릭이벤트
+		$(".post_btn").on("click", function(){
+			
+			$("form[name=comment]").attr("action","/commentList").submit();
+		});
+      
       const edit_txt = document.querySelector('edit_txt');
       const gone = document.querySelector('gone');
       const new_show = document.getElementById('new_show');

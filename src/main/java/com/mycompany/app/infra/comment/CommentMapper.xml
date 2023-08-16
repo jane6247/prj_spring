@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+ <mapper namespace="com.mycompany.app.infra.comment.CommentMapper">
+
+<resultMap id="resultMapObj" type="com.mycompany.app.infra.comment.Comment"></resultMap>
+
+		<sql id="comment">
+			seq
+			,message
+			,member_seq
+		
+		</sql>
+		
+		<sql id="selectCommon">
+			FROM
+				comment
+			WHERE 1=1
+			 	<if test="shKeyword != null and !shKeyword.equals('')">AND id LIKE CONCAT('%',#{shKeyword},'%')</if>			
+		</sql>
+		
+		<select id="selectOneCount" resultType="Integer">
+			SELECT count(*)
+			<include refid="selectCommon" />
+	    </select>
+	    
+	    <select id="selectList" resultMap="resultMapObj">
+			SELECT aa.* FROM (   	
+		   		SELECT
+					<include refid="comment" />
+		   			<include refid="selectCommon" />
+			) aa
+			LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}	   			
+   		</select>
+
+		<select id="selectOne" resultMap="resultMapObj">
+	   		SELECT
+				<include refid="comment" />
+	   		FROM
+	   			comment
+			WHERE 1=1
+				AND seq = #{seq}	
+   		</select>   
+
+		<update id="update">
+	   		UPDATE comment
+	   		SET
+	   			name = #{name}
+			WHERE
+				seq = #{seq}	
+   		</update>   	
+   	
+	   	<delete id="delete">
+	   		delete from comment WHERE seq = #{seq}	
+	   	</delete>   	
+   	 
+    	<update id="uelete"> 
+	   		UPDATE comment
+	   		SET
+	   			member_seq= 1
+			WHERE
+				seq = #{seq}	
+	   	</update>   	 
+	   	
+	   	<insert id="insert">
+	    INSERT INTO comment (
+	        message
+	 
+	    ) VALUES (
+	        #{message}
+	  
+	    )
+       </insert>
+	
+</mapper>  

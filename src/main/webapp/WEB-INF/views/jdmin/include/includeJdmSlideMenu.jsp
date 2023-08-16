@@ -111,8 +111,8 @@
             </a>
           </li>
           <li>
-            <a href="forms-editors.html">
-              <i class="bi bi-circle"></i><span>Form Editors</span>
+            <a href="commentList">
+              <i class="bi bi-circle"></i><span>Comment</span>
             </a>
           </li>
           <li>

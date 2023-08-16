@@ -27,9 +27,9 @@ public class MemberController {
 		if (vo.getTotalRows() > 0) {
 			List<Member> list = service.selectList(vo);
 			model.addAttribute("list", list);
-//			model.addAttribute("vo", vo);
+
 		} else {
-//			by pass
+			
 		}
 
 		return "jdmin/infra/member/memberList";
@@ -38,7 +38,7 @@ public class MemberController {
 	@RequestMapping("/memberForm")
 	public String memberForm(MemberVo vo, Model model) {
 
-//		객체 한개를 가져와야 된다.
+
 		Member item = service.selectOne(vo);
 
 		model.addAttribute("item", item);

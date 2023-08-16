@@ -253,71 +253,7 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 	 <script type="text/javascript">
     
-      function search() {
-        var destination = document.getElementById('destination-input').value;
-        var genre = document.getElementById('genre-input').value;
-        var calendar = document.getElementById('calendar-input').value;
-       
-      }
-      
-      goList = function(thisPage) {
-    		$("input:hidden[name=thisPage]").val(thisPage);
-    		$("form[name=formList]").attr("action", "findhostview").submit();
-    	}
-      
-      
-      
-       $(document).ready(function() {
-    	  // 방향 선택 시
-    	  $("#destination-input").change(function() {
-    	    const direction = $("#destination-input").val();
-    	    const genre = $("#genre-input").val();
-    	    const selectedDate = $("#calendar-input").val();
-    	    showFilteredData(direction, genre, selectedDate);
-    	  });
-
-    	  // 장르 선택 시
-    	  $("#genre-input").change(function() {
-    	    const direction = $("#destination-input").val();
-    	    const genre = $("#genre-input").val();
-    	    const selectedDate = $("#calendar-input").val();
-    	    showFilteredData(direction, genre, selectedDate);
-    	  });
-
-    	  // 날짜 선택 시
-    	  $("#calendar-input").change(function() {
-    	    const direction = $("#destination-input").val();
-    	    const genre = $("#genre-input").val();
-    	    const selectedDate = $("#calendar-input").val();
-    	    showFilteredData(direction, genre, selectedDate);
-    	  });
-    	});
-
-    	function showFilteredData(direction, genre, selectedDate) {
-    	  $.ajax({
-    	    async: true,
-    	    cache: false,
-    	    type: "post",
-    	    url: "/getDataByFilters",
-    	    data: {
-    	    "direction" : $("#destination-input").val(),
-			"genre" : $("#genre-input").val()
-    	    },
-    	    success: function (response) {
-    	      if (response.rt == "success") {
-    	       
-    	        displayFilteredData(response.data);
-    	      } else {
-    	        alert("선택이 안됩니다");
-    	      }
-    	    },
-    	    error: function (jqXHR, textStatus, errorThrown) {
-    	      console.log("AJAX Error:", textStatus, errorThrown);
-    	      alert("AJAX Error: " + textStatus + " - " + errorThrown);
-    	    }
-    	  });
-    	}
-
+    
     </script>
   </body>
 </html>
