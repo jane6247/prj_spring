@@ -58,11 +58,11 @@ public class CommentController {
 		return "redirect:/commentList";
 	}
 	
-	@RequestMapping("/commentUele")
-	public String commentUele(Comment dto) {
-		service.uelete(dto);
-		return "redirect:/commentList";
-	}
+//	@RequestMapping("/commentUele")
+//	public String commentUele(Comment dto) {
+//		service.uelete(dto);
+//		return "redirect:/commentList";
+//	}
 	
 	@RequestMapping("/commentInst")
 	public String commentInst(Comment dto) {

@@ -39,7 +39,7 @@
                   <tr>
                     <th scope="col">#</th>
                     <th scope="col">Message</th>
-                    <th scope="col">Member_seq</th>
+                    
                 
                   </tr>
                 </thead>
@@ -62,7 +62,7 @@
 		          <tr>
                     <th scope="row"><c:out value="${list.seq }"/></th>
                     <td><a href="commentForm?seq=<c:out value="${list.seq }"/>"><c:out value="${list.message }"/></a></td>
-                    <td><c:out value="${list.member_seq }"/></td>
+                    
                     
                   </tr>
                   

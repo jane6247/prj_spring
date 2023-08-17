@@ -1,8 +1,15 @@
 package com.mycompany.app.infra.member;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.mycompany.app.infra.code.Code;
+
 public class Member {
 	//디비칼럼명 첫글자는 소문자
 	//seq는 편의상 디비에는 int지만 자바에서는 string으로 사용한다.
 	
+	public static List<Member> cachedMemberArrayList = new ArrayList<Member>();
 	private String seq;
 	private String id;
 	private String password;
@@ -60,8 +67,9 @@ public class Member {
 	public void setAge(Integer age) {
 		this.age = age;
 	}
+
 	
 	
 	
-	
+
 }

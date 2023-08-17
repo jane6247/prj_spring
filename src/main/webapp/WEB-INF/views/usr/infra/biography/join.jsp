@@ -328,36 +328,7 @@ color: red; important;
 <body>
     <br>
 <br>
-    <div class="cont">
-        <div class="form sign-in">
-            <h2>Welcome</h2>
-            <label>
-                <span>Id</span>
-                <input type="id" name="id" id="id" placeholder="Enter User ID" value="test" />
-            </label>
-            <label>
-                <span>Password</span>
-                <input type="password" name="password" id="password" placeholder="Enter password" value="11111d"/>
-            </label>
-            <p class="forgot-pass">Forgot password?</p>
-            <button type="button" class="submit" id="btnLogin">Sign In</button>
-         
-        </div>
-        <div class="sub-cont">
-            <div class="img">
-                <div class="img__text m--up">
-                 
-                    <h3>Don't have an account? Please Sign up!<h3>
-                </div>
-                <div class="img__text m--in">
-                
-                    <h3>If you already has an account, just sign in.<h3>
-                </div>
-                <div class="img__btn">
-                    <span class="m--up">Sign Up</span>
-                    <span class="m--in">Sign In</span>
-                </div>
-            </div>
+   
      <!--START sing-up  -->      
        <form name="formSignup" method="post">            
 	    <div class="form sign-up">
@@ -402,9 +373,7 @@ color: red; important;
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="resources/js/validation.js"></script>
 <script type="text/javascript">
-//     document.querySelector('.img__btn').addEventListener('click', function() {
-//         document.querySelector('.cont').classList.toggle('s--signup');
-//     });
+
 
     
     

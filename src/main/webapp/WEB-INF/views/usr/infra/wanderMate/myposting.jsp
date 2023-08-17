@@ -34,6 +34,7 @@
   <body>
   <jsp:useBean id="CodeServiceImpl" class="com.mycompany.app.infra.code.CodeServiceImpl"/>
   
+  
     <div class="wrap">
       <header class="header">
         <div class="logo">
@@ -95,31 +96,31 @@
                 <img src="/resources/assets_wanderMate/img/profile_pic02.webp" />
               </div>
               <div class="name_text">
-                <h3>Jessica <c:out value="${item.seq }"/></h3>
+              
+             
+                <h3>Jessica </h3>
                 <br />
-               
-               
-                <p>
-                  Age: 2</p>
+                <p>Age: 2</p>
                   
                   <c:forEach items="${card}" var="list" varStatus="status">
                   <c:set var="listFindRegion" value="${CodeServiceImpl.selectListCachedCode('2')}"/>
                   <c:set var="listFindType" value="${CodeServiceImpl.selectListCachedCode('3')}"/> 
+                  
                   <p>
+                  
+                  
                   <c:forEach items="${listFindRegion}" var="listRegion" varStatus="statusRegion">
 						<c:if test="${list.region_seq eq listRegion.seq}">
 							<c:out value="${listRegion.name}"/>
 						</c:if> 					
-				</c:forEach>
+				  </c:forEach>
 				/
-				<c:forEach items="${listFindType}" var="listType" varStatus="statusType">
-					<c:if test="${list.type_seq eq listType.seq}">
-						<c:out value="${listType.name }"/>
-					</c:if> 					
-				</c:forEach>
-					
-				
-				
+					<c:forEach items="${listFindType}" var="listType" varStatus="statusType">
+						<c:if test="${list.type_seq eq listType.seq}">
+							<c:out value="${listType.name }"/>
+						</c:if> 					
+					</c:forEach>
+						
                 </p>
                 </c:forEach>
               </div>
@@ -148,7 +149,7 @@
               </div>
             </div>
             <div class="info_box">
-              <h4>About me:</h4>
+              <h4>About me:<c:out value="${item.seq }"/></h4>
               <p class="gone">
              <c:out value="${item.aboutMe }"/>
               </p>
@@ -214,7 +215,7 @@
                   <div class="comment-body">
                     <h3>John Doe</h3>
                     <div class="meta">October 03, 2018 at 2:21pm</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus,</p>
                     <p><a href="#" class="reply">Reply</a></p>
                   </div>
                 </li>
@@ -226,7 +227,7 @@
                   <div class="comment-body">
                     <h3>John Doe</h3>
                     <div class="meta">October 03, 2018 at 2:21pm</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus,</p>
                     <p><a href="#" class="reply">Reply</a></p>
                   </div>
 
@@ -238,7 +239,7 @@
                       <div class="comment-body">
                         <h3>John Doe</h3>
                         <div class="meta">October 03, 2018 at 2:21pm</div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus,</p>
                         <p><a href="#" class="reply">Reply</a></p>
                       </div>
 
@@ -251,7 +252,7 @@
                           <div class="comment-body">
                             <h3>John Doe</h3>
                             <div class="meta">October 03, 2018 at 2:21pm</div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus,</p>
                             <p><a href="#" class="reply">Reply</a></p>
                           </div>
 
@@ -263,7 +264,7 @@
                                 <div class="comment-body">
                                   <h3>John Doe</h3>
                                   <div class="meta">October 03, 2018 at 2:21pm</div>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus,</p>
                                   <p><a href="#" class="reply">Reply</a></p>
                                 </div>
                               </li>
@@ -281,11 +282,12 @@
                   <div class="comment-body">
                     <h3>John Doe</h3>
                     <div class="meta">October 03, 2018 at 2:21pm</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus,</p>
                     <p><a href="#" class="reply">Reply</a></p>
                   </div>
                 </li>
               </ul><!-- END comment-list -->
+              
       <form name="comment" method="post">
       <section class="comment_wrap">
         <h1>Leave a comment</h1>

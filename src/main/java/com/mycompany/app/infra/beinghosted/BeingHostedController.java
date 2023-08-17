@@ -37,10 +37,13 @@ public class BeingHostedController {
 		return "usr/infra/biography/login";
 	 
 	 }
+   @RequestMapping("/indexUsrSign_upView") public String indexUsrSign_upView(){
+		
+		return "usr/infra/biography/join";
+	 
+	 }
 	
 
-	
-	
 	   @RequestMapping("/mainview")
 	   public String mainview(){
 	   return "usr/infra/wanderMate/mainview";  

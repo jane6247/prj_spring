@@ -22,7 +22,7 @@
   
   @Override public int delete(Comment dto) { return dao.delete(dto); }
   
-  @Override public int uelete(Comment dto) { return dao.uelete(dto); }
+//  @Override public int uelete(Comment dto) { return dao.uelete(dto); }
   
   @Override public int insert(Comment dto) { return dao.insert(dto); }
   

@@ -10,7 +10,7 @@
 		<sql id="comment">
 			seq
 			,message
-			,member_seq
+			
 		
 		</sql>
 		
@@ -56,13 +56,13 @@
 	   		delete from comment WHERE seq = #{seq}	
 	   	</delete>   	
    	 
-    	<update id="uelete"> 
-	   		UPDATE comment
-	   		SET
-	   			member_seq= 1
-			WHERE
-				seq = #{seq}	
-	   	</update>   	 
+<!--     	<update id="uelete">  -->
+<!-- 	   		UPDATE comment -->
+<!-- 	   		SET -->
+<!-- 	   			member_seq= 1 -->
+<!-- 			WHERE -->
+<!-- 				seq = #{seq}	 -->
+<!-- 	   	</update>   	  -->
 	   	
 	   	<insert id="insert">
 	    INSERT INTO comment (

@@ -8,7 +8,7 @@ public interface CommentService {
 	public Comment selectOne(CommentVo vo);
 	public int update(Comment dto);
 	public int delete(Comment dto);
-	public int uelete(Comment dto);
+//	public int uelete(Comment dto);
 	public int insert(Comment dto);
 	List<Comment> selectList(CommentVo vo);
 }

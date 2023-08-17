@@ -24,6 +24,6 @@ public class CommentDao {
 	public Comment selectOne(CommentVo vo){ return sqlSession.selectOne(namespace + ".selectOne", vo); }
 	public int update(Comment dto){ return sqlSession.update(namespace + ".update", dto); }
 	public int delete(Comment dto){ return sqlSession.delete(namespace + ".delete", dto); }
-	public int uelete(Comment dto){ return sqlSession.update(namespace + ".uelete", dto); }
+//	public int uelete(Comment dto){ return sqlSession.update(namespace + ".uelete", dto); }
 	public int insert(Comment dto){ return sqlSession.insert(namespace + ".insert", dto); }
 }

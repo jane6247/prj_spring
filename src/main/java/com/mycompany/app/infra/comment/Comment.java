@@ -8,7 +8,7 @@ public class Comment {
 
 	private String seq;
 	private String message;
-	private Integer member_Seq;
+	
 	
 	
 //	for cache
@@ -26,13 +26,6 @@ public class Comment {
 	public void setMessage(String message) {
 		this.message = message;
 	}
-	public Integer getMember_Seq() {
-		return member_Seq;
-	}
-	public void setMember_Seq(Integer member_Seq) {
-		this.member_Seq = member_Seq;
-	}
-	
-	
+
 	
 }
