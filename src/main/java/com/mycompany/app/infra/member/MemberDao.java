@@ -4,11 +4,10 @@ import java.util.List;
 
 import javax.annotation.Resource;
 import javax.inject.Inject;
+import javax.servlet.http.HttpSession;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
-
-import com.mycompany.app.infra.code.Code;
 
 @Repository
 public class MemberDao {
@@ -29,4 +28,9 @@ public class MemberDao {
 	public Member selectOneAjax(MemberVo vo) {return sqlSession.selectOne(namespace + ".selectOneAjax", vo); }
 //	for cache
 	public List<Member> selectListCachedMemberArrayList(){ return sqlSession.selectList(namespace + ".selectListCachedMemberArrayList", null); }
+	
+	
+
+	
+	
 }

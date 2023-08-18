@@ -2,6 +2,8 @@ package com.mycompany.app.infra.member;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 public interface MemberService {
 	
 	public int selectOneCount(MemberVo vo);
@@ -12,5 +14,7 @@ public interface MemberService {
 	public int uelete(Member dto);
 	public int insert(Member dto);
 	public Member selectOneAjax(MemberVo vo);
+
+	
 
 }

@@ -1,9 +1,8 @@
 package com.mycompany.app.infra.member;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import javax.annotation.PostConstruct;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -55,6 +54,12 @@ public class MemberServiceImpl implements MemberService{
 		
 		return dao.selectOneAjax(vo);
 	}
+	
+
+	
+	
+
+
 	
 	
 }

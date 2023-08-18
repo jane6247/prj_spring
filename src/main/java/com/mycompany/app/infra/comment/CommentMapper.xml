@@ -10,7 +10,8 @@
 		<sql id="comment">
 			seq
 			,message
-			
+			,member_id
+			,regDate
 		
 		</sql>
 		
@@ -47,7 +48,7 @@
 		<update id="update">
 	   		UPDATE comment
 	   		SET
-	   			name = #{name}
+	   			member_id = #{member_id}
 			WHERE
 				seq = #{seq}	
    		</update>   	
@@ -67,9 +68,13 @@
 	   	<insert id="insert">
 	    INSERT INTO comment (
 	        message
+	        ,member_id
+			,regDate
 	 
 	    ) VALUES (
 	        #{message}
+	        ,#{member_id}
+	        ,#{regDate}
 	  
 	    )
        </insert>

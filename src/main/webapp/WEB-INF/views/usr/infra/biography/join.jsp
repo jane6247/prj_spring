@@ -329,7 +329,8 @@ color: red; important;
     <br>
 <br>
    
-     <!--START sing-up  -->      
+     <!--START sing-up  --> 
+          
        <form name="formSignup" method="post">            
 	    <div class="form sign-up">
 	        <h2>Create your Account</h2>
@@ -472,7 +473,7 @@ color: red; important;
 				,success: function(response) {
 					if(response.rt == "success") {
 						alert(response.rtMember.name);
-						location.href = "/";
+						location.href = "/main";
 					} else {
 						alert("그런 회원 없습니다.");
 					}

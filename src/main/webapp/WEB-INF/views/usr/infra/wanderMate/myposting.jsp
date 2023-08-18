@@ -100,7 +100,7 @@
              
                 <h3>Jessica </h3>
                 <br />
-                <p>Age: 2</p>
+                <p>Age:25</p>
                   
                   <c:forEach items="${card}" var="list" varStatus="status">
                   <c:set var="listFindRegion" value="${CodeServiceImpl.selectListCachedCode('2')}"/>
@@ -204,89 +204,89 @@
       </section>
       
       <!--START comment list  -->
-   <div class="col-md-12 tour-wrap">
-    		<div class="pt-5">
-              <h3 class="mb-5" style="border-bottom: 1px solid #f2f2f2;">3 Comments</h3>
-              <ul class="comment-list">
-                <li class="comment">
-                  <div class="vcard bio">
-                    <img src="images/person_1.jpg" alt="Image placeholder">
-                  </div>
-                  <div class="comment-body">
-                    <h3>John Doe</h3>
-                    <div class="meta">October 03, 2018 at 2:21pm</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus,</p>
-                    <p><a href="#" class="reply">Reply</a></p>
-                  </div>
-                </li>
+<!--    <div class="col-md-12 tour-wrap"> -->
+<!--     		<div class="pt-5"> -->
+<!--               <h3 class="mb-5" style="border-bottom: 1px solid #f2f2f2;">3 Comments</h3> -->
+<!--               <ul class="comment-list"> -->
+<!--                 <li class="comment"> -->
+<!--                   <div class="vcard bio"> -->
+<!--                     <img src="images/person_1.jpg" alt="Image placeholder"> -->
+<!--                   </div> -->
+<!--                   <div class="comment-body"> -->
+<!--                     <h3>John Doe</h3> -->
+<!--                     <div class="meta">October 03, 2018 at 2:21pm</div> -->
+<!--                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus,</p> -->
+<!--                     <p><a href="#" class="reply">Reply</a></p> -->
+<!--                   </div> -->
+<!--                 </li> -->
 
-                <li class="comment">
-                  <div class="vcard bio">
-                    <img src="images/person_1.jpg" alt="Image placeholder">
-                  </div>
-                  <div class="comment-body">
-                    <h3>John Doe</h3>
-                    <div class="meta">October 03, 2018 at 2:21pm</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus,</p>
-                    <p><a href="#" class="reply">Reply</a></p>
-                  </div>
+<!--                 <li class="comment"> -->
+<!--                   <div class="vcard bio"> -->
+<!--                     <img src="images/person_1.jpg" alt="Image placeholder"> -->
+<!--                   </div> -->
+<!--                   <div class="comment-body"> -->
+<!--                     <h3>John Doe</h3> -->
+<!--                     <div class="meta">October 03, 2018 at 2:21pm</div> -->
+<!--                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus,</p> -->
+<!--                     <p><a href="#" class="reply">Reply</a></p> -->
+<!--                   </div> -->
 
-                  <ul class="children">
-                    <li class="comment">
-                      <div class="vcard bio">
-                        <img src="images/person_1.jpg" alt="Image placeholder">
-                      </div>
-                      <div class="comment-body">
-                        <h3>John Doe</h3>
-                        <div class="meta">October 03, 2018 at 2:21pm</div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus,</p>
-                        <p><a href="#" class="reply">Reply</a></p>
-                      </div>
+<!--                   <ul class="children"> -->
+<!--                     <li class="comment"> -->
+<!--                       <div class="vcard bio"> -->
+<!--                         <img src="images/person_1.jpg" alt="Image placeholder"> -->
+<!--                       </div> -->
+<!--                       <div class="comment-body"> -->
+<!--                         <h3>John Doe</h3> -->
+<!--                         <div class="meta">October 03, 2018 at 2:21pm</div> -->
+<!--                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus,</p> -->
+<!--                         <p><a href="#" class="reply">Reply</a></p> -->
+<!--                       </div> -->
 
 
-                      <ul class="children">
-                        <li class="comment">
-                          <div class="vcard bio">
-                            <img src="images/person_1.jpg" alt="Image placeholder">
-                          </div>
-                          <div class="comment-body">
-                            <h3>John Doe</h3>
-                            <div class="meta">October 03, 2018 at 2:21pm</div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus,</p>
-                            <p><a href="#" class="reply">Reply</a></p>
-                          </div>
+<!--                       <ul class="children"> -->
+<!--                         <li class="comment"> -->
+<!--                           <div class="vcard bio"> -->
+<!--                             <img src="images/person_1.jpg" alt="Image placeholder"> -->
+<!--                           </div> -->
+<!--                           <div class="comment-body"> -->
+<!--                             <h3>John Doe</h3> -->
+<!--                             <div class="meta">October 03, 2018 at 2:21pm</div> -->
+<!--                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus,</p> -->
+<!--                             <p><a href="#" class="reply">Reply</a></p> -->
+<!--                           </div> -->
 
-                            <ul class="children">
-                              <li class="comment">
-                                <div class="vcard bio">
-                                  <img src="images/person_1.jpg" alt="Image placeholder">
-                                </div>
-                                <div class="comment-body">
-                                  <h3>John Doe</h3>
-                                  <div class="meta">October 03, 2018 at 2:21pm</div>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus,</p>
-                                  <p><a href="#" class="reply">Reply</a></p>
-                                </div>
-                              </li>
-                            </ul>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
+<!--                             <ul class="children"> -->
+<!--                               <li class="comment"> -->
+<!--                                 <div class="vcard bio"> -->
+<!--                                   <img src="images/person_1.jpg" alt="Image placeholder"> -->
+<!--                                 </div> -->
+<!--                                 <div class="comment-body"> -->
+<!--                                   <h3>John Doe</h3> -->
+<!--                                   <div class="meta">October 03, 2018 at 2:21pm</div> -->
+<!--                                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus,</p> -->
+<!--                                   <p><a href="#" class="reply">Reply</a></p> -->
+<!--                                 </div> -->
+<!--                               </li> -->
+<!--                             </ul> -->
+<!--                         </li> -->
+<!--                       </ul> -->
+<!--                     </li> -->
+<!--                   </ul> -->
+<!--                 </li> -->
 
-                <li class="comment">
-                  <div class="vcard bio">
-                    <img src="images/person_1.jpg" alt="Image placeholder">
-                  </div>
-                  <div class="comment-body">
-                    <h3>John Doe</h3>
-                    <div class="meta">October 03, 2018 at 2:21pm</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus,</p>
-                    <p><a href="#" class="reply">Reply</a></p>
-                  </div>
-                </li>
-              </ul><!-- END comment-list -->
+<!--                 <li class="comment"> -->
+<!--                   <div class="vcard bio"> -->
+<!--                     <img src="images/person_1.jpg" alt="Image placeholder"> -->
+<!--                   </div> -->
+<!--                   <div class="comment-body"> -->
+<!--                     <h3>John Doe</h3> -->
+<!--                     <div class="meta">October 03, 2018 at 2:21pm</div> -->
+<!--                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus,</p> -->
+<!--                     <p><a href="#" class="reply">Reply</a></p> -->
+<!--                   </div> -->
+<!--                 </li> -->
+<!--               </ul>END comment-list -->
               
       <form name="comment" method="post">
       <section class="comment_wrap">
@@ -325,14 +325,14 @@
 			$("form[name=comment]").attr("action","/commentList").submit();
 		});
       
-      const edit_txt = document.querySelector('edit_txt');
-      const gone = document.querySelector('gone');
-      const new_show = document.getElementById('new_show');
-
-      edit_txt.addEventListener('click', () => {
-        gone.classList.toggle('hidden');
-        new_show.classList.toggle('hidden');
-      });
+	      const edit_txt = document.querySelector('edit_txt');
+	      const gone = document.querySelector('gone');
+	      const new_show = document.getElementById('new_show');
+	
+	      edit_txt.addEventListener('click', () => {
+	        gone.classList.toggle('hidden');
+	        new_show.classList.toggle('hidden');
+	      });
     </script>
   </body>
 </html>

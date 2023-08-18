@@ -332,13 +332,35 @@ color: red; important;
         <div class="form sign-in">
             <h2>Welcome</h2>
             <label>
+            
+            <c:choose>
+			<c:when test="${empty sessionScope.userId}">
+			<!-- 로그인이 안되어 있으면 -->
+				<form id="loginFrm" method="post" name="form" >
+				
                 <span>Id</span>
-                <input type="id" name="id" id="id" placeholder="Enter User ID" value="test" />
+                <input type="id" name="id" id="id" placeholder="Enter User ID" value="rlaekfo1227"/>
             </label>
             <label>
                 <span>Password</span>
-                <input type="password" name="password" id="password" placeholder="Enter password" value="11111d"/>
+                <input type="password" name="password" id="password" placeholder="Enter password" value="123"/>
             </label>
+            
+            <c:if test="${msg == '실패'}">
+							<tr>
+								<td colspan=2>
+									아이디 또는 패스워드가 틀렸습니다.
+								</td>
+							</tr>
+						</c:if>
+						
+					</form>
+			</c:when>
+			<c:otherwise>
+				<h3>${sessionScope.userId}님 환영합니다.</h3>
+				<a href="logout.do">로그아웃</a>
+			</c:otherwise>
+		</c:choose>
             <p class="forgot-pass">Forgot password?</p>
             <button type="button" class="submit" id="btnLogin">Sign In</button>
          
@@ -489,21 +511,21 @@ color: red; important;
 		//ajax
 		$("#btnLogin").on("click", function(){
 			
-			if(validation() == false) return false;
+// 			if(validation() == false) return false;
 			
 			$.ajax({
 				async: true 
 				,cache: false
 				,type: "post"
 				/* ,dataType:"json" */
-				,url: "/indexUsrLoginViewAjax"
+				,url: "/selectOneAjax"
 				/* ,data : $("#formLogin").serialize() */
 				,data : { "id" : $("#id").val(),
 					"password" : $("#password").val()}
 				,success: function(response) {
 					if(response.rt == "success") {
-						alert(response.rtMember.name);
-						location.href = "/";
+						alert(response.rtMember.id);
+						location.href = "/mainview";
 					} else {
 						alert("그런 회원 없습니다.");
 					}
@@ -518,6 +540,26 @@ color: red; important;
 			// if(!checkNull($("#ifmmId"), $.trim($("#ifmmId").val()), "아이디를 입력해 주세요!")) return false;
 			// if(!checkNull($("#ifmmPassword"), $.trim($("#ifmmPassword").val()), "비밀번호를 입력해 주세요!")) return false;
 		}
+		
+		$(document).ready(function(e){
+			$('#button').click(function(){
+
+				// 입력 값 체크
+				if($.trim($('#id').val()) == ''){
+					alert("아이디를 입력해 주세요.");
+					$('#id').focus();
+					return;
+				}else if($.trim($('#password').val()) == ''){
+					alert("패스워드를 입력해 주세요.");
+					$('#password').focus();
+					return;
+				}
+				
+				//전송
+				$('#loginFrm').submit();
+			});
+			
+		});
 
     </script>
 </body>

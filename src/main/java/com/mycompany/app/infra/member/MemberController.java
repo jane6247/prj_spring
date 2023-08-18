@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -72,20 +74,45 @@ public class MemberController {
 		return "redirect:/memberList";
 	}
 
-	// ajax
-	@ResponseBody
-	@RequestMapping("/indexUsrLoginViewAjax")
-	public Map<String, Object> indexUsrLoginView(MemberVo vo) {
-		Map<String, Object> returnMap = new HashMap<String, Object>();
-		Member rtMember = service.selectOneAjax(vo);
-		if (rtMember != null) {
-			returnMap.put("rtMember", rtMember);
-			returnMap.put("rt", "success");
-		} else {
-			returnMap.put("rt", "fail");
+	
+	  // ajax
+//	  
+//	  @ResponseBody
+//	  
+//	  @RequestMapping("/indexUsrLoginViewAjax") 
+//	  public Map<String, Object> indexUsrLoginView(MemberVo vo) { 
+//		  Map<String, Object> returnMap = new HashMap<String, Object>(); 
+//		  Member rtMember = service.selectOneAjax(vo);
+//		  if (rtMember != null) { 
+//			  returnMap.put("rtMember", rtMember); 
+//			  returnMap.put("rt", "success"); 
+//		  } else { 
+//			  returnMap.put("rt", "fail"); 
+//		  } 
+//	  return returnMap;
+//	  
+//	  }
+	 
+	  @ResponseBody
+		@RequestMapping("/selectOneAjax")
+		public Map<String, Object> selectOneAjax(MemberVo vo, HttpSession httpSession) {
+			Map<String, Object> returnMap = new HashMap<String, Object>();
+			Member rtMember = service.selectOneAjax(vo);
+			
+			if(rtMember != null) {
+		        // 로그인 성공 시 세션에 사용자 정보 저장
+				httpSession.setMaxInactiveInterval(60*60); //60min
+				httpSession.setAttribute("id", vo.getId());
+		        
+				returnMap.put("rtMember", rtMember);
+				returnMap.put("rt", "success");
+			} else {
+				returnMap.put("rt", "fail");
+			}
+			return returnMap;
 		}
-		return returnMap;
+	
 
-	}
+	
 
 }
