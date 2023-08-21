@@ -54,7 +54,7 @@
 		<c:forEach items="${list}" var="list" varStatus="status">
 		          <tr>
                     <th scope="row"><c:out value="${list.seq }"/></th>
-                    <td><a href="codeGroupForm?seq=<c:out value="${list.seq }"/>"><c:out value="${list.name }"/></a></td>
+                    <td><a href="codeGroupForm?seq=<c:out value="${list.seq }"/>"><c:out value="${list.name}"/></a></td>
                     <td><c:out value="${list.delNy }"/></td>
                   </tr>
 		</c:forEach>

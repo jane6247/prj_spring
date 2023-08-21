@@ -4,7 +4,7 @@ public class CodeGroup {
 	//seq는 편의상 디비에는 int지만 자바에서는 string으로 사용한다.
 	
 	private String seq;
-	private String name;
+	private String name_type;
 	private String delNy;
 //	----- 우클릭 source / generate getter, setter
 	public String getSeq() {
@@ -14,10 +14,10 @@ public class CodeGroup {
 		this.seq = seq;
 	}
 	public String getName() {
-		return name;
+		return name_type;
 	}
 	public void setName(String name) {
-		this.name = name;
+		this.name_type = name;
 	}
 	public String getDelNy() {
 		return delNy;

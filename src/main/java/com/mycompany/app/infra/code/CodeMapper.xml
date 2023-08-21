@@ -47,7 +47,7 @@
    	<update id="update">
    		UPDATE code
    		SET
-   			name = #{name}
+   			nameType = #{nameType}
 		WHERE
 			seq = #{seq}	
    	</update>   	
@@ -88,4 +88,15 @@
 			code
 	
     </select>
+    
+    <select id="test" resultMap="resultMapObj">
+    select
+       s.seq,
+       s.name,
+       s.codeGroup_seq,
+       c.name
+    from
+       code s
+          join codeGroup c on s.codeGroup_seq = c.seq;
+</select>
 </mapper>

@@ -3,6 +3,7 @@ public class CodeGroupVo {
 	private Integer shOption;
 	private String shKeyword;
 	private String seq;
+
 	
 //	paging
 	private int thisPage = 1;									// 현재 페이지
@@ -159,6 +160,7 @@ public class CodeGroupVo {
 		System.out.println("getStartRnumForMysql(): " + getStartRnumForMysql());
 		
 	}
+	
 	
 	
 }
