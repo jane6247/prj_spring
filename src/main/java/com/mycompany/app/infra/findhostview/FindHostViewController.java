@@ -11,9 +11,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.mycompany.app.infra.codegroup.CodeGroup;
-import com.mycompany.app.infra.member.Member;
-import com.mycompany.app.infra.member.MemberVo;
 
 @Controller
 public class FindHostViewController {

@@ -139,7 +139,7 @@
                 <img src="/resources/assets_wanderMate/img/profile_pic02.webp" alt="card image" />
               </div>
               <p class="card__title">
-                <strong>Darae</strong><br />
+                <strong></strong><br />
                 (
                 
                  <c:forEach items="${listFindRegion}" var="listRegion" varStatus="statusRegion">
@@ -154,7 +154,7 @@
 						<c:out value="${listType.name }"/>
 					</c:if> 					
 				</c:forEach>							
-								 )<br />age:31 <br />
+								 )<br />age:<br />
                 Language: <c:out value="${list.language }"/>
               </p>
               <div class="star_box">
