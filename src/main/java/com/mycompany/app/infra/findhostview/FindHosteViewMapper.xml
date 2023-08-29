@@ -46,25 +46,26 @@
 			SELECT count(*)
 			<include refid="selectCommon" />
 	    </select>
+	    
 	   <select id="selectCard" resultMap="resultMapObj">
-    SELECT
-        a.seq AS a_seq,
-        a.address,
-        a.aboutPlan,
-        a.budget,
-        a.date,
-        a.days,
-        a.type_seq,
-        a.region_seq,
-        a.member_Seq,
-        <include refid="ddd" />,
-        <include refid="abc" />
-    FROM
-        beingHosted a
-    JOIN
-        member b ON a.member_seq = b.seq
-    WHERE 1=1
-</select>
+		    SELECT
+		        a.seq AS a_seq,
+		        a.address,
+		        a.aboutPlan,
+		        a.budget,
+		        a.date,
+		        a.days,
+		        a.type_seq,
+		        a.region_seq,
+		        a.member_Seq,
+		        <include refid="ddd" />,
+		        <include refid="abc" />
+		    FROM
+		        beingHosted a
+		    JOIN
+		        member b ON a.member_seq = b.seq
+		    WHERE 1=1
+	</select>
 
 	    
 	   

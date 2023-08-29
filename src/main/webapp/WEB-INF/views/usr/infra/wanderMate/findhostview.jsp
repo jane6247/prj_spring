@@ -15,16 +15,10 @@
 
     
      <!-- google icon -->
-     <link
-     rel="stylesheet"
-     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-   />
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
 
     <!-- fontawesome -->
-    <script
-      src="https://kit.fontawesome.com/f0e73cfa04.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/f0e73cfa04.js" crossorigin="anonymous" ></script>
   </head>
   <body>
   
@@ -139,7 +133,7 @@
                 <img src="/resources/assets_wanderMate/img/profile_pic02.webp" alt="card image" />
               </div>
               <p class="card__title">
-                <strong></strong><br />
+                <strong>Name:<c:out value="${list.name }"/></strong><br />
                 (
                 
                  <c:forEach items="${listFindRegion}" var="listRegion" varStatus="statusRegion">
@@ -154,7 +148,7 @@
 						<c:out value="${listType.name }"/>
 					</c:if> 					
 				</c:forEach>							
-								 )<br />age:<br />
+								 )<br />age: <c:out value="${list.age }"/><br />
                 Language: <c:out value="${list.language }"/>
               </p>
               <div class="star_box">
